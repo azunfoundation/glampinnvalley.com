@@ -1034,17 +1034,49 @@ img {
     opacity: 0.85;
   }
 
+  /* Hide entire compare section on mobile */
+  .giv-compare-section {
+    display: none;
+  }
+
   /* Comparison table sticky first column */
   .giv-compare-table th:first-child,
   .giv-compare-table td:first-child {
     position: sticky;
     left: 0;
-    background: var(--color-night-dark);
+    background: #1f3b34;
     z-index: 2;
-    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.35);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+    min-width: 120px;
+    max-width: 130px;
+    white-space: normal;
   }
   .giv-compare-table thead th:first-child {
     z-index: 3;
+    background: #1f3b34;
+  }
+
+  /* No mask on the scroll container — mask-image blocks touch scroll on iOS */
+  /* Ensure scroll wrapper is independently scrollable despite body overflow-x:hidden */
+  .giv-compare-table-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x !important;
+    overscroll-behavior-x: contain;
+    /* Isolate scroll context from parent overflow */
+    isolation: isolate;
+  }
+
+  /* Tighter cell padding on mobile */
+  .giv-compare-table th,
+  .giv-compare-table td {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  .giv-compare-table th:first-child,
+  .giv-compare-table td:first-child {
+    padding-left: 0 !important;
+    padding-right: 10px !important;
   }
 }
 

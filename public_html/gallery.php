@@ -12,7 +12,7 @@ $active_nav = 'gallery';
 $is_dark_hero = true;
 
 $gallery_items = [
-    ['cat' => 'domes', 'src' => 'assets/images/gallery-image.webp', 'alt' => 'Geodesic dome on private deck nestled in forest grass', 'title' => 'Ridge Sanctuary'],
+    ['cat' => 'domes', 'src' => 'assets/images/ridge-sanctuary-new.webp', 'alt' => 'Geodesic dome on private deck nestled in forest grass', 'title' => 'Ridge Sanctuary'],
     ['cat' => 'domes', 'src' => 'assets/images/banner4.webp', 'alt' => 'Aerial perspective of Twin Valley domes on elevated deck', 'title' => 'Twin Valley Aerial'],
     ['cat' => 'pool', 'src' => 'assets/images/banner2.webp', 'alt' => 'Infinity pool at dusk reflecting evening sky', 'title' => 'The Infinity Edge'],
     ['cat' => 'domes', 'src' => 'assets/images/banner3.webp', 'alt' => 'Quilted gold dome interior facing forest window', 'title' => 'Signature Dome Interior'],

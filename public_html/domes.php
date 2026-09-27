@@ -279,6 +279,7 @@ require __DIR__ . '/includes/header.php';
 <!-- =========================================================================
      COMPARE MATRIX · Green Ground
      ========================================================================= -->
+<div class="giv-compare-section">
 <!-- Top wave divider into green -->
 <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);margin-bottom:-1px;background:#f3efe6;">
   <path d="M0 90 L0 70 C150 60 260 30 380 34 C480 38 540 70 640 66 C760 61 820 22 940 24 C1040 26 1090 58 1190 56 C1290 54 1360 34 1440 38 L1440 90 Z" fill="#1f3b34"></path>
@@ -303,8 +304,8 @@ require __DIR__ . '/includes/header.php';
 
     <!-- Responsive Comparison Table -->
     <div class="giv-table-scroll-hint">✦ Swipe table horizontally to compare all 4 tiers ✦</div>
-    <div class="giv-compare-table-wrapper" style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
-      <table class="giv-compare-table" style="width:100%;min-width:720px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;">
+    <div class="giv-compare-table-wrapper" style="overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;touch-action:pan-x;overscroll-behavior-x:contain;will-change:scroll-position;">
+      <table class="giv-compare-table" style="width:100%;min-width:640px;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;">
         <thead>
           <tr>
             <th style="text-align:left;padding:14px 16px 14px 0;font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-text-light-subtle);border-bottom:1px solid rgba(241,233,218,.25);"></th>
@@ -334,6 +335,7 @@ require __DIR__ . '/includes/header.php';
     <path d="M0 90 L0 58 C120 46 210 22 330 28 C430 34 480 66 580 60 C690 54 750 18 870 24 C970 29 1020 58 1120 54 C1220 50 1290 28 1370 32 C1410 34 1425 44 1440 48 L1440 90 Z" fill="#f3efe6"></path>
   </svg>
 </section>
+</div>
 
 <!-- =========================================================================
      INCLUDED + POLICIES
