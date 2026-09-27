@@ -469,9 +469,10 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   Mobile Sticky Quick Action Bar
+   Mobile Sticky Quick Action Bar (Hidden)
    -------------------------------------------------------------------------- */
 .giv-sticky-bookbar {
+  display: none !important;
   position: fixed;
   left: 0;
   right: 0;
@@ -489,6 +490,7 @@ img {
 }
 
 .giv-sticky-bookbar.visible {
+  display: none !important;
   transform: translateY(0);
 }
 
@@ -990,9 +992,9 @@ img {
     height: 36px;
   }
 
-  /* Subfooter clearance for mobile sticky booking bar */
+  /* Subfooter clearance (mobile sticky booking bar is hidden) */
   .giv-subfooter-inner {
-    padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)) !important;
+    padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
   /* Subheads aligned to left on mobile */

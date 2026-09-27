@@ -4,7 +4,7 @@
  * High-converting mobile action bar featuring direct Call and WhatsApp Check Availability.
  */
 ?>
-<div class="giv-sticky-bookbar giv-quick-action-bar" id="mobileStickyBar" role="region" aria-label="Quick Actions">
+<div class="giv-sticky-bookbar giv-quick-action-bar" id="mobileStickyBar" style="display: none !important;" role="region" aria-label="Quick Actions" aria-hidden="true">
   <div class="giv-quick-bar-inner">
     <!-- Call Action -->
     <a href="tel:<?= PHONE_RAW ?>" class="giv-quick-btn giv-quick-call" aria-label="Call <?= PHONE_DISPLAY ?>">

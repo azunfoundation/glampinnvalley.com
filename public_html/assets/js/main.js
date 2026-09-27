@@ -73,14 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Mobile Sticky Quick Action Bar
-    if (stickyBar && !menuOpen && window.innerWidth < 861) {
+    // Mobile Sticky Quick Action Bar (disabled)
+    /* if (stickyBar && !menuOpen && window.innerWidth < 861) {
       if (y > 100) {
         stickyBar.classList.add('visible');
       } else {
         stickyBar.classList.remove('visible');
       }
-    }
+    } */
 
     // Parallax elements
     if (parallaxEls.length > 0) {
