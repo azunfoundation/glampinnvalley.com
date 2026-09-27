@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</helmet>
+<header style="{{ navStyle }}">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px);height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="Glamp Inn Valley Home v3.dc.html" aria-label="Glamp Inn Valley home" style="display:flex;align-items:center;color:inherit"><img src="img/logo-1.webp" alt="Glamp Inn Valley" style="height:{{ scrolled ? '44px' : '52px' }};width:auto;display:block;filter:{{ logoFilter }};transition:height .4s ease"></a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;gap:clamp(18px,2.4vw,36px);font-family:'Lora',Georgia,serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase">
+        <sc-for list="{{ links }}" as="l" hint-placeholder-count="6">
+          <a href="{{ l.href }}" style="{{ l.style }}" style-hover="opacity:1;color:#d9a962">{{ l.label }}</a>
+        </sc-for>
+      </nav>
+    </sc-if>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="{{ waUrl }}" target="_blank" rel="noopener" style="{{ navBtnStyle }}" style-hover="background:rgba(182,130,53,.16)">Check Availability</a>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ toggleMenu }}" aria-label="Menu" style="width:44px;height:44px;border:0;background:transparent;color:inherit;display:grid;place-items:center;cursor:pointer;padding:0"><span style="display:block;width:22px;height:1px;background:currentColor;box-shadow:0 7px 0 currentColor,0 -7px 0 currentColor"></span></button>
+      </sc-if>
+    </div>
+  </div>
+</header>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:60;background:#14262a;color:#f1e9da;padding:100px clamp(20px,6vw,56px) 40px;display:flex;flex-direction:column;justify-content:space-between;font-family:'Lora',Georgia,serif">
+    <button onClick="{{ toggleMenu }}" aria-label="Close" style="position:absolute;top:14px;right:clamp(14px,4vw,48px);width:44px;height:44px;border:0;background:transparent;font-size:30px;line-height:1;cursor:pointer;color:#f1e9da;font-family:'Cormorant Garamond',serif">×</button>
+    <nav style="display:flex;flex-direction:column;font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:300;line-height:1.2">
+      <sc-for list="{{ links }}" as="l" hint-placeholder-count="6">
+        <a href="{{ l.href }}" style="color:#f1e9da;padding:10px 0;border-bottom:1px solid rgba(241,233,218,.18)">{{ l.label }}</a>
+      </sc-for>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:14px;font-size:14px">
+      <a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:flex;justify-content:center;align-items:center;height:52px;border:1px solid #d9a962;color:#f1e9da;border-radius:4px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px">Check Availability on WhatsApp</a>
+      <a href="tel:+917095466999" style="color:#f1e9da;opacity:.8">+91 70954 66999</a>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:84},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;&quot;,&quot;The Valley&quot;,&quot;Domes &amp; Rates&quot;,&quot;Experiences&quot;,&quot;Gallery&quot;,&quot;Getting Here&quot;,&quot;FAQ&quot;]},&quot;dark&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { scrolled: false, isMobile: false, menuOpen: false, ready: false };
+  componentDidMount() {
+    this.onScroll = () => { const s = window.scrollY > 40; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    this.onResize = () => { const m = window.innerWidth < 1024; if (m !== this.state.isMobile || !this.state.ready) this.setState({ isMobile: m, ready: true }); };
+    window.addEventListener('scroll', this.onScroll, { passive: true }); window.addEventListener('resize', this.onResize);
+    this.onResize(); this.onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onResize); }
+  renderVals() {
+    const { scrolled, isMobile, menuOpen, ready } = this.state;
+    const startDark = this.props.dark !== false, active = this.props.active || '';
+    const onDark = startDark && !scrolled && !menuOpen;
+    const waUrl = 'https://wa.me/917095466999?text=' + encodeURIComponent("Hi Glamp Inn Valley, I'd like to check availability for a dome stay.");
+    const L = [['The Valley', 'About.dc.html'], ['Domes & Rates', 'Domes.dc.html'], ['Experiences', 'Experiences.dc.html'], ['Gallery', 'Gallery.dc.html'], ['Getting Here', 'Contact.dc.html'], ['FAQ', 'FAQ.dc.html']];
+    const links = L.map(([label, href]) => ({ label, href, style: { color: 'inherit', whiteSpace: 'nowrap', opacity: active === label ? 1 : .8, borderBottom: active === label ? '1px solid #d9a962' : '1px solid transparent', paddingBottom: '2px' } }));
+    return {
+      waUrl, links, menuOpen,
+      isMobile: ready && isMobile, isDesktop: !ready || !isMobile,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      logoFilter: (onDark || scrolled) ? 'brightness(1.25)' : 'none',
+      navStyle: { position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, height: scrolled ? '64px' : '84px', color: (onDark || scrolled) ? '#f1e9da' : '#1d2a26', background: scrolled ? 'rgba(31,59,52,0.96)' : (onDark ? 'transparent' : 'rgba(243,239,230,.92)'), backdropFilter: (onDark && !scrolled) ? 'none' : 'blur(12px)', borderBottom: scrolled ? '1px solid rgba(217,169,98,0.22)' : (onDark ? '1px solid transparent' : '1px solid rgba(29,42,38,.14)'), boxShadow: scrolled ? '0 4px 20px rgba(15,31,35,0.25)' : 'none', transition: 'height .4s ease, background .4s ease, color .4s ease, border-color .4s ease', fontFamily: "'Lora', Georgia, serif" },
+      navBtnStyle: { display: isMobile && !scrolled ? 'none' : 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '42px', padding: '0 18px', border: '1px solid ' + ((onDark || scrolled) ? '#d9a962' : '#b68235'), color: (onDark || scrolled) ? '#f1e9da' : '#b68235', borderRadius: '4px', fontFamily: "'Cormorant Garamond', serif", fontWeight: 600, fontSize: '17px', whiteSpace: 'nowrap', transition: 'all .3s ease' }
+    };
+  }
+}
+</script>
+</body>
+</html>

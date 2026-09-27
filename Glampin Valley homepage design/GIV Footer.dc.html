@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600&family=Lora:wght@400&display=swap" rel="stylesheet">
+</helmet>
+<section style="position:relative;background:linear-gradient(180deg,#14262a 0%,#0f1f23 100%);color:#f1e9da;overflow:hidden;font-family:'Lora',Georgia,serif">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);position:absolute;top:0;left:0;transform:translateY(-99%)"><path d="M0 90 L0 64 C130 54 220 26 340 30 C440 34 500 66 600 62 C720 57 780 22 900 26 C1000 29 1050 58 1150 54 C1250 50 1330 32 1440 36 L1440 90 Z" fill="#14262a"></path></svg>
+  <div aria-hidden="true" style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(241,233,218,.7) 0 1px,transparent 1.6px),radial-gradient(circle,rgba(217,169,98,.55) 0 1px,transparent 1.7px);background-size:230px 230px,410px 410px;background-position:40px 20px,180px 100px"></div>
+  <svg viewBox="0 0 400 200" aria-hidden="true" style="position:absolute;right:-8%;bottom:0;width:min(70vw,820px);height:auto;opacity:.14"><path d="{{ latticeD }}" fill="none" stroke="#d9a962" stroke-width=".7"></path></svg>
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px) clamp(48px,6vw,80px)">
+    <p style="margin:0 0 20px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#d9a962"><span style="display:block;width:36px;height:1px;background:#d9a962"></span>{{ kicker }}</p>
+    <h2 style="margin:0 0 30px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(40px,5.6vw,84px);line-height:.98;letter-spacing:-.02em;max-width:16ch;text-wrap:balance">{{ title }}</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center">
+      <a href="{{ waUrl }}" target="_blank" rel="noopener" style="white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 30px;border:1px solid #d9a962;color:#f1e9da;border-radius:4px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:19px" style-hover="background:rgba(217,169,98,.18)">Check Availability on WhatsApp</a>
+      <a href="tel:+917095466999" style="color:#f1e9da;font-family:'Cormorant Garamond',serif;font-size:20px;border-bottom:1px solid rgba(241,233,218,.4);padding-bottom:2px" style-hover="border-bottom-color:#d9a962;color:#f1e9da">+91 70954 66999</a>
+    </div>
+  </div>
+  <footer style="position:relative;border-top:1px solid rgba(241,233,218,.14);color:#b9c4bb">
+    <div style="max-width:1440px;margin:0 auto;padding:32px clamp(20px,5vw,64px) calc(32px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px;font-size:12px;letter-spacing:.04em">
+      <div style="display:flex;flex-direction:column;gap:10px"><img src="img/logo-1.webp" alt="Glamp Inn Valley" style="height:38px;width:auto;align-self:flex-start;filter:brightness(1.2)"><span>Glamping and Adventures · Sy.no 50, Thirmalapur Village, Pudur Mandal, Vikarabad 501101</span></div>
+      <nav style="display:flex;flex-wrap:wrap;gap:12px 24px">
+        <a href="About.dc.html" style="color:#b9c4bb" style-hover="color:#d9a962">The Valley</a>
+        <a href="Domes.dc.html" style="color:#b9c4bb" style-hover="color:#d9a962">Domes &amp; Rates</a>
+        <a href="Experiences.dc.html" style="color:#b9c4bb" style-hover="color:#d9a962">Experiences</a>
+        <a href="Gallery.dc.html" style="color:#b9c4bb" style-hover="color:#d9a962">Gallery</a>
+        <a href="Contact.dc.html" style="color:#b9c4bb" style-hover="color:#d9a962">Getting Here</a>
+        <a href="FAQ.dc.html" style="color:#b9c4bb" style-hover="color:#d9a962">FAQ</a>
+        <a href="mailto:glampinnvalley01@gmail.com" style="color:#b9c4bb" style-hover="color:#d9a962">glampinnvalley01@gmail.com</a>
+        <a href="https://www.instagram.com/glampinnvalley" target="_blank" rel="noopener" style="color:#b9c4bb" style-hover="color:#d9a962">Instagram</a>
+      </nav>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px">
+        <span>© 2026 Glamping and Adventures. All rights reserved.</span>
+        <span style="opacity:0.5" aria-hidden="true">·</span>
+        <span>Designed and developed by <a href="https://creativals.com" target="_blank" rel="noopener" style="color:#d9a962;text-decoration:underline;text-underline-offset:3px" style-hover="color:#e8c07a">creativals.com</a></span>
+      </div>
+    </div>
+  </footer>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:560},&quot;kicker&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Your weekend, elsewhere&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;title&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;The valley is closer than you think.&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;waText&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Hi Glamp Inn Valley, I'd like to check availability for a dome stay.&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  lattice() {
+    const cx = 200, cy = 200, R = [190, 132, 74, 22], N = [16, 12, 8, 4], f = v => v.toFixed(1);
+    const pt = (r, i, n) => { const a = Math.PI - (Math.PI * i) / n; return [cx + r * Math.cos(a), cy - r * Math.sin(a)]; };
+    let d = '';
+    for (let k = 0; k < R.length; k++) { d += 'M' + pt(R[k], 0, N[k]).map(f).join(' '); for (let i = 1; i <= N[k]; i++) d += ' L' + pt(R[k], i, N[k]).map(f).join(' '); }
+    for (let k = 0; k < R.length - 1; k++) { const n1 = N[k], n2 = N[k + 1]; for (let i = 0; i <= n1; i++) { const p = pt(R[k], i, n1), q = pt(R[k + 1], Math.round(i * n2 / n1), n2); d += ' M' + p.map(f).join(' ') + ' L' + q.map(f).join(' '); if (i < n1) d += ' L' + pt(R[k + 1], Math.min(n2, Math.round((i + 1) * n2 / n1)), n2).map(f).join(' '); } }
+    return d + ' M10 200 L390 200';
+  }
+  renderVals() {
+    return {
+      latticeD: this.lattice(),
+      kicker: this.props.kicker ?? 'Your weekend, elsewhere',
+      title: this.props.title ?? 'The valley is closer than you think.',
+      waUrl: 'https://wa.me/917095466999?text=' + encodeURIComponent(this.props.waText ?? "Hi Glamp Inn Valley, I'd like to check availability for a dome stay.")
+    };
+  }
+}
+</script>
+</body>
+</html>

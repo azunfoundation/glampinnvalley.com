@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Lora:wght@400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f3efe6;color:#1d2a26;font-family:"Lora",Georgia,serif;-webkit-font-smoothing:antialiased}
+a{color:#b68235;text-decoration:none}a:hover{color:#7d5411}
+*,*::before,*::after{box-sizing:border-box}
+</style>
+</helmet>
+
+<section style="padding:48px;display:flex;flex-direction:column;gap:28px">
+  <div style="display:flex;flex-direction:column;gap:6px;max-width:60ch">
+    <p style="margin:0;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#b68235">Dome illustrations · turn 1</p>
+    <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:44px;line-height:1.05">Six ways to draw the dome</h1>
+    <p style="margin:6px 0 0;font-size:14px;color:#5d6b66;line-height:1.6">Each is a single-stroke line drawing in brand gold on cream and on forest green, so you can judge it in both chapters. Pick one (or say what to blend) and I'll build the new section around it.</p>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:28px">
+
+    <div id="1a" style="width:520px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:22px">Dome on the deck</span><a href="#1a" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;border:1px solid #b68235;padding:3px 8px;border-radius:3px">1a</a></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(29,42,38,.16)">
+        <div style="background:#f3efe6;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ deckD }}" fill="none" stroke="#b68235" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <div style="background:#1f3b34;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ deckD }}" fill="none" stroke="#d9a962" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+      </div>
+      <p style="margin:0;font-size:13px;color:#5d6b66;line-height:1.55">Full geodesic shell with the round valley window, on a railed deck with two stargazer chairs. Closest to the real property.</p>
+    </div>
+
+    <div id="1b" style="width:520px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:22px">Dome under the stars</span><a href="#1b" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;border:1px solid #b68235;padding:3px 8px;border-radius:3px">1b</a></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(29,42,38,.16)">
+        <div style="background:#f3efe6;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ starsD }}" fill="none" stroke="#b68235" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><g fill="#b68235"><circle cx="40" cy="30" r="1.4"></circle><circle cx="72" cy="18" r="1"></circle><circle cx="180" cy="22" r="1.4"></circle><circle cx="205" cy="44" r="1"></circle><circle cx="150" cy="12" r=".9"></circle><circle cx="24" cy="60" r=".9"></circle></g></svg></div>
+        <div style="background:#1f3b34;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ starsD }}" fill="none" stroke="#d9a962" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><g fill="#f1e9da"><circle cx="40" cy="30" r="1.4"></circle><circle cx="72" cy="18" r="1"></circle><circle cx="180" cy="22" r="1.4"></circle><circle cx="205" cy="44" r="1"></circle><circle cx="150" cy="12" r=".9"></circle><circle cx="24" cy="60" r=".9"></circle></g></svg></div>
+      </div>
+      <p style="margin:0;font-size:13px;color:#5d6b66;line-height:1.55">Simplified silhouette with only a few struts, a crescent moon and a scatter of stars. Softer, more poetic; good for the night chapters.</p>
+    </div>
+
+    <div id="1c" style="width:520px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:22px">Dome in the trees</span><a href="#1c" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;border:1px solid #b68235;padding:3px 8px;border-radius:3px">1c</a></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(29,42,38,.16)">
+        <div style="background:#f3efe6;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ treesD }}" fill="none" stroke="#b68235" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <div style="background:#1f3b34;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ treesD }}" fill="none" stroke="#d9a962" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+      </div>
+      <p style="margin:0;font-size:13px;color:#5d6b66;line-height:1.55">The dome half-hidden behind foliage and grasses, with a hillline behind. Emphasises the forest setting over the structure.</p>
+    </div>
+
+    <div id="1d" style="width:520px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:22px">Twin domes on the ridge</span><a href="#1d" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;border:1px solid #b68235;padding:3px 8px;border-radius:3px">1d</a></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(29,42,38,.16)">
+        <div style="background:#f3efe6;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ twinD }}" fill="none" stroke="#b68235" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <div style="background:#1f3b34;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ twinD }}" fill="none" stroke="#d9a962" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+      </div>
+      <p style="margin:0;font-size:13px;color:#5d6b66;line-height:1.55">Two domes on a shared deck with the valley falling away below, the path between them and a setting sun. A wide, panoramic composition.</p>
+    </div>
+
+    <div id="1e" style="width:520px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:22px">Dome section (cutaway)</span><a href="#1e" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;border:1px solid #b68235;padding:3px 8px;border-radius:3px">1e</a></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(29,42,38,.16)">
+        <div style="background:#f3efe6;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ cutD }}" fill="none" stroke="#b68235" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <div style="background:#1f3b34;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ cutD }}" fill="none" stroke="#d9a962" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+      </div>
+      <p style="margin:0;font-size:13px;color:#5d6b66;line-height:1.55">Architectural half-section: the shell cut open to show the bed, side table and window, with the hammock hung out over the drop. Suits a "what's inside" section.</p>
+    </div>
+
+    <div id="1f" style="width:520px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:22px">Dome monogram</span><a href="#1f" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;border:1px solid #b68235;padding:3px 8px;border-radius:3px">1f</a></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(29,42,38,.16)">
+        <div style="background:#f3efe6;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ monoD }}" fill="none" stroke="#b68235" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <div style="background:#1f3b34;padding:20px"><svg viewBox="0 0 240 160" style="width:100%;height:auto;display:block"><path d="{{ monoD }}" fill="none" stroke="#d9a962" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+      </div>
+      <p style="margin:0;font-size:13px;color:#5d6b66;line-height:1.55">A compact emblem: dome, ridgeline and a single star inside a circle. Works small — as a section marker, bullet, or watermark repeated as a pattern.</p>
+    </div>
+
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  f(v) { return (+v).toFixed(1); }
+  // dome shell: arc with a ring of struts. cx, base y, radius, ring count
+  shell(cx, by, R, rings, struts, windowSide) {
+    const f = this.f; let d = ` M${f(cx - R)} ${f(by)} A${f(R)} ${f(R)} 0 0 1 ${f(cx + R)} ${f(by)}`;
+    const pt = (r, a) => [cx + r * Math.cos(a), by - r * Math.sin(a)];
+    const Rs = [R], Ns = [struts];
+    for (let k = 1; k < rings; k++) { Rs.push(R * (1 - k / rings)); Ns.push(Math.max(3, Math.round(struts * (1 - k / rings)))); }
+    for (let k = 1; k < rings; k++) { const r = Rs[k]; d += ` M${f(cx - r)} ${f(by)} A${f(r)} ${f(r)} 0 0 1 ${f(cx + r)} ${f(by)}`; }
+    for (let k = 0; k < rings - 1; k++) {
+      const n1 = Ns[k], n2 = Ns[k + 1];
+      for (let i = 0; i <= n1; i++) {
+        const a1 = Math.PI - Math.PI * i / n1, p = pt(Rs[k], a1), j = Math.round(i * n2 / n1), q = pt(Rs[k + 1], Math.PI - Math.PI * j / n2);
+        d += ` M${f(p[0])} ${f(p[1])} L${f(q[0])} ${f(q[1])}`;
+        if (i < n1) { const q2 = pt(Rs[k + 1], Math.PI - Math.PI * Math.min(n2, Math.round((i + 1) * n2 / n1)) / n2); d += ` L${f(q2[0])} ${f(q2[1])}`; }
+      }
+    }
+    if (windowSide) { const wx = cx + windowSide * R * .42, wy = by - R * .42, wr = R * .3; d += ` M${f(wx - wr)} ${f(wy)} a${f(wr)} ${f(wr)} 0 1 0 ${f(wr * 2)} 0 a${f(wr)} ${f(wr)} 0 1 0 -${f(wr * 2)} 0`; }
+    return d;
+  }
+  chair(x, y, dir) { const f = this.f, s = dir; return ` M${f(x)} ${f(y)} l${f(-6 * s)} -8 l${f(-10 * s)} -3 M${f(x)} ${f(y)} l${f(4 * s)} -7 M${f(x - 6 * s)} ${f(y - 8)} l${f(-2 * s)} 8 M${f(x - 16 * s)} ${f(y - 11)} l0 11`; }
+  pine(x, y, h) { const f = this.f; let d = ` M${f(x)} ${f(y)} l0 -${f(h * .3)}`; for (let k = 0; k < 3; k++) { const yy = y - h * .28 - k * h * .25, w = h * .3 * (1 - k * .28); d += ` M${f(x - w)} ${f(yy)} L${f(x)} ${f(yy - h * .32)} L${f(x + w)} ${f(yy)}`; } return d; }
+  round(x, y, h) { const f = this.f, r = h * .34; return ` M${f(x)} ${f(y)} l0 -${f(h * .4)} M${f(x - r)} ${f(y - h * .4)} a${f(r)} ${f(r)} 0 1 1 ${f(r * 2)} 0 a${f(r)} ${f(r * .85)} 0 1 1 -${f(r * 2)} 0`; }
+  grass(x, y, n, seed) { const f = this.f; let s = seed, r = () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296), d = ''; for (let i = 0; i < n; i++) { const gx = x + r() * 40 - 20, h = 8 + r() * 14, l = (r() - .5) * 14; d += ` M${f(gx)} ${f(y)} q${f(l * .3)} -${f(h * .5)} ${f(l)} -${f(h)}`; } return d; }
+  hills(y0, amp, ph, x0, x1) { const f = this.f; let d = ''; for (let i = 0; i <= 36; i++) { const x = x0 + (x1 - x0) * i / 36, y = y0 - amp * Math.sin((x - x0) / (x1 - x0) * Math.PI * 2.1 + ph) - amp * .4 * Math.sin((x - x0) / (x1 - x0) * Math.PI * 4.6 + ph); d += (i ? ' L' : ' M') + f(x) + ' ' + f(y); } return d; }
+
+  renderVals() {
+    const f = this.f;
+    // 1a dome on the deck
+    let deckD = this.shell(120, 112, 58, 3, 10, 1);
+    deckD += ' M40 112 L200 112 M40 112 L40 128 M200 112 L200 128 M40 128 L200 128 M48 112 L48 128 M192 112 L192 128 M52 128 l-6 14 M188 128 l6 14 M44 120 L196 120';
+    deckD += ' M40 104 L60 104 M180 104 L200 104 M46 104 l0 8 M194 104 l0 8'; // railing, outside the shell
+    deckD += this.chair(50, 112, 1) + this.chair(192, 112, -1);
+    deckD += ' M120 54 l0 -10 M120 44 l-4 4 M120 44 l4 4'; // small flag/vent
+    // 1b dome under the stars
+    let starsD = ` M62 120 A58 58 0 0 1 178 120 M120 62 L120 120 M86 68 L120 120 L154 68 M75 120 L120 120 M62 120 L178 120`;
+    starsD += ` M120 62 L62 120 M120 62 L178 120 M86 68 L98 120 M154 68 L142 120`;
+    starsD += ' M200 26 a11 11 0 1 0 8 19 a8 8 0 1 1 -8 -19'; // crescent
+    starsD += ' M30 132 L210 132 M20 142 C60 138 100 146 140 140 C170 136 200 144 224 140'; // ground
+    starsD += this.pine(40, 120, 26) + this.pine(196, 120, 20) + this.grass(60, 132, 5, 3) + this.grass(190, 132, 4, 9);
+    // 1c dome in the trees
+    let treesD = this.hills(70, 10, .5, 0, 240);
+    treesD += this.shell(126, 122, 50, 2, 8, -1);
+    treesD += this.round(46, 128, 60) + this.pine(200, 126, 52) + this.pine(216, 128, 34) + this.round(178, 130, 30);
+    treesD += this.grass(60, 130, 8, 5) + this.grass(120, 132, 10, 7) + this.grass(180, 132, 8, 11);
+    treesD += ' M10 132 C50 128 90 136 130 130 C170 124 200 134 232 130';
+    // 1d twin domes on the ridge
+    let twinD = this.shell(78, 96, 34, 2, 8, 1) + this.shell(168, 96, 34, 2, 8, -1);
+    twinD += ' M36 96 L210 96 M36 96 L36 106 M210 96 L210 106 M36 106 L210 106 M112 96 L112 106 M134 96 L134 106 M44 106 l-4 10 M202 106 l4 10';
+    twinD += ' M118 96 l0 -6 l10 0 l0 6'; // gap between domes = path
+    twinD += ' M0 130 C40 120 70 134 110 126 C150 118 190 132 240 122 M0 146 C60 140 120 152 240 140'; // valley
+    twinD += ' M196 36 a14 14 0 0 1 28 0'; // setting sun (half)
+    twinD += ' M186 36 L238 36';
+    twinD += this.pine(20, 122, 22) + this.pine(228, 126, 18) + this.grass(30, 130, 4, 13) + this.grass(214, 128, 4, 17);
+    // 1e cutaway
+    let cutD = ' M50 118 A70 70 0 0 1 190 118'; // outer
+    cutD += ' M120 48 L120 118 M50 118 L190 118';
+    cutD += ' M120 48 A70 70 0 0 1 190 118 M120 48 L155 61 L190 118 M155 61 L138 118 M155 61 L172 90 M120 84 L155 61 M120 84 L138 118 M120 84 L172 90'; // struts on right half
+    cutD += ' M62 118 l0 -16 l44 0 l0 16 M62 108 l44 0 M66 102 l14 0 l0 6 M92 102 l10 0 l0 6'; // bed
+    cutD += ' M56 118 l0 -14 M54 104 l8 0'; // lamp
+    cutD += ' M80 60 a10 10 0 1 0 0 20 a10 10 0 1 0 0 -20 M70 70 l20 0 M80 60 l0 20'; // window
+    cutD += ' M40 118 L200 118 M40 118 L40 126 M200 118 L200 126 M40 126 L200 126 M46 126 l-4 12 M194 126 l4 12'; // deck
+    cutD += ' M200 118 C216 118 226 128 232 140 M200 126 C214 126 222 134 226 146 M204 122 L206 130 M212 124 L216 136 M222 130 L226 142'; // hammock net
+    cutD += this.grass(28, 138, 5, 19);
+    // 1f monogram
+    let monoD = ' M120 22 a58 58 0 1 0 0 116 a58 58 0 1 0 0 -116'; // ring
+    monoD += ' M84 96 A36 36 0 0 1 156 96 M120 60 L120 96 M96 68 L120 96 L144 68 M84 96 L156 96 M120 60 L84 96 M120 60 L156 96';
+    monoD += ' M68 104 C90 96 110 108 130 102 C150 96 160 106 172 100'; // ridge
+    monoD += ' M120 36 l0 8 M116 40 l8 0'; // star
+    return { deckD: deckD.trim(), starsD: starsD.trim(), treesD: treesD.trim(), twinD: twinD.trim(), cutD: cutD.trim(), monoD: monoD.trim() };
+  }
+}
+</script>
+</body>
+</html>

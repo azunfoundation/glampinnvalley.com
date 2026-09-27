@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Glamp Inn Valley — Luxury Dome Stays in the Vikarabad Hills</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="_ds/classical-7611ef11-0a27-4632-9190-a8e8f931a344/styles.css">
+<script src="_ds/classical-7611ef11-0a27-4632-9190-a8e8f931a344/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#f3efe6;color:#1d2a26;font-family:"Lora",Georgia,serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#b68235;text-decoration:none}
+a:hover{color:#7d5411}
+*,*::before,*::after{box-sizing:border-box}
+:focus-visible{outline:2px solid #b68235;outline-offset:2px}
+::selection{background:rgba(182,130,53,.3)}
+@keyframes giv-twinkle{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes giv-drift{from{transform:translateY(0)}to{transform:translateY(-14px)}}
+@keyframes giv-firefly{0%{transform:translate(0,0) scale(.6);opacity:0}25%{opacity:.95}55%{opacity:.25;transform:translate(14px,-22px) scale(1)}80%{opacity:.8}100%{transform:translate(30px,-46px) scale(.7);opacity:0}}
+@keyframes giv-sway{from{transform:rotate(-1.2deg)}to{transform:rotate(1.2deg)}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+.giv-timeline-nav{display:inline-flex;align-items:center;gap:12px;justify-self:end}
+.giv-timeline-nav-btn{background:transparent;border:1px solid rgba(47,90,76,.25);border-radius:50%;width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;color:#2f5a4c;cursor:pointer;transition:all .25s ease;padding:0}
+.giv-timeline-nav-btn:hover:not(:disabled){border-color:#b68235;color:#b68235;background:rgba(255,255,255,.9);transform:translateX(-2px);box-shadow:0 4px 14px rgba(182,130,53,.18)}
+.giv-timeline-nav-btn:disabled{opacity:.35;cursor:default;pointer-events:none}
+.giv-timeline-action-btn{background:transparent;border:none;padding:4px 0;display:inline-flex;align-items:center;gap:10px;font-family:inherit;font-size:12px;color:#5d6b66;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:color .25s ease}
+.giv-timeline-action-btn:hover{color:#1d2a26}
+.giv-timeline-nav-circle{border:1px solid rgba(47,90,76,.25);border-radius:50%;width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;color:#2f5a4c;transition:all .25s ease}
+.giv-timeline-action-btn:hover .giv-timeline-nav-circle{border-color:#b68235;color:#b68235;background:rgba(255,255,255,.9);transform:translateX(2px);box-shadow:0 4px 14px rgba(182,130,53,.18)}
+.giv-timeline-float-arrow{position:absolute;top:43%;transform:translateY(-50%);z-index:15;width:44px;height:44px;border-radius:50%;background:rgba(243,239,230,.92);backdrop-filter:blur(8px);border:1px solid rgba(47,90,76,.22);color:#2f5a4c;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 20px rgba(29,42,38,.08);transition:all .25s ease;padding:0}
+.giv-timeline-float-prev{left:clamp(12px,2.5vw,36px)}
+.giv-timeline-float-next{right:clamp(12px,2.5vw,36px)}
+.giv-timeline-float-arrow:hover:not(.disabled){background:#fff;color:#b68235;border-color:#b68235;transform:translateY(-50%) scale(1.08);box-shadow:0 8px 24px rgba(182,130,53,.22)}
+.giv-timeline-float-arrow.disabled{opacity:0;pointer-events:none;transform:translateY(-50%) scale(.9)}
+@media (max-width:768px){.giv-timeline-float-arrow{display:none!important}}
+.giv-timeline-track{cursor:grab;user-select:none;-webkit-user-select:none}
+.giv-timeline-track.is-dragging{cursor:grabbing!important;scroll-behavior:auto!important;scroll-snap-type:none!important}
+@keyframes kbZoomIn{0%{transform:scale(1)}100%{transform:scale(1.08)}}
+@keyframes kbDriftRight{0%{transform:scale(1.07) translate(-1.5%,0)}100%{transform:scale(1.02) translate(1.5%,0)}}
+@keyframes kbZoomOut{0%{transform:scale(1.08)}100%{transform:scale(1.01)}}
+@keyframes kbPanLeft{0%{transform:scale(1.06) translate(1.5%,1%)}100%{transform:scale(1.08) translate(-1.5%,-1%)}}
+@keyframes reelPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.8)}}
+@keyframes givFireAmbient{0%{box-shadow:0 0 70px 10px rgba(226,140,60,.18),0 0 120px 25px rgba(217,90,20,.08);filter:brightness(1)}50%{box-shadow:0 0 110px 22px rgba(240,165,75,.32),0 0 160px 40px rgba(226,110,30,.16);filter:brightness(1.05) contrast(1.02)}100%{box-shadow:0 0 80px 12px rgba(226,140,60,.22),0 0 130px 30px rgba(217,90,20,.11);filter:brightness(.98)}}
+@keyframes givOrbitPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.03);opacity:.95;border-color:rgba(217,169,98,.45)}}
+.giv-night-section{position:relative;background:radial-gradient(circle at 85% 15%,rgba(35,75,66,.45) 0%,transparent 55%),linear-gradient(180deg,#152b27 0%,#10211d 40%,#0a1614 100%);color:#f1e9da;overflow:hidden;padding:clamp(56px,7vw,100px) 0 0}
+.giv-night-stars{position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg width='96' height='96' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='rgba(217,169,98,0.14)' stroke-width='0.8'%3E%3Cline x1='48' y1='44' x2='48' y2='52'/%3E%3Cline x1='44' y1='48' x2='52' y2='48'/%3E%3C/g%3E%3Ccircle cx='48' cy='48' r='0.7' fill='rgba(241,233,218,0.16)'/%3E%3C/svg%3E");background-size:96px 96px;opacity:.85}
+.giv-night-nebula-cyan{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(46,120,110,.14) 0%,transparent 70%);top:15%;left:-120px;pointer-events:none;filter:blur(60px)}
+.giv-night-nebula-amber{position:absolute;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(226,140,60,.1) 0%,transparent 70%);bottom:20%;right:6%;pointer-events:none;filter:blur(70px)}
+.giv-night-celestial-chart{position:absolute;top:clamp(16px,3.5vw,42px);right:clamp(16px,5vw,72px);width:clamp(140px,16vw,220px);height:clamp(140px,16vw,220px);pointer-events:none;z-index:2;opacity:.9}
+.giv-night-celestial-chart svg{width:100%;height:100%;overflow:visible}
+.giv-night-container{position:relative;max-width:1360px;margin:0 auto;padding:0 clamp(20px,5vw,64px);z-index:3}
+.giv-night-topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid rgba(241,233,218,.12);padding-bottom:18px;margin-bottom:clamp(32px,4.5vw,54px)}
+.giv-night-kicker{margin:0;display:inline-flex;align-items:center;gap:12px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#d9a962}
+.giv-night-roman{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;font-weight:600;letter-spacing:.1em}
+.giv-night-dash{display:block;width:28px;height:1px;background:#d9a962;opacity:.85}
+.giv-night-label{font-family:'Lora',Georgia,serif;font-weight:500}
+.giv-night-coords{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(217,169,98,.75);font-family:'Lora',Georgia,serif}
+.giv-coord-dot{width:6px;height:6px;border-radius:50%;background:#d9a962;box-shadow:0 0 8px rgba(217,169,98,.8);animation:reelPulse 2s ease-in-out infinite}
+.giv-coord-sep{opacity:.35}
+.giv-night-stage-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:clamp(32px,5vw,72px);align-items:center;margin-bottom:clamp(48px,6vw,84px)}
+.giv-night-headline{margin:0 0 20px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(36px,4vw,58px);line-height:1.08;letter-spacing:-.018em;color:#f1e9da;text-wrap:balance}
+.giv-night-accent{font-style:italic;color:#e6c88b}
+.giv-night-story{margin:0 0 clamp(24px,3vw,36px);font-family:'Lora',Georgia,serif;font-size:clamp(14.5px,1.02vw,16.5px);line-height:1.74;color:#b8c7c0;max-width:48ch;text-wrap:pretty}
+.giv-night-rituals{display:flex;flex-direction:column;gap:10px;margin-bottom:clamp(24px,3vw,34px)}
+.giv-night-ritual-item{display:flex;align-items:center;gap:16px;padding:12px 18px;border-radius:8px;background:rgba(255,255,255,.03);border:1px solid rgba(241,233,218,.08);transition:all .3s cubic-bezier(.2,.8,.2,1);cursor:pointer;width:100%;text-align:left;font-family:inherit;color:inherit;outline:none}
+.giv-night-ritual-item:hover,.giv-night-ritual-item.active{background:rgba(217,169,98,.12);border-color:rgba(217,169,98,.45);transform:translateX(6px);box-shadow:0 6px 20px rgba(0,0,0,.3),0 0 16px rgba(217,169,98,.16)}
+.giv-night-ritual-item:focus-visible{outline:2px solid #d9a962;outline-offset:2px}
+.giv-night-ritual-item.active .giv-ritual-arrow{opacity:1;transform:translateX(4px);color:#dfb265}
+.giv-ritual-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;letter-spacing:.1em;color:#d9a962}
+.giv-ritual-info{flex:1;min-width:0}
+.giv-ritual-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;font-weight:500;color:#f1e9da;line-height:1.2}
+.giv-ritual-desc{font-size:12px;color:#8f9e98;margin-top:2px;line-height:1.4}
+.giv-ritual-arrow{color:#d9a962;opacity:.6;transition:transform .25s ease,opacity .25s ease}
+.giv-night-ritual-item:hover .giv-ritual-arrow{opacity:1;transform:translateX(3px)}
+.giv-night-protocol-card{background:linear-gradient(135deg,rgba(18,38,34,.75) 0%,rgba(10,22,20,.85) 100%);border:1px solid rgba(217,169,98,.35);border-radius:8px;padding:14px 18px;margin-bottom:clamp(24px,3vw,34px);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.giv-protocol-badge{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#d9a962;margin-bottom:6px}
+.giv-protocol-text{font-size:12px;line-height:1.55;color:#b8c4be}
+.giv-protocol-text strong{color:#e28c3c}
+.giv-night-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.giv-night-btn-primary{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:4px;background:#c89b4f;color:#101917;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;box-shadow:0 8px 24px rgba(200,155,79,.28);transition:all .3s cubic-bezier(.2,.8,.2,1)}
+.giv-night-btn-primary:hover{background:#dfb265;transform:translateY(-2px);box-shadow:0 12px 30px rgba(200,155,79,.4);color:#08100e}
+.giv-night-btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:4px;border:1px solid rgba(217,169,98,.4);color:#f1e9da;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:all .25s ease}
+.giv-night-btn-ghost:hover{border-color:#d9a962;background:rgba(217,169,98,.1);color:#fff}
+.giv-night-canvas-col{position:relative}
+.giv-night-canvas-stage{position:relative;width:100%;max-width:580px;margin:0 auto}
+.giv-night-arch-card{position:relative;width:100%;border-radius:999px 999px 12px 12px;padding:10px 10px 0 10px;border:1.5px solid rgba(217,169,98,.55);border-bottom:1.5px solid rgba(217,169,98,.25);background:linear-gradient(180deg,rgba(18,38,34,.6) 0%,rgba(10,22,20,.9) 100%);box-shadow:0 28px 70px rgba(0,0,0,.6)}
+.giv-arch-apex-marker{position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:36px;height:2.5px;background:#e28c3c;border-radius:2px;box-shadow:0 0 10px rgba(226,140,60,.8);z-index:5}
+.giv-arch-pill{position:absolute;top:26px;left:50%;transform:translateX(-50%);z-index:6;display:inline-flex;align-items:center;gap:7px;padding:5px 14px;border-radius:999px;background:rgba(10,22,20,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(217,169,98,.35);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#f1e9da;white-space:nowrap;pointer-events:none}
+.giv-live-dot{width:6px;height:6px;border-radius:50%;background:#2ebd85;box-shadow:0 0 8px #2ebd85}
+.giv-arch-viewport{position:relative;width:100%;aspect-ratio:16/11;border-radius:999px 999px 6px 6px;overflow:hidden;background:#081210}
+.giv-arch-visual{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.giv-arch-visual.fading{opacity:.18;transform:scale(.97)}
+.giv-night-arch-card:hover .giv-arch-visual{transform:scale(1.035)}
+.giv-arch-vignette{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,18,16,.25) 0%,transparent 40%,rgba(8,18,16,.85) 100%);pointer-events:none;z-index:2}
+.giv-arch-footer{position:absolute;left:0;right:0;bottom:0;padding:16px 20px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;z-index:5;pointer-events:none}
+.giv-arch-caption-text{transition:opacity .25s ease}
+.giv-arch-caption-text.fading{opacity:.2}
+.giv-arch-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#d9a962;font-weight:500;text-shadow:0 2px 8px rgba(0,0,0,.9)}
+.giv-arch-sub{font-size:11px;color:#b8c4be;font-style:italic;margin-top:2px;text-shadow:0 1px 6px rgba(0,0,0,.95)}
+.giv-arch-pagination{display:flex;align-items:center;gap:8px;pointer-events:auto}
+.giv-arch-dot{width:8px;height:8px;border-radius:50%;background:rgba(241,233,218,.4);border:none;padding:0;cursor:pointer;outline:none;transition:all .25s ease}
+.giv-arch-dot:hover{background:rgba(217,169,98,.85);transform:scale(1.3)}
+.giv-arch-dot.active{background:#d9a962;box-shadow:0 0 8px rgba(217,169,98,.8);outline:2px solid rgba(217,169,98,.6);outline-offset:2.5px}
+.giv-night-satellite-wrap{position:absolute;right:-24px;bottom:-32px;width:clamp(160px,20vw,210px);aspect-ratio:1;z-index:8;cursor:pointer;user-select:none}
+.giv-night-satellite-wrap:focus-visible{outline:2px solid #d9a962;outline-offset:4px;border-radius:50%}
+.giv-satellite-orbit-outer{position:absolute;inset:-14px;border-radius:50%;border:1px solid rgba(217,169,98,.3);pointer-events:none;animation:givOrbitPulse 6s ease-in-out infinite alternate;transition:border-color .4s ease}
+.giv-satellite-orbit-middle{position:absolute;inset:-6px;border-radius:50%;border:1px dashed rgba(217,169,98,.25);pointer-events:none;transition:border-color .4s ease}
+.giv-satellite-circle{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;border:1.5px solid rgba(217,169,98,.7);background:#000;box-shadow:0 0 50px 10px rgba(226,140,60,.28),0 16px 36px rgba(0,0,0,.65);animation:givFireAmbient 4s ease-in-out infinite alternate;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s ease,border-color .4s ease}
+.giv-night-satellite-wrap:hover .giv-satellite-circle{transform:scale(1.05);box-shadow:0 0 70px 15px rgba(240,165,75,.4)}
+.giv-satellite-img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.04);transition:opacity .3s ease,transform .5s ease}
+.giv-satellite-img.fading{opacity:.15;transform:scale(.95)}
+.giv-night-satellite-wrap:hover .giv-satellite-img{transform:scale(1.1)}
+.giv-satellite-glow{position:absolute;inset:0;background:radial-gradient(circle,transparent 50%,rgba(0,0,0,.7) 100%);pointer-events:none}
+.giv-satellite-tag{position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);white-space:nowrap;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(10,22,20,.9);border:1px solid rgba(217,169,98,.4);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#f1e9da;box-shadow:0 4px 12px rgba(0,0,0,.4);pointer-events:none;transition:border-color .4s ease}
+.giv-fire-spark{width:5px;height:5px;border-radius:50%;background:#e28c3c;box-shadow:0 0 6px #e28c3c;transition:background .4s ease,box-shadow .4s ease}
+.giv-night-satellite-wrap[data-type="pool"] .giv-satellite-circle{border-color:rgba(78,168,222,.75);box-shadow:0 0 50px 10px rgba(78,168,222,.32),0 16px 36px rgba(0,0,0,.65)}
+.giv-night-satellite-wrap[data-type="pool"]:hover .giv-satellite-circle{box-shadow:0 0 70px 16px rgba(78,168,222,.5)}
+.giv-night-satellite-wrap[data-type="pool"] .giv-satellite-orbit-outer{border-color:rgba(78,168,222,.35)}
+.giv-night-satellite-wrap[data-type="pool"] .giv-satellite-orbit-middle{border-color:rgba(78,168,222,.28)}
+.giv-satellite-tag[data-type="pool"]{border-color:rgba(78,168,222,.5)}
+.giv-satellite-tag[data-type="pool"] .giv-fire-spark{background:#4ea8de;box-shadow:0 0 6px #4ea8de}
+.giv-night-hotspot{position:absolute;inset:0;z-index:3;cursor:pointer}
+.giv-night-metrics-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.5vw,28px);padding:clamp(24px,3.5vw,36px) 0;border-top:1px solid rgba(241,233,218,.12);border-bottom:1px solid rgba(241,233,218,.12);margin-top:clamp(20px,3vw,40px);margin-bottom:clamp(60px,8vw,100px)}
+.giv-metric-card{display:flex;flex-direction:column;gap:6px}
+.giv-metric-value{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(20px,1.8vw,28px);font-weight:400;color:#d9a962;line-height:1.1;letter-spacing:-.01em}
+.giv-metric-label{font-size:12px;line-height:1.5;color:#8f9e98;max-width:24ch}
+@media(max-width:1024px){.giv-night-stage-grid{grid-template-columns:1fr;gap:48px}.giv-night-canvas-stage{max-width:520px}.giv-night-metrics-bar{grid-template-columns:repeat(2,1fr);gap:24px}}
+@media(max-width:768px){.giv-night-topbar{flex-direction:column;align-items:flex-start;gap:12px}.giv-night-celestial-chart{width:120px;height:120px;top:10px;right:12px;opacity:.6}.giv-night-satellite-wrap{right:-10px;bottom:-24px;width:150px}.giv-night-metrics-bar{grid-template-columns:1fr;gap:20px}.giv-night-actions{flex-direction:column;align-items:stretch}.giv-night-btn-primary,.giv-night-btn-ghost{justify-content:center}}
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:clip;background:#f3efe6">
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:45;pointer-events:none;opacity:.055;mix-blend-mode:multiply;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>&quot;);background-size:240px 240px"></div>
+
+<!-- NAV -->
+<header style="{{ navStyle }}">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px);height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#top" aria-label="Glamp Inn Valley home" style="display:flex;align-items:center;gap:12px;color:inherit">
+      <img src="img/logo-1.webp" alt="Glamp Inn Valley" style="height:{{ scrolled ? '44px' : '52px' }};width:auto;display:block;filter:{{ logoFilter }};transition:height .4s ease">
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;gap:clamp(18px,2.4vw,36px);font-size:12px;letter-spacing:.14em;text-transform:uppercase">
+        <a href="#story" style="color:inherit;opacity:.85" style-hover="opacity:1;color:#d9a962">The Valley</a>
+        <a href="#dome" style="color:inherit;opacity:.85" style-hover="opacity:1;color:#d9a962">The Dome</a>
+        <a href="#day" style="color:inherit;opacity:.85" style-hover="opacity:1;color:#d9a962">A Day Here</a>
+        <a href="#domes" style="color:inherit;opacity:.85" style-hover="opacity:1;color:#d9a962">Stay</a>
+        <a href="#location" style="color:inherit;opacity:.85" style-hover="opacity:1;color:#d9a962">Getting Here</a>
+      </nav>
+    </sc-if>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="{{ waUrl }}" target="_blank" rel="noopener" style="{{ navBtnStyle }}" style-hover="background:rgba(182,130,53,.16)">Check Availability</a>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ toggleMenu }}" aria-label="Menu" style="width:44px;height:44px;border:0;background:transparent;color:inherit;display:grid;place-items:center;cursor:pointer;padding:0">
+          <span style="display:block;width:22px;height:1px;background:currentColor;box-shadow:0 7px 0 currentColor,0 -7px 0 currentColor"></span>
+        </button>
+      </sc-if>
+    </div>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:60;background:#14262a;color:#f1e9da;padding:100px clamp(20px,6vw,56px) 40px;display:flex;flex-direction:column;justify-content:space-between;background-image:radial-gradient(circle at 20% 30%,rgba(241,233,218,.55) 0 1px,transparent 1.5px),radial-gradient(circle at 70% 60%,rgba(241,233,218,.4) 0 1px,transparent 1.5px),radial-gradient(circle at 45% 85%,rgba(241,233,218,.5) 0 1px,transparent 1.5px);background-size:260px 260px,340px 340px,200px 200px">
+    <button onClick="{{ toggleMenu }}" aria-label="Close" style="position:absolute;top:14px;right:clamp(14px,4vw,48px);width:44px;height:44px;border:0;background:transparent;font-size:30px;line-height:1;cursor:pointer;color:#f1e9da;font-family:'Cormorant Garamond',serif">×</button>
+    <nav style="display:flex;flex-direction:column;font-family:'Cormorant Garamond',Georgia,serif;font-size:40px;font-weight:300;line-height:1.2">
+      <a onClick="{{ toggleMenu }}" href="#story" style="color:#f1e9da;padding:12px 0;border-bottom:1px solid rgba(241,233,218,.18)">The Valley</a>
+      <a onClick="{{ toggleMenu }}" href="#dome" style="color:#f1e9da;padding:12px 0;border-bottom:1px solid rgba(241,233,218,.18)">The Dome</a>
+      <a onClick="{{ toggleMenu }}" href="#day" style="color:#f1e9da;padding:12px 0;border-bottom:1px solid rgba(241,233,218,.18)">A Day Here</a>
+      <a onClick="{{ toggleMenu }}" href="#domes" style="color:#f1e9da;padding:12px 0;border-bottom:1px solid rgba(241,233,218,.18)">Stay</a>
+      <a onClick="{{ toggleMenu }}" href="#location" style="color:#f1e9da;padding:12px 0;border-bottom:1px solid rgba(241,233,218,.18)">Getting Here</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:14px;font-size:14px">
+      <a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:flex;justify-content:center;align-items:center;white-space:nowrap;height:52px;border:1px solid #d9a962;color:#f1e9da;border-radius:4px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px">Check Availability on WhatsApp</a>
+      <a href="tel:+917095466999" style="color:#f1e9da;opacity:.8">+91 70954 66999</a>
+    </div>
+  </div>
+</sc-if>
+
+<!-- HERO · night into dawn -->
+<section id="top" data-screen-label="Hero" style="position:relative;background:linear-gradient(180deg,#0f1f23 0%,#14262a 45%,#1f3b34 100%);color:#f1e9da;overflow:hidden;padding-top:clamp(120px,16vh,180px)">
+  <div aria-hidden="true" style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(241,233,218,.7) 0 1px,transparent 1.6px),radial-gradient(circle,rgba(241,233,218,.45) 0 .8px,transparent 1.4px),radial-gradient(circle,rgba(217,169,98,.6) 0 1px,transparent 1.6px);background-size:220px 220px,140px 140px,380px 380px;background-position:0 0,60px 90px,140px 40px;opacity:.9;mask-image:linear-gradient(180deg,#000 0%,#000 40%,transparent 80%);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 40%,transparent 80%)"></div>
+  <svg viewBox="0 0 400 220" aria-hidden="true" style="position:absolute;right:clamp(20px,8vw,140px);top:clamp(56px,7vh,88px);width:clamp(0px,(100vw - 760px) * 1.2,340px);height:auto;opacity:.75;pointer-events:none">
+    <path d="M318 26 A34 34 0 1 0 318 94 A27 27 0 1 1 318 26 Z" fill="none" stroke="#d9a962" stroke-width=".9"></path>
+    <g fill="#f1e9da"><circle cx="40" cy="160" r="1.6"></circle><circle cx="96" cy="118" r="1.3"></circle><circle cx="150" cy="140" r="1.8"></circle><circle cx="204" cy="96" r="1.3"></circle><circle cx="236" cy="150" r="1.5"></circle><circle cx="120" cy="60" r="1.2"></circle></g>
+    <path d="M40 160 L96 118 L150 140 L204 96 L236 150 M96 118 L120 60" fill="none" stroke="#f1e9da" stroke-width=".5" opacity=".45" stroke-dasharray="1 3"></path>
+      </svg>
+
+
+
+
+
+
+  {{ firefliesHero }}
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(20px,4vw,56px);align-items:end">
+      <div>
+        <p style="margin:0 0 20px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#d9a962"><span style="display:block;width:36px;height:1px;background:#d9a962"></span>Vikarabad Hills · Telangana</p>
+        <h1 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(52px,8.4vw,132px);line-height:.92;letter-spacing:-.025em;text-wrap:balance">Sleep under<br>the whole <em style="font-style:italic;font-weight:300;color:#d9a962">sky.</em></h1>
+      </div>
+      <div style="padding-bottom:clamp(6px,1.2vw,18px)">
+        <p style="margin:0 0 24px;max-width:40ch;font-size:clamp(15px,1.15vw,18px);line-height:1.6;color:#e2d8c4;text-wrap:pretty">Eight geodesic domes on a forested ridge two hours from Hyderabad. An infinity pool at the edge of the hills, a fire of your own, and nights with more stars than you remember.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+          <a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;height:52px;padding:0 28px;border:1px solid #d9a962;color:#f1e9da;border-radius:4px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:19px" style-hover="background:rgba(217,169,98,.18)">Check Availability</a>
+          <a href="#story" style="display:inline-flex;align-items:center;gap:10px;height:52px;color:#f1e9da;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;border-bottom:1px solid rgba(241,233,218,.4)" style-hover="border-bottom-color:#d9a962;color:#f1e9da">Begin the story <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- dome-shaped hero plate with lattice -->
+  <div style="position:relative;max-width:1440px;margin:clamp(36px,6vh,72px) auto 0;padding:0 clamp(20px,5vw,64px)">
+    <div style="position:relative;width:100%;aspect-ratio:2/1;min-height:clamp(260px,52vh,440px);max-height:70vh;border-radius:999px 999px 0 0;overflow:hidden;border:1px solid rgba(217,169,98,.5);border-bottom:0">
+      <img src="img/home-slider.webp" alt="Sunset over the valley from a private dome deck" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 55%">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,31,35,.35) 0%,rgba(15,31,35,0) 40%)"></div>
+      <svg viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;opacity:.55;mix-blend-mode:screen"><path d="{{ latticeD }}" fill="none" stroke="#f1e9da" stroke-width=".6" vector-effect="non-scaling-stroke"></path></svg>
+      <div style="position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;align-items:flex-end;padding:clamp(14px,2.5vw,32px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#f1e9da;text-shadow:0 1px 8px rgba(0,0,0,.5)">
+        <span>18° 12′ N · 77° 50′ E</span>
+        <span style="display:inline-flex;align-items:center;gap:8px"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 3 20 12 6 21"></polygon></svg> property film · placeholder</span>
+      </div>
+    </div>
+  </div>
+  <!-- ridge into cream -->
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);margin-top:-1px"><path d="M0 90 L0 62 C120 48 200 30 320 36 C420 41 470 60 560 52 C660 43 720 14 840 20 C940 25 990 52 1090 48 C1190 44 1250 24 1330 28 C1380 31 1410 44 1440 50 L1440 90 Z" fill="#f3efe6"></path></svg>
+</section>
+
+<!-- STORY · cream -->
+<section id="story" data-screen-label="The valley" style="padding:clamp(56px,9vw,130px) 0 0;position:relative">
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMin slice" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"><path d="{{ contourD }}" fill="none" stroke="#2f5a4c" stroke-width=".7" opacity=".16"></path></svg>
+  <svg data-parallax="-40" viewBox="0 0 220 420" aria-hidden="true" style="position:absolute;left:clamp(-60px,-4vw,-20px);top:clamp(120px,14vw,220px);width:clamp(120px,14vw,220px);height:auto;pointer-events:none;transform-origin:bottom left;animation:giv-sway 9s ease-in-out infinite alternate"><path d="{{ fernD }}" fill="none" stroke="#2f5a4c" stroke-width="1" stroke-linecap="round" opacity=".55"></path></svg>
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,96px);align-items:start">
+      <div>
+        <p style="margin:0 0 22px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#b68235"><span style="font-family:'Cormorant Garamond',serif;font-size:14px;font-variant-numeric:tabular-nums">I</span><span style="display:block;width:36px;height:1px;background:#b68235"></span>The valley</p>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(38px,4.8vw,72px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance">Perched above an endless valley, in the company of a <em style="font-style:italic;color:#2f5a4c">verdant forest.</em></h2>
+      </div>
+      <div style="padding-top:clamp(0px,1.5vw,20px)">
+        <p style="margin:0 0 18px;font-size:clamp(15px,1.15vw,17px);line-height:1.75;color:#3d4b46;text-align:justify;hyphens:auto">As you climb the winding roads into the Vikarabad hills, the city thins out behind you. Your futuristic yet intimate abode waits on the ridge: a geodesic dome with a private deck, an infinity pool cut into the hillside, and evenings that end around a fire under a sky full of stars.</p>
+        <p style="margin:0 0 30px;font-size:clamp(15px,1.15vw,17px);line-height:1.75;color:#3d4b46;text-align:justify;hyphens:auto">Glamp Inn Valley is Hyderabad's first stay of its kind — an eco-friendly haven where luxury finds its home amidst nature, and where peacocks are your only neighbours.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:20px clamp(24px,4vw,56px);border-top:1px solid rgba(29,42,38,.18);padding-top:22px;font-family:'Cormorant Garamond',serif">
+          <div><div style="font-size:40px;line-height:1;font-weight:300;font-variant-numeric:tabular-nums">8</div><div style="font-family:'Lora',serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b66;margin-top:8px">Domes</div></div>
+          <div><div style="font-size:40px;line-height:1;font-weight:300;font-variant-numeric:tabular-nums">2 hrs</div><div style="font-family:'Lora',serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b66;margin-top:8px">From Hyderabad</div></div>
+          <div><div style="font-size:40px;line-height:1;font-weight:300;font-variant-numeric:tabular-nums">∞</div><div style="font-family:'Lora',serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b66;margin-top:8px">Pool · Stars</div></div>
+        </div>
+      </div>
+    </div>
+    <!-- layered plates: arch + rectangle + drawn ridge -->
+    <div data-reveal="1" style="position:relative;display:flex;flex-wrap:wrap;gap:clamp(20px,2vw,28px);margin-top:clamp(48px,7vw,100px);align-items:flex-end">
+      <svg viewBox="0 0 800 160" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-2%;right:-2%;bottom:-6%;width:104%;height:38%;pointer-events:none"><path d="M0 150 C90 120 140 70 230 82 C300 90 330 130 420 118 C520 104 560 40 660 52 C730 60 760 110 800 124" fill="none" stroke="#2f5a4c" stroke-width="1" stroke-dasharray="3 5" opacity=".5"></path></svg>
+      <figure style="margin:0;flex:1 1 420px;min-width:0;position:relative">
+        <img src="img/banner4.webp" alt="Aerial view of two domes on a shared deck among the greenery" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border:6px solid #ece6d8;outline:1px solid rgba(29,42,38,.16);filter:sepia(.15) saturate(.9) contrast(1.04)">
+        <figcaption style="margin-top:10px;font-size:12px;color:#5d6b66;font-style:italic">Twin Valley, seen from above the ridge.</figcaption>
+      </figure>
+      <figure style="margin:0;flex:1 1 260px;min-width:0;position:relative;transform:translateY(clamp(-10px,-2vw,-30px))">
+        <img src="img/gallery-4.webp" alt="Stone path lined with red foliage leading toward the forest" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:999px 999px 0 0;border:6px solid #ece6d8;outline:1px solid rgba(29,42,38,.16);filter:sepia(.15) saturate(.9) contrast(1.04)">
+        <figcaption style="margin-top:10px;font-size:12px;color:#5d6b66;font-style:italic">The walk down to the pool.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- THE DOME · green, illustrated anatomy -->
+<section id="dome" data-screen-label="The dome" style="margin-top:clamp(64px,10vw,140px);position:relative;background:linear-gradient(180deg,#1f3b34 0%,#25453b 60%,#1f3b34 100%);color:#f1e9da">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);transform:translateY(-99%);position:absolute;top:0;left:0"><path d="M0 90 L0 70 C150 60 260 30 380 34 C480 38 540 70 640 66 C760 61 820 22 940 24 C1040 26 1090 58 1190 56 C1290 54 1360 34 1440 38 L1440 90 Z" fill="#1f3b34"></path></svg>
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"><path d="{{ contourD }}" fill="none" stroke="#d9a962" stroke-width=".7" opacity=".1"></path></svg>
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(48px,7vw,100px) clamp(20px,5vw,64px) clamp(64px,9vw,130px)">
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,96px);align-items:center">
+      <div>
+        <p style="margin:0 0 22px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#d9a962"><span style="font-family:'Cormorant Garamond',serif;font-size:14px">II</span><span style="display:block;width:36px;height:1px;background:#d9a962"></span>The dome</p>
+        <h2 style="margin:0 0 22px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(38px,4.8vw,72px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance">A room with no corners, and a window the size of the sky.</h2>
+        <p style="margin:0 0 32px;max-width:44ch;font-size:clamp(15px,1.1vw,17px);line-height:1.7;color:#cfd8cf;text-wrap:pretty">Geodesic geometry lets a single shell span the whole room with nothing to hold it up but its own triangles — so inside, there is only quilted gold, a king bed, and the valley.</p>
+        <ol style="list-style:none;margin:0;padding:0;border-top:1px solid rgba(241,233,218,.18)">
+          <sc-for list="{{ domeFeatures }}" as="f" hint-placeholder-count="4">
+            <li style="display:grid;grid-template-columns:40px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid rgba(241,233,218,.18)">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#d9a962;font-variant-numeric:tabular-nums;padding-top:4px">{{ f.n }}</span>
+              <div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;line-height:1.15">{{ f.title }}</div><div style="font-size:13px;color:#b9c4bb;margin-top:4px;line-height:1.55">{{ f.body }}</div></div>
+            </li>
+          </sc-for>
+        </ol>
+      </div>
+      <div style="position:relative">
+        <svg viewBox="0 0 400 260" aria-hidden="true" style="width:100%;height:auto;display:block;overflow:visible">
+          <path d="{{ latticeD }}" fill="none" stroke="#d9a962" stroke-width=".9" opacity=".9"></path>
+          <line x1="0" y1="200" x2="400" y2="200" stroke="#f1e9da" stroke-width=".8" opacity=".5"></line>
+          <line x1="40" y1="200" x2="40" y2="228" stroke="#f1e9da" stroke-width=".8" opacity=".5"></line><line x1="360" y1="200" x2="360" y2="228" stroke="#f1e9da" stroke-width=".8" opacity=".5"></line>
+          <line x1="20" y1="228" x2="380" y2="228" stroke="#f1e9da" stroke-width=".8" opacity=".5" stroke-dasharray="2 4"></line>
+          <circle cx="200" cy="12" r="2.4" fill="#d9a962"></circle><circle cx="68" cy="86" r="2.4" fill="#d9a962"></circle><circle cx="332" cy="86" r="2.4" fill="#d9a962"></circle><circle cx="200" cy="200" r="2.4" fill="#d9a962"></circle>
+          <text x="200" y="-4" text-anchor="middle" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="2">01 · SHELL</text>
+          <text x="44" y="82" text-anchor="end" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="2">02 · VALLEY WINDOW</text>
+          <text x="356" y="82" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="2">03 · KING BED</text>
+          <text x="200" y="246" text-anchor="middle" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="2">04 · PRIVATE DECK · 450–550 SQ FT</text>
+        </svg>
+        <img src="img/banner3.webp" alt="Inside a dome: quilted golden walls and a wide window onto the valley" loading="lazy" style="position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:52%;aspect-ratio:1;object-fit:cover;object-position:60% 50%;border-radius:50%;border:4px solid #1f3b34;outline:1px solid rgba(217,169,98,.6);filter:sepia(.1) saturate(.95)">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A DAY · cream → sun arc -->
+<section id="day" data-screen-label="A day here" style="padding:clamp(64px,10vw,140px) 0 0;position:relative;background:linear-gradient(180deg,#f3efe6 0%,#efe8d8 60%,#e9e2cf 100%)">
+  <div data-sun="1" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 70%,rgba(226,168,94,.32) 0%,rgba(226,168,94,.12) 18%,rgba(226,168,94,0) 42%)"></div>
+  <svg viewBox="0 0 1440 240" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;pointer-events:none"><path d="{{ landscapeD }}" fill="none" stroke="#2f5a4c" stroke-width=".9" stroke-linejoin="round" stroke-linecap="round" opacity=".42"></path></svg>
+  <svg data-parallax="-24" viewBox="0 0 600 300" aria-hidden="true" style="position:absolute;left:clamp(-40px,-2vw,0px);bottom:0;width:clamp(220px,28vw,420px);height:auto;pointer-events:none"><path d="{{ grassD }}" fill="none" stroke="#2f5a4c" stroke-width="1" stroke-linecap="round" opacity=".5"></path></svg>
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:end;gap:20px;margin-bottom:clamp(20px,3vw,36px)">
+      <div>
+        <p style="margin:0 0 22px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#b68235"><span style="font-family:'Cormorant Garamond',serif;font-size:14px">III</span><span style="display:block;width:36px;height:1px;background:#b68235"></span>A day here</p>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(38px,4.8vw,72px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance">From first light to the <em style="font-style:italic;color:#2f5a4c">last ember.</em></h2>
+      </div>
+      <div class="giv-timeline-nav" style="justify-self:end;display:inline-flex;align-items:center;gap:12px">
+        <button type="button" class="giv-timeline-nav-btn giv-timeline-prev" id="timelineScrollPrev" aria-label="Previous activities" title="Previous activities">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <button type="button" class="giv-timeline-action-btn" id="timelineScrollNext" aria-label="Next activities" title="Next activities">
+          <span class="giv-timeline-btn-text">Scroll sideways</span>
+          <span class="giv-timeline-nav-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div data-reveal="1" class="giv-timeline-wrapper" style="position:relative">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:0;right:0;top:44%;width:100%;height:120px;pointer-events:none;opacity:.55"><path d="M0 110 C300 -20 1140 -20 1440 110" fill="none" stroke="#b68235" stroke-width="1" stroke-dasharray="2 6"></path></svg>
+
+    <!-- Floating Arrow Buttons (Desktop) -->
+    <button type="button" class="giv-timeline-float-arrow giv-timeline-float-prev" id="timelineFloatPrev" aria-label="Scroll left" title="Scroll left">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button type="button" class="giv-timeline-float-arrow giv-timeline-float-next" id="timelineFloatNext" aria-label="Scroll right" title="Scroll right">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+
+    <div id="dayTimelineTrack" class="giv-timeline-track" style="display:flex;gap:clamp(14px,2vw,28px);overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-left:clamp(20px,5vw,64px);padding:52px clamp(20px,5vw,64px) 28px;scrollbar-width:none;-webkit-overflow-scrolling:touch;position:relative">
+      <sc-for list="{{ day }}" as="d" hint-placeholder-count="6">
+        <figure class="giv-timeline-card" style="margin:0;flex:0 0 clamp(230px,24vw,320px);scroll-snap-align:start;transform:translateY({{ d.lift }})">
+          <img src="{{ d.img }}" alt="{{ d.alt }}" loading="lazy" draggable="false" style="{{ d.imgStyle }}">
+          <figcaption style="margin-top:14px;display:flex;flex-direction:column;gap:4px">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.16em;color:#b68235;font-variant-numeric:tabular-nums;text-transform:uppercase">{{ d.time }}</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;line-height:1.1">{{ d.title }}</span>
+            <span style="font-size:13px;color:#5d6b66;line-height:1.5">{{ d.body }}</span>
+          </figcaption>
+        </figure>
+      </sc-for>
+      <div style="flex:0 0 clamp(20px, 5vw, 64px);flex-shrink:0"></div>
+    </div>
+  </div>
+</section>
+
+<!-- NIGHT · pool + stars + reviews (Creative Architectural Stargazer Layout) -->
+<section id="night" data-screen-label="Night on the ridge" class="giv-night-section">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);position:absolute;top:0;left:0;transform:translateY(-99%)"><path d="M0 90 L0 56 C110 44 180 18 300 26 C400 33 450 66 560 60 C680 53 740 16 860 22 C960 27 1010 58 1110 54 C1210 50 1280 26 1360 30 C1400 32 1420 44 1440 48 L1440 90 Z" fill="#152b27"></path></svg>
+  
+  <!-- Starfield background pattern -->
+  <div class="giv-night-stars" aria-hidden="true"></div>
+
+  <!-- Ambient glowing nebulae -->
+  <div class="giv-night-nebula-cyan" aria-hidden="true"></div>
+  <div class="giv-night-nebula-amber" aria-hidden="true"></div>
+
+  <!-- Top-Right Celestial Illustration: Golden Crescent Moon & Constellation -->
+  <div class="giv-night-celestial-chart" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 18 A22 22 0 1 0 50 62 A18 18 0 1 1 50 18 Z" stroke="#d9a962" stroke-width="1.3" opacity="0.88"/>
+      <line x1="126" y1="44" x2="164" y2="40" stroke="rgba(217,169,98,0.42)" stroke-width="0.75"/>
+      <line x1="164" y1="40" x2="188" y2="52" stroke="rgba(217,169,98,0.42)" stroke-width="0.75"/>
+      <line x1="164" y1="40" x2="148" y2="82" stroke="rgba(217,169,98,0.42)" stroke-width="0.75"/>
+      <line x1="188" y1="52" x2="148" y2="82" stroke="rgba(217,169,98,0.42)" stroke-width="0.75"/>
+      <line x1="148" y1="82" x2="114" y2="100" stroke="rgba(217,169,98,0.42)" stroke-width="0.75"/>
+      <line x1="114" y1="100" x2="84" y2="120" stroke="rgba(217,169,98,0.3)" stroke-width="0.6"/>
+      <circle cx="126" cy="44" r="1.8" fill="#f1e9da"/>
+      <circle cx="164" cy="40" r="2.2" fill="#d9a962"/>
+      <circle cx="188" cy="52" r="1.8" fill="#f1e9da"/>
+      <circle cx="148" cy="82" r="2.2" fill="#d9a962"/>
+      <circle cx="114" cy="100" r="1.6" fill="#f1e9da"/>
+      <circle cx="84" cy="120" r="1.4" fill="#f1e9da"/>
+      <text x="134" y="132" fill="rgba(217,169,98,0.6)" font-family="'Cormorant Garamond', Georgia, serif" font-size="8.5" letter-spacing="1">Vikarabad · 17°20'N</text>
+    </svg>
+  </div>
+
+  <div class="giv-night-container">
+    <!-- Top Metadata Bar -->
+    <div class="giv-night-topbar" data-reveal="1">
+      <div class="giv-night-kicker">
+        <span class="giv-night-roman">IV</span>
+        <span class="giv-night-dash" aria-hidden="true">—</span>
+        <span class="giv-night-label">NIGHT ON THE RIDGE</span>
+      </div>
+      <div class="giv-night-coords" aria-hidden="true">
+        <span class="giv-coord-dot"></span>
+        <span>17°20'N · 77°54'E</span>
+        <span class="giv-coord-sep">·</span>
+        <span>700M ELEVATION</span>
+        <span class="giv-coord-sep">·</span>
+        <span>ZERO LIGHT POLLUTION</span>
+      </div>
+    </div>
+
+    <!-- Main Asymmetric Stage Grid -->
+    <div class="giv-night-stage-grid" data-reveal="1">
+      <!-- Left Column: Story, Night Rituals & Attire Protocol -->
+      <div class="giv-night-narrative-col">
+        <h2 class="giv-night-headline">
+          The pool ends where the hills begin.<br>
+          <em class="giv-night-accent">The sky doesn't end at all.</em>
+        </h2>
+
+        <p class="giv-night-story">
+          An infinity edge cut into the ridge, facing the full sweep of the valley. Swim as the sky turns from amber to deep sapphire, then find your way to the fire by lantern light. Far from the city, the Milky Way is a regular guest.
+        </p>
+
+        <!-- Curated Night Rituals -->
+        <div class="giv-night-rituals" role="tablist" aria-label="Night on the Ridge Rituals">
+          <button type="button" class="giv-night-ritual-item active" role="tab" aria-selected="true" data-ritual-index="0" aria-controls="givNightArchCard">
+            <span class="giv-ritual-num">01</span>
+            <div class="giv-ritual-info">
+              <div class="giv-ritual-title">Hillside Infinity Pool</div>
+              <div class="giv-ritual-desc">Unfiltered valley vistas meeting the endless horizon</div>
+            </div>
+            <svg class="giv-ritual-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+
+          <button type="button" class="giv-night-ritual-item" role="tab" aria-selected="false" data-ritual-index="1" aria-controls="givNightArchCard">
+            <span class="giv-ritual-num">02</span>
+            <div class="giv-ritual-info">
+              <div class="giv-ritual-title">Private Bonfire Hearth</div>
+              <div class="giv-ritual-desc">Crackling firewood & cozy stargazing seating beside your dome</div>
+            </div>
+            <svg class="giv-ritual-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+
+          <button type="button" class="giv-night-ritual-item" role="tab" aria-selected="false" data-ritual-index="2" aria-controls="givNightArchCard">
+            <span class="giv-ritual-num">03</span>
+            <div class="giv-ritual-info">
+              <div class="giv-ritual-title">Dark-Sky Milky Way</div>
+              <div class="giv-ritual-desc">Bortle Class 3 observatory darkness with zero city glare</div>
+            </div>
+            <svg class="giv-ritual-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Column: Interlocking Celestial Visual Canvas -->
+      <div class="giv-night-canvas-col">
+        <div class="giv-night-canvas-stage">
+          <!-- Main Observatory Arch Frame -->
+          <div class="giv-night-arch-card" id="givNightArchCard">
+            <!-- Arch Gold Apex Indicator -->
+            <div class="giv-arch-apex-marker" aria-hidden="true"></div>
+
+            <!-- Top Floating Status Pill -->
+            <div class="giv-arch-pill" id="givArchPill">
+              <span class="giv-live-dot"></span>
+              <span id="givArchPillText">OBSERVATORY POOL · RIDGE ELEVATION 700M</span>
+            </div>
+
+            <!-- Arch Image Viewport -->
+            <div class="giv-arch-viewport">
+              <img src="img/night-ridge-arch.webp" 
+                   alt="Valley Panorama — Hillside infinity pool overlooking the Vikarabad valley with astronomical dome grid" 
+                   class="giv-arch-visual"
+                   id="givArchVisual"
+                   loading="eager">
+              
+              <!-- Dark Vignette Gradient -->
+              <div class="giv-arch-vignette" aria-hidden="true"></div>
+
+              <!-- Bottom Caption & Coordinates -->
+              <div class="giv-arch-footer">
+                <div class="giv-arch-caption-text">
+                  <div class="giv-arch-title" id="givArchTitle">VALLEY PANORAMA · CLEAR SKY</div>
+                  <div class="giv-arch-sub" id="givArchSub">Pristine waters meeting endless forest canopy · 17:00</div>
+                </div>
+                <div class="giv-arch-pagination" role="group" aria-label="Ritual slides">
+                  <button type="button" class="giv-arch-dot active" data-dot-index="0" aria-label="Ritual 01: Hillside Infinity Pool" title="Hillside Infinity Pool"></button>
+                  <button type="button" class="giv-arch-dot" data-dot-index="1" aria-label="Ritual 02: Private Bonfire Hearth" title="Private Bonfire Hearth"></button>
+                  <button type="button" class="giv-arch-dot" data-dot-index="2" aria-label="Ritual 03: Dark-Sky Milky Way" title="Dark-Sky Milky Way"></button>
+                </div>
+              </div>
+
+              <!-- Clickable Hotspot -->
+              <a href="#experiences" class="giv-night-hotspot" id="givArchHotspot" title="Explore Hillside Infinity Pool" aria-label="Explore Hillside Infinity Pool"></a>
+            </div>
+          </div>
+
+          <!-- Interlocking Planetary Satellite: Bonfire Hearth Portal -->
+          <div class="giv-night-satellite-wrap" id="givNightSatelliteWrap" role="button" tabindex="0" data-type="fire" data-target="1" title="Switch to Private Bonfire Hearth" aria-label="Switch to Private Bonfire Hearth">
+            <!-- Concentric Outer Orbital Rings -->
+            <div class="giv-satellite-orbit-outer" aria-hidden="true"></div>
+            <div class="giv-satellite-orbit-middle" aria-hidden="true"></div>
+
+            <!-- Circular Bonfire Portal -->
+            <div class="giv-satellite-circle">
+              <img src="img/night-ridge-fire.webp" 
+                   alt="Private Bonfire Hearth beside your dome" 
+                   class="giv-satellite-img" 
+                   id="givSatelliteImg"
+                   loading="eager">
+              <div class="giv-satellite-glow" aria-hidden="true"></div>
+            </div>
+
+            <!-- Satellite Floating Badge -->
+            <div class="giv-satellite-tag" id="givSatelliteTag" data-type="fire">
+              <span class="giv-fire-spark"></span>
+              <span id="givSatelliteTagText">PRIVATE BONFIRE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Authentic Reviews & Quotes -->
+    <div data-reveal="1" style="margin-top:clamp(64px,8vw,110px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(24px,3vw,48px);border-top:1px solid rgba(241,233,218,.18);padding-top:clamp(32px,4vw,56px)">
+      <sc-for list="{{ reviews }}" as="rv" hint-placeholder-count="3">
+        <blockquote style="margin:0;display:flex;flex-direction:column;gap:22px;justify-content:space-between">
+          <p style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(24px,2vw,32px);line-height:1.3;text-wrap:pretty">“{{ rv.quote }}”</p>
+          <footer style="display:flex;align-items:center;gap:12px">
+            <img src="{{ rv.img }}" alt="" loading="lazy" style="width:38px;height:38px;border-radius:50%;object-fit:cover;outline:1px solid rgba(217,169,98,.6);outline-offset:2px">
+            <div><div style="font-size:14px">{{ rv.name }}</div><div style="font-size:12px;color:#8f9c95">{{ rv.handle }}</div></div>
+          </footer>
+        </blockquote>
+      </sc-for>
+    </div>
+  </div>
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);background:#0a1614;margin-top:clamp(48px,7vw,90px)"><path d="M0 90 L0 60 C130 50 210 24 330 30 C430 36 480 68 580 62 C690 56 750 20 870 26 C970 31 1020 60 1120 56 C1220 52 1290 30 1370 34 C1410 36 1425 46 1440 50 L1440 90 Z" fill="#f3efe6"></path></svg>
+</section>
+
+<!-- DOMES · cream, rates -->
+<section id="domes" data-screen-label="Stay" style="padding:clamp(48px,7vw,100px) 0 0;position:relative">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.5"><defs><pattern id="giv-ridge" width="480" height="300" patternUnits="userSpaceOnUse"><path d="{{ ridgeTileD }}" fill="none" stroke="#b68235" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round" opacity=".22"></path><g fill="#b68235" opacity=".35"><circle cx="60" cy="40" r="1"></circle><circle cx="210" cy="24" r=".8"></circle><circle cx="330" cy="58" r="1.1"></circle><circle cx="430" cy="30" r=".8"></circle><circle cx="140" cy="88" r=".7"></circle></g></pattern></defs><rect width="100%" height="100%" fill="url(#giv-ridge)"></rect></svg>
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:end;gap:20px;margin-bottom:clamp(28px,4vw,48px)">
+      <div>
+        <p style="margin:0 0 22px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#b68235"><span style="font-family:'Cormorant Garamond',serif;font-size:14px">V</span><span style="display:block;width:36px;height:1px;background:#b68235"></span>Stay</p>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(38px,4.8vw,72px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance">Eight domes, each named for a <em style="font-style:italic;color:#2f5a4c">valley.</em></h2>
+      </div>
+      <p style="margin:0;font-size:13px;color:#5d6b66;max-width:34ch;text-wrap:pretty;justify-self:end">All domes sleep two, with an attached bathroom, stargazer chairs and a private deck. Check-in 3 pm · Check-out 11 am.</p>
+    </div>
+    <div data-reveal="1" style="border-top:1px solid rgba(29,42,38,.18)">
+      <sc-for list="{{ domes }}" as="dm" hint-placeholder-count="4">
+        <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(20px,3vw,48px);padding:clamp(24px,3vw,40px) 0;border-bottom:1px solid rgba(29,42,38,.18);align-items:center">
+          <img src="{{ dm.img }}" alt="{{ dm.alt }}" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-radius:{{ dm.radius }};border:6px solid #ece6d8;outline:1px solid rgba(29,42,38,.16);filter:sepia(.15) saturate(.9) contrast(1.04)">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:24px;align-items:start">
+            <div>
+              <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#b68235;margin-bottom:10px">{{ dm.kicker }}</div>
+              <h3 style="margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,2.8vw,44px);line-height:1.02;letter-spacing:-.01em">{{ dm.name }}</h3>
+              <p style="margin:0 0 14px;font-size:14px;color:#3d4b46;line-height:1.65;text-wrap:pretty">{{ dm.body }}</p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12px;color:#5d6b66">
+                <sc-for list="{{ dm.features }}" as="ft" hint-placeholder-count="4"><span style="border-bottom:1px solid rgba(47,90,76,.35);padding-bottom:2px">{{ ft }}</span></sc-for>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:16px">
+              <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;border-top:1px solid rgba(29,42,38,.18);border-bottom:1px solid rgba(29,42,38,.18);padding:14px 0;font-variant-numeric:tabular-nums">
+                  <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b66">Weekdays</div><div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;line-height:1.1;margin-top:4px">{{ dm.weekday }}</div></div>
+                  <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b66">Weekends</div><div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;line-height:1.1;margin-top:4px">{{ dm.weekend }}</div></div>
+                </div>
+                <div style="font-size:11px;color:#8f9c95;margin-top:-8px">Per night, for two. Taxes as applicable.</div>
+              </sc-if>
+              <a href="{{ dm.wa }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;height:48px;padding:0 22px;border:1px solid #b68235;color:#b68235;border-radius:4px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:17px;align-self:flex-start" style-hover="background:rgba(182,130,53,.12)">Enquire on WhatsApp <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES · green, hover index -->
+<section id="experiences" data-screen-label="Experiences" style="margin-top:clamp(64px,10vw,140px);position:relative;background:linear-gradient(180deg,#1f3b34 0%,#25453b 60%,#1f3b34 100%);color:#f1e9da">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);position:absolute;top:0;left:0;transform:translateY(-99%)"><path d="M0 90 L0 66 C140 56 240 28 360 32 C460 36 520 66 620 62 C740 57 800 20 920 24 C1020 27 1070 58 1170 54 C1270 50 1340 32 1440 36 L1440 90 Z" fill="#1f3b34"></path></svg>
+  <svg data-parallax="-30" viewBox="0 0 320 260" aria-hidden="true" style="position:absolute;right:clamp(-60px,-4vw,-20px);top:clamp(-10px,1vw,20px);width:clamp(160px,20vw,320px);height:auto;pointer-events:none;transform-origin:top right;animation:giv-sway 11s ease-in-out infinite alternate"><path d="{{ branchD }}" fill="none" stroke="#d9a962" stroke-width="1" stroke-linecap="round" opacity=".45"></path></svg>
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(20px,5vw,64px) clamp(64px,9vw,130px)">
+    <div data-reveal="1" style="margin-bottom:clamp(28px,4vw,56px)">
+      <p style="margin:0 0 22px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#d9a962"><span style="font-family:'Cormorant Garamond',serif;font-size:14px">VI</span><span style="display:block;width:36px;height:1px;background:#d9a962"></span>Experiences</p>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(38px,4.8vw,72px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance;max-width:20ch">Fill the day, or fill none of it.</h2>
+    </div>
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(28px,5vw,80px);align-items:start">
+      <div style="position:{{ stickyPos }};top:100px">
+        <img src="{{ activeImg }}" alt="{{ activeAlt }}" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:999px 999px 0 0;border:1px solid rgba(217,169,98,.45);transition:opacity .4s ease">
+        <div style="margin-top:12px;display:flex;justify-content:space-between;font-size:12px;color:#b9c4bb"><span style="font-style:italic">{{ activeTitle }}</span><span style="font-variant-numeric:tabular-nums">{{ activeIndexLabel }}</span></div>
+      </div>
+      <ol style="list-style:none;margin:0;padding:0;border-top:1px solid rgba(241,233,218,.18)">
+        <sc-for list="{{ activities }}" as="a" hint-placeholder-count="8">
+          <li onMouseEnter="{{ a.hover }}" onClick="{{ a.hover }}" style="{{ a.style }}">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.1em;color:#d9a962;font-variant-numeric:tabular-nums;padding-top:6px">{{ a.n }}</span>
+            <div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(24px,2vw,32px);font-weight:300;line-height:1.1">{{ a.title }}</div>
+              <div style="font-size:13px;color:#b9c4bb;margin-top:6px;line-height:1.5;text-wrap:pretty">{{ a.body }}</div>
+            </div>
+            <span style="font-size:11px;color:#8f9c95;letter-spacing:.1em;text-transform:uppercase;padding-top:9px;white-space:nowrap">{{ a.when }}</span>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </div>
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px)"><path d="M0 90 L0 58 C120 46 210 22 330 28 C430 34 480 66 580 60 C690 54 750 18 870 24 C970 29 1020 58 1120 54 C1220 50 1290 28 1370 32 C1410 34 1425 44 1440 48 L1440 90 Z" fill="#f3efe6"></path></svg>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" data-screen-label="Gallery" style="padding:clamp(48px,7vw,100px) 0 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:end;gap:20px;margin-bottom:clamp(28px,4vw,48px)">
+      <div>
+        <p style="margin:0 0 22px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#b68235"><span style="font-family:'Cormorant Garamond',serif;font-size:14px">VII</span><span style="display:block;width:36px;height:1px;background:#b68235"></span>Field notes</p>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(38px,4.8vw,72px);line-height:1.02;letter-spacing:-.02em">Kept from the valley.</h2>
+      </div>
+      <a href="https://www.instagram.com/glampinnvalley" target="_blank" rel="noopener" style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#1d2a26;border-bottom:1px solid rgba(29,42,38,.3);padding-bottom:3px;justify-self:end" style-hover="color:#b68235;border-bottom-color:#b68235">@glampinnvalley</a>
+    </div>
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,160px),1fr));grid-auto-rows:clamp(150px,20vw,230px);grid-auto-flow:dense;gap:clamp(10px,1.4vw,18px)">
+      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="8">
+        <img src="{{ g.src }}" alt="{{ g.alt }}" loading="lazy" style="{{ g.style }}">
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events" data-screen-label="Celebrations" style="padding:clamp(64px,10vw,140px) 0 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,64px);align-items:end;margin-bottom:clamp(28px,4vw,48px)">
+      <div>
+        <p style="margin:0 0 22px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#b68235"><span style="font-family:'Cormorant Garamond',serif;font-size:14px">VIII</span><span style="display:block;width:36px;height:1px;background:#b68235"></span>Celebrations</p>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(38px,4.8vw,72px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance">The whole valley, for your <em style="font-style:italic;color:#2f5a4c">occasion.</em></h2>
+      </div>
+      <p style="margin:0;font-size:14px;color:#3d4b46;line-height:1.7;max-width:46ch;text-wrap:pretty">Proposals by lantern light, birthdays around the fire, intimate weddings on the ridge. Tell us the date and we'll shape the evening.</p>
+    </div>
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(12px,1.6vw,24px)">
+      <sc-for list="{{ events }}" as="ev" hint-placeholder-count="4">
+        <a href="{{ ev.wa }}" target="_blank" rel="noopener" style="display:block;color:#1d2a26">
+          <img src="{{ ev.img }}" alt="{{ ev.alt }}" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:999px 999px 0 0;border:6px solid #ece6d8;outline:1px solid rgba(29,42,38,.16);filter:sepia(.15) saturate(.9) contrast(1.04)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;border-bottom:1px solid rgba(29,42,38,.18);padding-bottom:10px">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400">{{ ev.title }}</span>
+            <span style="font-size:11px;color:#b68235;letter-spacing:.1em;text-transform:uppercase">Plan →</span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location" data-screen-label="Getting here" style="padding:clamp(64px,10vw,140px) 0 0;position:relative">
+    <svg viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:clamp(200px,36vw,520px);pointer-events:none"><path d="{{ roadD }}" fill="none" stroke="#2f5a4c" stroke-width=".9" stroke-linejoin="round" stroke-linecap="round" opacity=".2"></path><path d="{{ roadDashD }}" fill="none" stroke="#b68235" stroke-width="1" stroke-dasharray="6 10" stroke-linecap="round" opacity=".35"></path></svg>
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,96px);align-items:center">
+      <div style="position:relative">
+        <svg viewBox="0 0 400 400" aria-hidden="true" style="width:100%;height:auto;display:block">
+          <path d="M40 330 C80 320 90 260 130 250 C180 238 200 200 240 180 C280 160 300 120 350 96" fill="none" stroke="#2f5a4c" stroke-width="1.2" stroke-dasharray="3 5"></path>
+          <path d="M20 360 C90 340 150 300 210 310 C270 320 320 290 380 300" fill="none" stroke="#b68235" stroke-width=".8" opacity=".6"></path>
+          <path d="M60 130 C110 100 150 120 200 90 C250 60 300 80 360 50" fill="none" stroke="#b68235" stroke-width=".8" opacity=".35"></path>
+          <circle cx="40" cy="330" r="3" fill="#1d2a26"></circle><circle cx="130" cy="250" r="3" fill="#1d2a26"></circle><circle cx="240" cy="180" r="3" fill="#1d2a26"></circle>
+          <path d="M336 96 a14 14 0 0 1 28 0 Z" fill="none" stroke="#b68235" stroke-width="1.4"></path><path d="M340 96 L350 82 L360 96 M350 82 L350 96" fill="none" stroke="#b68235" stroke-width=".8"></path>
+          <text x="52" y="346" fill="#1d2a26" font-family="Lora, serif" font-size="10" letter-spacing="1.5">HYDERABAD</text>
+          <text x="140" y="262" fill="#1d2a26" font-family="Lora, serif" font-size="10" letter-spacing="1.5">CHEVELLA</text>
+          <text x="250" y="192" fill="#1d2a26" font-family="Lora, serif" font-size="10" letter-spacing="1.5">VIKARABAD</text>
+          <text x="350" y="130" text-anchor="middle" fill="#b68235" font-family="Cormorant Garamond, serif" font-size="15" font-style="italic">Glamp Inn Valley</text>
+          <text x="350" y="144" text-anchor="middle" fill="#5d6b66" font-family="Lora, serif" font-size="8" letter-spacing="1.5">THIRMALAPUR · PUDUR</text>
+          <text x="20" y="380" fill="#8f9c95" font-family="Lora, serif" font-size="8" letter-spacing="1.5">NOT TO SCALE · ~2 HRS BY ROAD</text>
+        </svg>
+      </div>
+      <div>
+        <p style="margin:0 0 22px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#b68235"><span style="font-family:'Cormorant Garamond',serif;font-size:14px">IX</span><span style="display:block;width:36px;height:1px;background:#b68235"></span>Getting here</p>
+        <h2 style="margin:0 0 20px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(38px,4.8vw,72px);line-height:1.02;letter-spacing:-.02em;text-wrap:balance">Leave the city after lunch. Watch the sunset from your deck.</h2>
+        <p style="margin:0 0 28px;font-size:15px;color:#3d4b46;line-height:1.75;text-wrap:pretty">West of Hyderabad, roughly two hours by road. The drive is part of the escape: past Chevella, into Vikarabad, then a red-earth road through the trees to Thirmalapur.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;font-size:14px">
+          <a href="https://www.google.com/maps/search/?api=1&query=Glamp+Inn+Valley+Thirmalapur+Vikarabad" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;height:46px;padding:0 20px;border:1px solid #b68235;color:#b68235;border-radius:4px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:17px" style-hover="background:rgba(182,130,53,.12)">Open in Maps</a>
+          <span style="color:#5d6b66;font-size:13px;line-height:1.5">Sy.no 50, Thirmalapur Village, Pudur Mandal,<br>Vikarabad, Telangana 501101</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE · night -->
+<section id="book" data-screen-label="Book" style="margin-top:clamp(64px,10vw,140px);position:relative;background:linear-gradient(180deg,#14262a 0%,#0f1f23 100%);color:#f1e9da;overflow:hidden">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);position:absolute;top:0;left:0;transform:translateY(-99%)"><path d="M0 90 L0 64 C130 54 220 26 340 30 C440 34 500 66 600 62 C720 57 780 22 900 26 C1000 29 1050 58 1150 54 C1250 50 1330 32 1440 36 L1440 90 Z" fill="#14262a"></path></svg>
+  <div aria-hidden="true" style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(241,233,218,.7) 0 1px,transparent 1.6px),radial-gradient(circle,rgba(217,169,98,.55) 0 1px,transparent 1.7px);background-size:230px 230px,410px 410px;background-position:40px 20px,180px 100px"></div>
+  {{ firefliesClose }}
+  <svg viewBox="0 0 400 200" aria-hidden="true" style="position:absolute;right:-8%;bottom:0;width:min(70vw,820px);height:auto;opacity:.16"><path d="{{ latticeD }}" fill="none" stroke="#d9a962" stroke-width=".7"></path></svg>
+  
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(72px,11vw,160px) clamp(20px,5vw,64px)">
+    <p style="margin:0 0 22px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#d9a962"><span style="display:block;width:36px;height:1px;background:#d9a962"></span>Your weekend, elsewhere</p>
+    <h2 style="margin:0 0 34px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(46px,6.8vw,104px);line-height:.95;letter-spacing:-.025em;max-width:16ch;text-wrap:balance">The valley is closer than you <em style="font-style:italic;color:#d9a962">think.</em></h2>
+    <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center">
+      <a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;height:54px;padding:0 30px;border:1px solid #d9a962;color:#f1e9da;border-radius:4px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:19px" style-hover="background:rgba(217,169,98,.18)">Check Availability on WhatsApp</a>
+      <a href="tel:+917095466999" style="color:#f1e9da;font-family:'Cormorant Garamond',serif;font-size:20px;border-bottom:1px solid rgba(241,233,218,.4);padding-bottom:2px" style-hover="border-bottom-color:#d9a962;color:#f1e9da">+91 70954 66999</a>
+    </div>
+  </div>
+  <footer style="position:relative;border-top:1px solid rgba(241,233,218,.14);color:#b9c4bb">
+    <div style="max-width:1440px;margin:0 auto;padding:32px clamp(20px,5vw,64px) calc(32px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px;font-size:12px;letter-spacing:.04em">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <img src="img/logo-1.webp" alt="Glamp Inn Valley" style="height:38px;width:auto;align-self:flex-start;filter:brightness(1.2)">
+        <span>Glamping and Adventures · Thirmalapur, Vikarabad</span>
+      </div>
+      <nav style="display:flex;flex-wrap:wrap;gap:12px 24px">
+        <a href="#domes" style="color:#b9c4bb" style-hover="color:#d9a962">Stay</a>
+        <a href="#experiences" style="color:#b9c4bb" style-hover="color:#d9a962">Experiences</a>
+        <a href="#gallery" style="color:#b9c4bb" style-hover="color:#d9a962">Gallery</a>
+        <a href="mailto:glampinnvalley01@gmail.com" style="color:#b9c4bb" style-hover="color:#d9a962">glampinnvalley01@gmail.com</a>
+        <a href="https://www.instagram.com/glampinnvalley" target="_blank" rel="noopener" style="color:#b9c4bb" style-hover="color:#d9a962">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=100095675161083" target="_blank" rel="noopener" style="color:#b9c4bb" style-hover="color:#d9a962">Facebook</a>
+      </nav>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span>© 2026 Glamping and Adventures. All rights reserved.</span>
+        <span>Designed and developed by <a href="https://creativals.com" target="_blank" rel="noopener" style="color:#d9a962;text-decoration:underline;text-underline-offset:3px" style-hover="color:#e8c07a">creativals.com</a></span>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<sc-if value="{{ showBar }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(243,239,230,.94);backdrop-filter:blur(10px);border-top:1px solid rgba(29,42,38,.16);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:14px;color:#1d2a26">
+    <div style="line-height:1.2"><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#5d6b66">From</div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;font-variant-numeric:tabular-nums">₹9,999 <span style="font-size:13px;font-family:'Lora',serif;color:#5d6b66">/ night</span></div></div>
+    <a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;height:46px;padding:0 20px;border:1px solid #b68235;color:#b68235;border-radius:4px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:17px;white-space:nowrap">Check Availability</a>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPrices&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Booking&quot;},&quot;stickyBookBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Booking&quot;},&quot;revealAnimations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;ambientMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { scrolled: false, pastHero: false, isMobile: false, activeAct: 0, menuOpen: false, ready: false };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const y = window.scrollY;
+      const scrolled = y > 40, pastHero = y > window.innerHeight * 0.9;
+      if (scrolled !== this.state.scrolled || pastHero !== this.state.pastHero) this.setState({ scrolled, pastHero });
+      if (this.props.ambientMotion !== false && !this.raf) this.raf = requestAnimationFrame(() => { this.raf = 0; this.ambient(); });
+    };
+    this.onResize = () => {
+      const isMobile = window.innerWidth < 860;
+      if (isMobile !== this.state.isMobile || !this.state.ready) this.setState({ isMobile, ready: true });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onResize);
+    this.onResize(); this.onScroll(); if (this.props.ambientMotion !== false) this.ambient();
+    if (this.props.revealAnimations !== false) this.setupReveal();
+    this.setupTimeline();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onResize);
+    if (this.io) this.io.disconnect();
+    if (this.raf) cancelAnimationFrame(this.raf);
+  }
+  setupTimeline() {
+    const track = document.getElementById('dayTimelineTrack');
+    const nextBtn = document.getElementById('timelineScrollNext');
+    const prevBtn = document.getElementById('timelineScrollPrev');
+    const fNext = document.getElementById('timelineFloatNext');
+    const fPrev = document.getElementById('timelineFloatPrev');
+    if (!track) return;
+
+    const getStep = () => {
+      const card = track.querySelector('.giv-timeline-card');
+      if (card) {
+        const style = window.getComputedStyle(track);
+        const gap = parseFloat(style.columnGap || style.gap) || 20;
+        const cardW = card.getBoundingClientRect().width + gap;
+        const visible = Math.max(1, Math.floor(track.clientWidth / cardW));
+        return cardW * Math.max(1, Math.min(visible, 2));
+      }
+      return track.clientWidth * 0.75;
+    };
+
+    const update = () => {
+      const max = Math.max(0, track.scrollWidth - track.clientWidth);
+      const cur = track.scrollLeft;
+      const atStart = cur <= 10, atEnd = cur >= max - 15;
+      if (prevBtn) {
+        prevBtn.disabled = atStart;
+        prevBtn.style.opacity = atStart ? '0.35' : '1';
+        prevBtn.style.pointerEvents = atStart ? 'none' : 'auto';
+      }
+      if (fPrev) fPrev.classList.toggle('disabled', atStart);
+      if (fNext) fNext.classList.toggle('disabled', atEnd);
+      if (nextBtn) {
+        const txt = nextBtn.querySelector('.giv-timeline-btn-text');
+        if (txt) txt.textContent = atEnd ? 'Back to start' : 'Scroll sideways';
+        const circle = nextBtn.querySelector('.giv-timeline-nav-circle');
+        if (circle) {
+          circle.innerHTML = atEnd
+            ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>'
+            : '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+        }
+      }
+    };
+
+    const forward = () => {
+      const max = Math.max(0, track.scrollWidth - track.clientWidth);
+      if (track.scrollLeft >= max - 15) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: getStep(), behavior: 'smooth' });
+      }
+    };
+
+    const backward = () => {
+      if (track.scrollLeft <= 15) {
+        const max = Math.max(0, track.scrollWidth - track.clientWidth);
+        track.scrollTo({ left: max, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+      }
+    };
+
+    if (nextBtn) nextBtn.addEventListener('click', forward);
+    if (prevBtn) prevBtn.addEventListener('click', backward);
+    if (fNext) fNext.addEventListener('click', forward);
+    if (fPrev) fPrev.addEventListener('click', backward);
+
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    setTimeout(update, 100);
+
+    let isDown = false, startX = 0, sLeft = 0;
+    track.addEventListener('mousedown', e => {
+      if (e.target.closest('button')) return;
+      isDown = true;
+      track.classList.add('is-dragging');
+      startX = e.pageX - track.offsetLeft;
+      sLeft = track.scrollLeft;
+    });
+    window.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      e.preventDefault();
+      track.scrollLeft = sLeft - (e.pageX - track.offsetLeft - startX) * 1.5;
+    });
+    window.addEventListener('mouseup', () => {
+      if (!isDown) return;
+      isDown = false;
+      track.classList.remove('is-dragging');
+      update();
+    });
+  }
+  setupReveal() {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.style.opacity = '1'; e.target.style.transform = e.target.dataset.baseTransform || 'none'; io.unobserve(e.target);
+    }), { threshold: 0.08 });
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.getBoundingClientRect().top > window.innerHeight) {
+        el.style.transition = 'opacity 1.1s cubic-bezier(.2,.6,.2,1), transform 1.1s cubic-bezier(.2,.6,.2,1)';
+        el.style.opacity = '0'; el.style.transform = 'translateY(28px)';
+      }
+      io.observe(el);
+    });
+    this.io = io;
+  }
+
+  // scroll-driven ambience: botanical parallax + the sun crossing the day section
+  ambient() {
+    const vh = window.innerHeight;
+    document.querySelectorAll('[data-parallax]').forEach(el => {
+      const r = el.getBoundingClientRect(), p = (r.top + r.height / 2 - vh / 2) / vh;
+      el.style.translate = '0 ' + (p * parseFloat(el.dataset.parallax)).toFixed(1) + 'px';
+    });
+    const sun = document.querySelector('[data-sun]');
+    if (sun) {
+      const r = sun.getBoundingClientRect(), t = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+      const x = 12 + t * 76, y = 78 - Math.sin(t * Math.PI) * 60, warm = t > .7 ? '226,140,94' : '226,168,94';
+      sun.style.background = 'radial-gradient(circle at ' + x.toFixed(1) + '% ' + y.toFixed(1) + '%,rgba(' + warm + ',.34) 0%,rgba(' + warm + ',.12) 18%,rgba(' + warm + ',0) 42%)';
+    }
+  }
+  rng(seed) { let s = seed >>> 0; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); }
+  // Topographic contours around two summits, perturbed by low-frequency noise
+  contour() {
+    const r = this.rng(7), out = [];
+    [[380, 520, 1], [1080, 300, .8]].forEach(([cx, cy, k]) => {
+      const ph = Array.from({ length: 4 }, () => r() * Math.PI * 2);
+      for (let ring = 1; ring <= 9; ring++) {
+        const base = ring * 62 * k; let d = '';
+        for (let i = 0; i <= 96; i++) {
+          const a = (i / 96) * Math.PI * 2;
+          const n = 1 + .11 * Math.sin(2 * a + ph[0]) + .07 * Math.sin(3 * a + ph[1]) + .05 * Math.sin(5 * a + ph[2]) + .03 * Math.sin(7 * a + ph[3] + ring * .4);
+          d += (i ? ' L' : 'M') + (cx + base * n * Math.cos(a) * 1.35).toFixed(1) + ' ' + (cy + base * n * Math.sin(a) * .8).toFixed(1);
+        }
+        out.push(d + ' Z');
+      }
+    });
+    return out.join(' ');
+  }
+  // A fern frond: curved rachis with alternating pinnae shortening toward the tip
+  fern() {
+    const P = t => [30 + 150 * t * t * .9 + 20 * t, 400 - 380 * t], f = v => v.toFixed(1);
+    let d = 'M' + P(0).map(f).join(' ');
+    for (let i = 1; i <= 40; i++) d += ' L' + P(i / 40).map(f).join(' ');
+    for (let i = 3; i < 38; i++) {
+      const t = i / 40, [x, y] = P(t), [x2, y2] = P(t + .02), ang = Math.atan2(y2 - y, x2 - x);
+      const len = 62 * (1 - t) * (t < .15 ? t / .15 : 1) + 6, side = i % 2 ? 1 : -1, a = ang + side * 1.15;
+      const ex = x + Math.cos(a) * len, ey = y + Math.sin(a) * len, cx = x + Math.cos(a - side * .35) * len * .6, cy = y + Math.sin(a - side * .35) * len * .6;
+      d += ' M' + f(x) + ' ' + f(y) + ' Q' + f(cx) + ' ' + f(cy) + ' ' + f(ex) + ' ' + f(ey);
+      for (let k = 1; k <= 4; k++) { const u = k / 5, px = x + (ex - x) * u, py = y + (ey - y) * u, l = len * .22 * (1 - u * .6), b = a + side * 1.1; d += ' M' + f(px) + ' ' + f(py) + ' l' + f(Math.cos(b) * l) + ' ' + f(Math.sin(b) * l); }
+    }
+    return d;
+  }
+  // Wild grass: a clump of blades of varied height and lean
+  grass() {
+    const r = this.rng(11), f = v => v.toFixed(1); let d = '';
+    for (let i = 0; i < 26; i++) {
+      const x = 20 + r() * 520, hgt = 90 + r() * 190, lean = (r() - .5) * 160;
+      d += ' M' + f(x) + ' 300 Q' + f(x + lean * .3) + ' ' + f(300 - hgt * .55) + ' ' + f(x + lean) + ' ' + f(300 - hgt);
+      if (r() > .55) d += ' m0 0 l' + (lean > 0 ? -8 : 8) + ' ' + f(10 + r() * 8);
+    }
+    return d;
+  }
+  // A leafy branch entering from a corner
+  branch() {
+    const r = this.rng(5), f = v => v.toFixed(1);
+    const leaf = (x, y, ang, l) => { const c = Math.cos(ang), s = Math.sin(ang); return ' M' + f(x) + ' ' + f(y) + ' Q' + f(x + c * l * .5 - s * l * .32) + ' ' + f(y + s * l * .5 + c * l * .32) + ' ' + f(x + c * l) + ' ' + f(y + s * l) + ' Q' + f(x + c * l * .5 + s * l * .32) + ' ' + f(y + s * l * .5 - c * l * .32) + ' ' + f(x) + ' ' + f(y) + ' M' + f(x) + ' ' + f(y) + ' L' + f(x + c * l * .85) + ' ' + f(y + s * l * .85); };
+    const B = t => { const u = 1 - t, p = [[320, 10], [200, 60], [90, 155], [40, 250]]; return [0, 1].map(j => u * u * u * p[0][j] + 3 * u * u * t * p[1][j] + 3 * u * t * t * p[2][j] + t * t * t * p[3][j]); };
+    let d = 'M320 10 C200 60 90 155 40 250';
+    for (let i = 1; i < 12; i++) {
+      const t = i / 12, [x, y] = B(t), [x2, y2] = B(t + .01), ang = Math.atan2(y2 - y, x2 - x), side = i % 2 ? 1 : -1, l = 34 + r() * 26;
+      d += leaf(x, y, ang + side * (1 + r() * .3), l);
+      if (r() > .5) d += leaf(x, y, ang + side * (1.9 + r() * .3), l * .7);
+    }
+    return d;
+  }
+  // The valley skyline: two hill lines and a ridge of small trees
+  landscape() {
+    const r = this.rng(3), f = v => v.toFixed(1); let d = '';
+    const ridge = (x, y0, amp, ph, fr) => y0 - amp * Math.sin(x / 1440 * Math.PI * fr + ph) - amp * .4 * Math.sin(x / 1440 * Math.PI * fr * 2.3 + ph * 2);
+    const hill = (y0, amp, ph, fr) => { let s = ''; for (let i = 0; i <= 72; i++) { const x = (i / 72) * 1440; s += (i ? ' L' : ' M') + f(x) + ' ' + f(ridge(x, y0, amp, ph, fr)); } return s; };
+    d += hill(170, 26, .4, 2.2) + hill(214, 18, 1.9, 3.1);
+    for (let i = 0; i < 34; i++) {
+      const x = 30 + r() * 1380, y = ridge(x, 170, 26, .4, 2.2), hgt = 16 + r() * 26;
+      if (r() > .4) { d += ' M' + f(x) + ' ' + f(y) + ' l0 -' + f(hgt * .35); for (let k = 0; k < 3; k++) { const yy = y - hgt * .3 - k * hgt * .22, w = hgt * .3 * (1 - k * .25); d += ' M' + f(x - w) + ' ' + f(yy) + ' L' + f(x) + ' ' + f(yy - hgt * .3) + ' L' + f(x + w) + ' ' + f(yy); } }
+      else { const rr = hgt * .32; d += ' M' + f(x) + ' ' + f(y) + ' l0 -' + f(hgt * .4) + ' M' + f(x - rr) + ' ' + f(y - hgt * .4) + ' a' + f(rr) + ' ' + f(rr) + ' 0 1 1 ' + f(rr * 2) + ' 0 a' + f(rr) + ' ' + f(rr * .8) + ' 0 1 1 -' + f(rr * 2) + ' 0'; }
+    }
+    return d;
+  }
+  fireflies(n, seed) {
+    if (this.props.ambientMotion === false) return null;
+    const r = this.rng(seed);
+    return React.createElement('div', { 'aria-hidden': true, style: { position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' } },
+      Array.from({ length: n }, (_, i) => React.createElement('span', { key: i, style: { position: 'absolute', left: (r() * 100) + '%', top: (20 + r() * 75) + '%', width: '3px', height: '3px', borderRadius: '50%', background: '#e8c07a', boxShadow: '0 0 6px 2px rgba(232,192,122,.55)', opacity: 0, animation: 'giv-firefly ' + (7 + r() * 9).toFixed(1) + 's ease-in-out ' + (-r() * 14).toFixed(1) + 's infinite alternate' } })));
+  }
+
+  // Seamless 480x300 tile: two rolling ridgelines whose ends meet, with small pines on the crests
+  ridgeTile() {
+    const r = this.rng(17), f = v => v.toFixed(1), W = 480; let d = '';
+    const ridge = (y0, amp, ph) => x => y0 - amp * Math.sin(x / W * Math.PI * 2 + ph) - amp * .45 * Math.sin(x / W * Math.PI * 4 + ph * 1.7);
+    [[150, 22, .6], [232, 16, 2.4]].forEach(([y0, amp, ph], li) => {
+      const g = ridge(y0, amp, ph); d += ' M0 ' + f(g(0));
+      for (let i = 1; i <= 48; i++) { const x = i / 48 * W; d += ' L' + f(x) + ' ' + f(g(x)); }
+      for (let i = 0; i < (li ? 5 : 7); i++) {
+        const x = 20 + r() * (W - 40), y = g(x), hgt = 10 + r() * 12;
+        d += ' M' + f(x) + ' ' + f(y) + ' l0 -' + f(hgt * .3);
+        for (let k = 0; k < 2; k++) { const yy = y - hgt * .28 - k * hgt * .3, w = hgt * .28 * (1 - k * .3); d += ' M' + f(x - w) + ' ' + f(yy) + ' L' + f(x) + ' ' + f(yy - hgt * .38) + ' L' + f(x + w) + ' ' + f(yy); }
+      }
+    });
+    return d.trim();
+  }
+
+  // A road running from the bottom edge toward a vanishing point on the horizon, with fence posts and trees receding
+  road() {
+    const r = this.rng(23), f = v => v.toFixed(1), VX = 1010, VY = 250, W = 1440, H = 520;
+    let d = '';
+    // horizon hills
+    for (let i = 0; i <= 72; i++) { const x = i / 72 * W, y = VY - 8 - 22 * Math.sin(x / W * Math.PI * 2.4 + .7) - 9 * Math.sin(x / W * Math.PI * 5.2); d += (i ? ' L' : ' M') + f(x) + ' ' + f(y); }
+    // road edges: curves from the bottom converging to the vanishing point
+    d += ' M' + f(W * .18) + ' ' + H + ' C' + f(W * .42) + ' ' + f(H * .78) + ' ' + f(VX - 120) + ' ' + f(VY + 90) + ' ' + f(VX) + ' ' + f(VY);
+    d += ' M' + f(W * .62) + ' ' + H + ' C' + f(W * .66) + ' ' + f(H * .78) + ' ' + f(VX + 20) + ' ' + f(VY + 70) + ' ' + f(VX) + ' ' + f(VY);
+    // fence posts along the left edge, shrinking toward the horizon
+    for (let i = 0; i < 9; i++) { const t = i / 9, u = 1 - t, x = W * .18 * u * u * u + 3 * u * u * t * W * .42 + 3 * u * t * t * (VX - 120) + t * t * t * VX, y = H * u * u * u + 3 * u * u * t * H * .78 + 3 * u * t * t * (VY + 90) + t * t * t * VY, hgt = 40 * (1 - t) + 4; d += ' M' + f(x - 30 * (1 - t) - 6) + ' ' + f(y) + ' l0 -' + f(hgt); }
+    // trees on either side, larger near, smaller far
+    for (let i = 0; i < 14; i++) { const t = r(), side = r() > .5 ? 1 : -1, y = VY + 10 + (H - VY - 10) * t * t, x = side > 0 ? VX + 120 + (W - VX) * t * r() : VX - 200 - VX * t * r(); const hgt = 18 + 90 * t; if (x < 0 || x > W) continue; if (r() > .5) { d += ' M' + f(x) + ' ' + f(y) + ' l0 -' + f(hgt * .3); for (let k = 0; k < 3; k++) { const yy = y - hgt * .28 - k * hgt * .24, w = hgt * .26 * (1 - k * .28); d += ' M' + f(x - w) + ' ' + f(yy) + ' L' + f(x) + ' ' + f(yy - hgt * .34) + ' L' + f(x + w) + ' ' + f(yy); } } else { const rr = hgt * .3; d += ' M' + f(x) + ' ' + f(y) + ' l0 -' + f(hgt * .42) + ' M' + f(x - rr) + ' ' + f(y - hgt * .42) + ' a' + f(rr) + ' ' + f(rr) + ' 0 1 1 ' + f(rr * 2) + ' 0 a' + f(rr) + ' ' + f(rr * .85) + ' 0 1 1 -' + f(rr * 2) + ' 0'; } }
+    // a small dome at the vanishing point
+    d += ' M' + f(VX - 14) + ' ' + f(VY - 6) + ' a14 14 0 0 1 28 0 M' + f(VX) + ' ' + f(VY - 20) + ' L' + f(VX) + ' ' + f(VY - 6) + ' M' + f(VX - 14) + ' ' + f(VY - 6) + ' L' + f(VX + 14) + ' ' + f(VY - 6);
+    return d.trim();
+  }
+  roadDash() {
+    const f = v => v.toFixed(1), VX = 1010, VY = 250, W = 1440, H = 520;
+    return 'M' + f(W * .40) + ' ' + H + ' C' + f(W * .54) + ' ' + f(H * .78) + ' ' + f(VX - 50) + ' ' + f(VY + 80) + ' ' + f(VX) + ' ' + f(VY);
+  }
+
+  // ---- v3 background drawings ----
+  // Star chart: an astrolabe-like ring with radial hour lines, declination arcs, and a "dome" constellation
+  starChart() {
+    const f = v => v.toFixed(1), cx = 1100, cy = 260, R = 340; let d = '';
+    [R, R * .78, R * .56, R * .34].forEach(r => d += ' M' + f(cx - r) + ' ' + f(cy) + ' a' + f(r) + ' ' + f(r) + ' 0 1 0 ' + f(r * 2) + ' 0 a' + f(r) + ' ' + f(r) + ' 0 1 0 -' + f(r * 2) + ' 0');
+    for (let i = 0; i < 24; i++) { const a = i / 24 * Math.PI * 2, r0 = i % 2 ? R * .92 : R * .34; d += ' M' + f(cx + Math.cos(a) * r0) + ' ' + f(cy + Math.sin(a) * r0) + ' L' + f(cx + Math.cos(a) * R) + ' ' + f(cy + Math.sin(a) * R); }
+    return d.trim();
+  }
+  starChartStars() {
+    const r = this.rng(31), f = v => v.toFixed(1); let d = '';
+    for (let i = 0; i < 90; i++) { const x = r() * 1440, y = r() * 620; d += ' M' + f(x) + ' ' + f(y) + ' l0 .1'; }
+    // the Dome constellation, near the chart centre
+    const pts = [[980, 300], [1030, 230], [1100, 200], [1170, 230], [1220, 300]];
+    pts.forEach(p => d += ' M' + p[0] + ' ' + p[1] + ' l0 .1');
+    return d.trim();
+  }
+  meteor() { return 'M320 60 L470 140 M1290 520 L1400 590 M180 330 L260 372'; }
+  // Peacock: a fan of tail feathers rising from the corner, each with an eye
+  peacock() {
+    const f = v => v.toFixed(1), ox = 400, oy = 700; let d = '';
+    for (let i = 0; i < 9; i++) {
+      const a = Math.PI * .55 + i * .085, len = 520 + (i % 2) * 60;
+      const ex = ox + Math.cos(a) * len, ey = oy - Math.sin(a) * len;
+      d += ' M' + ox + ' ' + oy + ' Q' + f(ox + Math.cos(a) * len * .5 - 30) + ' ' + f(oy - Math.sin(a) * len * .5) + ' ' + f(ex) + ' ' + f(ey);
+      for (let k = 2; k < 9; k++) { const t = k / 9, px = ox + (ex - ox) * t, py = oy + (ey - oy) * t, bl = 26 * (1 - t * .3); d += ' M' + f(px) + ' ' + f(py) + ' l' + f(Math.cos(a + 1.3) * bl) + ' ' + f(-Math.sin(a + 1.3) * bl) + ' M' + f(px) + ' ' + f(py) + ' l' + f(Math.cos(a - 1.3) * bl) + ' ' + f(-Math.sin(a - 1.3) * bl); }
+    }
+    return d.trim();
+  }
+  peacockEye() {
+    const f = v => v.toFixed(1), ox = 400, oy = 700; let d = '';
+    for (let i = 0; i < 9; i++) { const a = Math.PI * .55 + i * .085, len = 520 + (i % 2) * 60, ex = ox + Math.cos(a) * len, ey = oy - Math.sin(a) * len; d += ' M' + f(ex - 14) + ' ' + f(ey) + ' a14 20 0 1 0 28 0 a14 20 0 1 0 -28 0 M' + f(ex - 6) + ' ' + f(ey) + ' a6 9 0 1 0 12 0 a6 9 0 1 0 -12 0'; }
+    return d.trim();
+  }
+  // A loose flock of birds crossing the top of the valley section
+  birds() {
+    const r = this.rng(41), f = v => v.toFixed(1); let d = '';
+    for (let i = 0; i < 11; i++) { const x = 120 + i * 90 + r() * 60, y = 60 + Math.sin(i * .7) * 40 + r() * 30, s = 8 + r() * 8; d += ' M' + f(x - s) + ' ' + f(y) + ' q' + f(s * .5) + ' -' + f(s * .7) + ' ' + f(s) + ' 0 q' + f(s * .5) + ' -' + f(s * .7) + ' ' + f(s) + ' 0'; }
+    return d.trim();
+  }
+  // Looking up through the dome: a great circle of concentric polygons and radial struts
+  ceiling() {
+    const f = v => v.toFixed(1), cx = 1120, cy = 480; let d = '';
+    for (let k = 1; k <= 6; k++) { const r = k * 90, n = 6 * k; let s = ''; for (let i = 0; i <= n; i++) { const a = i / n * Math.PI * 2; s += (i ? ' L' : ' M') + f(cx + Math.cos(a) * r) + ' ' + f(cy + Math.sin(a) * r); } d += s; }
+    for (let i = 0; i < 36; i++) { const a = i / 36 * Math.PI * 2; d += ' M' + f(cx + Math.cos(a) * 90) + ' ' + f(cy + Math.sin(a) * 90) + ' L' + f(cx + Math.cos(a) * 540) + ' ' + f(cy + Math.sin(a) * 540); }
+    return d.trim();
+  }
+  // Sun-path dial: the day's arc with hour ticks and a small sun and moon at either end
+  sundial() {
+    const f = v => v.toFixed(1), cx = 720, cy = 500, R = 640; let d = ' M' + (cx - R) + ' ' + cy + ' A' + R + ' ' + R + ' 0 0 1 ' + (cx + R) + ' ' + cy;
+    for (let i = 0; i <= 12; i++) { const a = Math.PI - i / 12 * Math.PI, l = i % 3 ? 10 : 22; d += ' M' + f(cx + Math.cos(a) * R) + ' ' + f(cy - Math.sin(a) * R) + ' L' + f(cx + Math.cos(a) * (R - l)) + ' ' + f(cy - Math.sin(a) * (R - l)); }
+    d += ' M' + (cx - R - 40) + ' ' + cy + ' a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0';
+    for (let i = 0; i < 8; i++) { const a = i / 8 * Math.PI * 2; d += ' M' + f(cx - R - 28 + Math.cos(a) * 16) + ' ' + f(cy + Math.sin(a) * 16) + ' l' + f(Math.cos(a) * 6) + ' ' + f(Math.sin(a) * 6); }
+    d += ' M' + (cx + R + 20) + ' ' + (cy - 12) + ' a12 12 0 1 0 0 24 a9 9 0 1 1 0 -24';
+    return d.trim();
+  }
+  dragonfly() {
+    const f = v => v.toFixed(1); let d = '';
+    [[420, 90, 1], [500, 150, -1]].forEach(([x, y, s]) => { d += ' M' + x + ' ' + y + ' l' + f(40 * s) + ' 6 M' + x + ' ' + y + ' l-3 -5 m0 0 l6 0 M' + f(x + 8 * s) + ' ' + (y + 1) + ' q' + f(18 * s) + ' -22 ' + f(34 * s) + ' -4 q-' + f(18 * s) + ' 6 -' + f(34 * s) + ' 4 M' + f(x + 8 * s) + ' ' + (y + 1) + ' q' + f(18 * s) + ' 20 ' + f(32 * s) + ' 5 q-' + f(16 * s) + ' -4 -' + f(32 * s) + ' -5'; });
+    return d.trim();
+  }
+  // Milky Way: a dense diagonal band of dots with a few brighter stars
+  milkyWay(bright) {
+    const r = this.rng(bright ? 53 : 52), f = v => v.toFixed(1); let d = '';
+    const n = bright ? 40 : 700;
+    for (let i = 0; i < n; i++) { const t = r(), x = t * 1440, spread = bright ? 160 : 120 + r() * 140, y = 700 - t * 520 + (r() - .5) * spread; if (y < 0 || y > 900) continue; d += ' M' + f(x) + ' ' + f(y) + ' l0 .1'; }
+    if (!bright) for (let i = 0; i < 120; i++) d += ' M' + f(r() * 1440) + ' ' + f(r() * 900) + ' l0 .1';
+    return d.trim();
+  }
+  moonPhases() { let d = ''; for (let i = 0; i < 8; i++) { const cx = 60 + i * 74; d += ' M' + (cx - 16) + ' 22 a16 16 0 1 0 32 0 a16 16 0 1 0 -32 0'; } return d.trim(); }
+  moonPhasesFill() {
+    let d = ''; for (let i = 0; i < 8; i++) { const cx = 60 + i * 74, k = i / 8 * 2; if (i === 0) continue; if (i === 4) { d += ' M' + (cx - 16) + ' 22 a16 16 0 1 0 32 0 a16 16 0 1 0 -32 0'; continue; }
+      const w = 16 * Math.abs(Math.cos(i / 8 * Math.PI * 2)), sweep = i < 4 ? 1 : 0; const inner = i < 4 ? (i < 2 ? 0 : 1) : (i < 6 ? 1 : 0);
+      d += ' M' + cx + ' 6 A16 16 0 0 ' + sweep + ' ' + cx + ' 38 A' + f2(w) + ' 16 0 0 ' + (((i % 4) < 2) === (i < 4) ? sweep : 1 - sweep) + ' ' + cx + ' 6 Z'; }
+    function f2(v) { return Math.max(.1, v).toFixed(1); }
+    return d.trim();
+  }
+  // The dome monogram (1f) tiled with a small star between
+  monoTile() {
+    const mono = (x, y, s) => { const f = v => v.toFixed(1); let d = ' M' + f(x - 29 * s) + ' ' + f(y) + ' a' + f(29 * s) + ' ' + f(29 * s) + ' 0 1 0 ' + f(58 * s) + ' 0 a' + f(29 * s) + ' ' + f(29 * s) + ' 0 1 0 -' + f(58 * s) + ' 0';
+      d += ' M' + f(x - 18 * s) + ' ' + f(y + 6 * s) + ' A' + f(18 * s) + ' ' + f(18 * s) + ' 0 0 1 ' + f(x + 18 * s) + ' ' + f(y + 6 * s) + ' M' + f(x) + ' ' + f(y - 12 * s) + ' L' + f(x) + ' ' + f(y + 6 * s) + ' M' + f(x - 12 * s) + ' ' + f(y - 8 * s) + ' L' + f(x) + ' ' + f(y + 6 * s) + ' L' + f(x + 12 * s) + ' ' + f(y - 8 * s) + ' M' + f(x - 18 * s) + ' ' + f(y + 6 * s) + ' L' + f(x + 18 * s) + ' ' + f(y + 6 * s);
+      d += ' M' + f(x - 26 * s) + ' ' + f(y + 12 * s) + ' C' + f(x - 12 * s) + ' ' + f(y + 6 * s) + ' ' + f(x) + ' ' + f(y + 16 * s) + ' ' + f(x + 26 * s) + ' ' + f(y + 10 * s);
+      d += ' M' + f(x) + ' ' + f(y - 24 * s) + ' l0 6 M' + f(x - 3 * s) + ' ' + f(y - 21 * s) + ' l6 0'; return d; };
+    return (mono(55, 50, 1) + mono(165, 145, 1) + ' M165 40 l0 8 M161 44 l8 0 M55 150 l0 8 M51 154 l8 0').trim();
+  }
+  // Trail map: a dotted path wandering through the section with waypoint rings and small pine clusters
+  trail() { return 'M-20 780 C160 700 240 560 420 540 C600 520 640 380 820 360 C1000 340 1060 200 1240 180 C1340 170 1400 120 1480 90'; }
+  trailMarks() {
+    const f = v => v.toFixed(1); let d = '';
+    [[420, 540], [820, 360], [1240, 180]].forEach(([x, y], i) => { d += ' M' + (x - 9) + ' ' + y + ' a9 9 0 1 0 18 0 a9 9 0 1 0 -18 0 M' + (x - 16) + ' ' + y + ' a16 16 0 1 0 32 0 a16 16 0 1 0 -32 0'; });
+    const r = this.rng(61);
+    for (let i = 0; i < 18; i++) { const x = r() * 1440, y = 120 + r() * 720, hgt = 14 + r() * 18; d += ' M' + f(x) + ' ' + f(y) + ' l0 -' + f(hgt * .3); for (let k = 0; k < 2; k++) { const yy = y - hgt * .28 - k * hgt * .3, w = hgt * .28 * (1 - k * .3); d += ' M' + f(x - w) + ' ' + f(yy) + ' L' + f(x) + ' ' + f(yy - hgt * .38) + ' L' + f(x + w) + ' ' + f(yy); } }
+    return d.trim();
+  }
+  compass() {
+    let d = ' M100 100 m-70 0 a70 70 0 1 0 140 0 a70 70 0 1 0 -140 0 M100 100 m-58 0 a58 58 0 1 0 116 0 a58 58 0 1 0 -116 0';
+    d += ' M100 30 L112 100 L100 170 L88 100 Z M30 100 L100 88 L170 100 L100 112 Z M100 88 L100 112 M88 100 L112 100';
+    for (let i = 0; i < 16; i++) { const a = i / 16 * Math.PI * 2, l = i % 4 ? 5 : 10; d += ' M' + (100 + Math.cos(a) * 70).toFixed(1) + ' ' + (100 + Math.sin(a) * 70).toFixed(1) + ' L' + (100 + Math.cos(a) * (70 - l)).toFixed(1) + ' ' + (100 + Math.sin(a) * (70 - l)).toFixed(1); }
+    return d.trim();
+  }
+  // Closing horizon: the twin domes on the ridge, drawn large and faint
+  horizonDomes() {
+    const f = v => v.toFixed(1); let d = '';
+    for (let i = 0; i <= 72; i++) { const x = i / 72 * 1440, y = 560 - 30 * Math.sin(x / 1440 * Math.PI * 2.2 + .6) - 12 * Math.sin(x / 1440 * Math.PI * 5); d += (i ? ' L' : ' M') + f(x) + ' ' + f(y); }
+    const dome = (cx, by, R) => { let s = ' M' + f(cx - R) + ' ' + f(by) + ' A' + R + ' ' + R + ' 0 0 1 ' + f(cx + R) + ' ' + f(by) + ' M' + f(cx - R) + ' ' + f(by) + ' L' + f(cx + R) + ' ' + f(by); for (let k = 1; k <= 3; k++) { const a = Math.PI - k * Math.PI / 4; s += ' M' + f(cx) + ' ' + f(by) + ' L' + f(cx + Math.cos(a) * R) + ' ' + f(by - Math.sin(a) * R); } s += ' M' + f(cx - R * .7) + ' ' + f(by) + ' A' + f(R * .7) + ' ' + f(R * .7) + ' 0 0 1 ' + f(cx + R * .7) + ' ' + f(by); return s; };
+    d += dome(300, 540, 120) + dome(560, 548, 120) + ' M160 548 L700 548 M160 548 l0 14 M700 548 l0 14 M160 562 L700 562';
+    return d.trim();
+  }
+
+  // Geodesic dome lattice: three rings + radials + zigzag struts, in a 400x200 box (base at y=200)
+  lattice() {
+    const cx = 200, cy = 200, R = [190, 132, 74, 22], N = [16, 12, 8, 4];
+    const pt = (r, i, n) => { const a = Math.PI - (Math.PI * i) / n; return [cx + r * Math.cos(a), cy - r * Math.sin(a)]; };
+    let d = '';
+    for (let k = 0; k < R.length; k++) {
+      d += `M${pt(R[k], 0, N[k]).join(' ')}`;
+      for (let i = 1; i <= N[k]; i++) d += ` L${pt(R[k], i, N[k]).map(v => v.toFixed(1)).join(' ')}`;
+    }
+    for (let k = 0; k < R.length - 1; k++) {
+      const n1 = N[k], n2 = N[k + 1];
+      for (let i = 0; i <= n1; i++) {
+        const p = pt(R[k], i, n1), j = Math.round((i * n2) / n1), q = pt(R[k + 1], j, n2);
+        d += ` M${p.map(v => v.toFixed(1)).join(' ')} L${q.map(v => v.toFixed(1)).join(' ')}`;
+        if (i < n1) { const q2 = pt(R[k + 1], Math.min(n2, Math.round(((i + 1) * n2) / n1)), n2); d += ` L${q2.map(v => v.toFixed(1)).join(' ')}`; }
+      }
+    }
+    d += ` M${cx - R[0]} ${cy} L${cx + R[0]} ${cy}`;
+    return d;
+  }
+
+  renderVals() {
+    const WA = 'https://wa.me/917095466999?text=';
+    const waUrl = WA + encodeURIComponent("Hi Glamp Inn Valley, I'd like to check availability for a dome stay.");
+    const { scrolled, isMobile, menuOpen, activeAct, pastHero, ready } = this.state;
+    const showPrices = this.props.showPrices !== false;
+    const stickyBar = this.props.stickyBookBar !== false;
+    const onDark = !scrolled && !menuOpen;
+    const navStyle = {
+      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, height: scrolled ? '64px' : '84px',
+      color: onDark ? '#f1e9da' : '#1d2a26',
+      background: onDark ? 'transparent' : 'rgba(243,239,230,.92)',
+      backdropFilter: onDark ? 'none' : 'blur(10px)',
+      borderBottom: onDark ? '1px solid transparent' : '1px solid rgba(29,42,38,.14)',
+      transition: 'height .4s ease, background .4s ease, color .4s ease, border-color .4s ease'
+    };
+    const navBtnStyle = {
+      display: isMobile && !scrolled ? 'none' : 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '42px', padding: '0 18px',
+      border: '1px solid ' + (onDark ? '#d9a962' : '#b68235'), color: onDark ? '#f1e9da' : '#b68235', borderRadius: '4px',
+      fontFamily: "'Cormorant Garamond', serif", fontWeight: 600, fontSize: '17px', whiteSpace: 'nowrap', transition: 'all .3s ease'
+    };
+
+    const domeFeatures = [
+      { n: '01', title: 'Private deck', body: 'Your own terrace over the hillside, with stargazer chairs for the evening show.' },
+      { n: '02', title: 'Valley window', body: 'A full-height glazed panel facing east across the forest.' },
+      { n: '03', title: 'En-suite bath', body: 'Attached bathroom with hot water, inside the dome.' },
+      { n: '04', title: 'Infinity hammock', body: 'In Sangla, Silent, Solang and Spiti: a net hung out over the drop.' }
+    ];
+    const plateC = { width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block', border: '6px solid #ece6d8', outline: '1px solid rgba(29,42,38,.16)', filter: 'sepia(.15) saturate(.9) contrast(1.04)' };
+    const dayRaw = [
+      { time: '6 am', title: 'Sunrise Delight', body: 'Crisp morning air and a panoramic view of the Vikarabad forest from your deck.', img: 'img/sunrise-delight.webp', alt: 'Sunrise from a dome deck' },
+      { time: '7 am', title: 'Guided Trek', body: 'Walk out to Bhiravakona, a 400-year-old Siva temple in the hills.', img: 'img/guided-trekking.png', alt: 'Guest with arms wide over the fields' },
+      { time: '8:30 am', title: 'Horse Ride', body: 'Well-trained horses, quiet paths through the greenery.', img: 'img/horse-ride.png', alt: 'Horse ride past the domes' },
+      { time: 'Late morning', title: 'Floating Breakfast', body: 'Served on the water, with the hills as your table setting.', img: 'img/floating-breakfast.webp', alt: 'Floating breakfast tray in the pool' },
+      { time: 'Afternoon', title: 'The Pool', body: 'Nothing to do but watch the weather move across the valley.', img: 'img/gallery-b3.webp', alt: 'Infinity pool looking over the valley' },
+      { time: '6 pm', title: 'Sunset Spectacle', body: 'The sky turns, and the domes glow.', img: 'img/sunset-spectacle.png', alt: 'Domes at sunset' },
+      { time: '7:30 pm', title: 'Musical Bonfire', body: 'Barbecue, music and a cozy fire under the stars.', img: 'img/musical-bonfire.png', alt: 'Friends around a bonfire' },
+      { time: 'Night', title: 'Candlelight Dinner', body: 'A table under the lanterns, then a sky full of stars.', img: 'img/candle-light-dinner.webp', alt: 'Candlelit dinner table under lantern-lit trees' }
+    ];
+    // cards follow the sun's arc: rise, peak, set
+    const day = dayRaw.map((d, i) => {
+      const t = i / (dayRaw.length - 1), lift = Math.round(Math.sin(t * Math.PI) * -36);
+      return { ...d, lift: lift + 'px', imgStyle: { ...plateC, borderRadius: i % 2 ? '999px 999px 0 0' : '0' } };
+    });
+
+    const acts = [
+      { title: 'Guided Trekking', body: 'Morning trail to Bhiravakona, a 400-year-old Siva temple.', when: 'Morning', img: 'img/guided-trekking.png' },
+      { title: 'Heritage Expedition', body: 'Damagundam Ramalingeshwara Swami Temple, 800 years old, in Pudur.', when: 'Morning · Evening', img: 'img/gallery-4.webp' },
+      { title: 'Horse Ride', body: 'Explore the surroundings on horseback with our well-trained horses.', when: 'Morning', img: 'img/horse-ride.png' },
+      { title: 'Bicycle Ride', body: 'Stone paths between the domes and out into the fields.', when: 'Anytime', img: 'img/bicycle-ride.webp' },
+      { title: 'Floating Breakfast', body: 'Breakfast served on the infinity pool.', when: 'Morning', img: 'img/floating-breakfast.webp' },
+      { title: 'Stud Farm Visit', body: 'Up close with the horses at a local stud farm.', when: '4:30 pm', img: 'img/horse-ride.png' },
+      { title: 'Barbecue', body: 'Grill at your table as the lights come on across the valley.', when: 'Evening', img: 'img/barbeque.webp' },
+      { title: 'Private Bonfire', body: 'A fire of your own, beside your dome.', when: 'Evening', img: 'img/gallery-7.webp' },
+      { title: 'Candlelight Dinner', body: 'A table set under the lanterns for two.', when: 'Night', img: 'img/candle-light-dinner.webp' },
+      { title: 'Karaoke Melodies', body: 'Sing your heart out with the people you came with.', when: '8 pm', img: 'img/musical-bonfire.png' }
+    ];
+    const activities = acts.map((a, i) => ({
+      ...a, n: String(i + 1).padStart(2, '0'),
+      hover: () => { if (this.state.activeAct !== i) this.setState({ activeAct: i }); },
+      style: { display: 'grid', gridTemplateColumns: '44px 1fr auto', gap: '14px', padding: '18px 0', borderBottom: '1px solid rgba(241,233,218,.18)', cursor: 'pointer', opacity: activeAct === i ? 1 : 0.55, transition: 'opacity .3s ease' }
+    }));
+    const act = acts[activeAct] || acts[0];
+
+    const domeWa = n => WA + encodeURIComponent("Hi Glamp Inn Valley, I'd like to check availability for " + n + ".");
+    const domes = [
+      { kicker: 'Twin Valley · Right & Left', name: 'Twin Valley', body: 'Two domes on one shared deck, ideal for friends or family travelling together. 450 sq ft each.', features: ['Attached bathroom', 'Stargazer chairs', 'Private deck', '450 sq ft'], weekday: '₹9,999', weekend: '₹11,999', img: 'img/banner4.webp', alt: 'Twin Valley domes from above', wa: domeWa('Twin Valley'), radius: '0' },
+      { kicker: 'Nubra · Araku', name: 'Nubra & Araku', body: 'Standalone domes set a little apart, each with a quiet deck facing the forest. 450 sq ft.', features: ['Attached bathroom', 'Stargazer chairs', 'Private deck', '450 sq ft'], weekday: '₹10,499', weekend: '₹12,499', img: 'img/gallery-b4.webp', alt: 'Dome interior looking out to the valley', wa: domeWa('Nubra or Araku Valley'), radius: '0 999px 0 0' },
+      { kicker: 'Sangla · Silent Valley', name: 'Sangla & Silent Valley', body: 'The same 450 sq ft, with an infinity hammock hung out over the hillside from your deck.', features: ['Attached bathroom', 'Stargazer chairs', 'Private deck', 'Infinity hammock', '450 sq ft'], weekday: '₹11,499', weekend: '₹13,499', img: 'img/gallery-0.webp', alt: 'Dome window with the hammock and valley beyond', wa: domeWa('Sangla or Silent Valley'), radius: '0' },
+      { kicker: 'Solang · Spiti Valley', name: 'Solang & Spiti Valley', body: 'The largest domes on the ridge at 550 sq ft, with the infinity hammock and the widest view.', features: ['Attached bathroom', 'Stargazer chairs', 'Private deck', 'Infinity hammock', '550 sq ft'], weekday: '₹14,499', weekend: '₹16,499', img: 'img/banner3.webp', alt: 'Golden quilted dome interior', wa: domeWa('Solang or Spiti Valley'), radius: '999px 0 0 0' }
+    ];
+    const reviews = [
+      { quote: 'Glamp Inn Valley exceeded my expectations! The Domes were a dream, and the stargazing sessions were simply magical.', name: 'Shruthi Kumari', handle: '@ShruKu', img: 'img/rev-shruthi.webp' },
+      { quote: "Glamp Inn Valley's eco-luxury concept is outstanding. A haven for nature enthusiasts and comfort seekers alike.", name: 'V Rahul', handle: '@rahul06', img: 'img/rev-rahul.webp' },
+      { quote: 'Glamp Inn Valley is a hidden gem. Hiking and luxury seamlessly blend in this breathtaking retreat.', name: 'Awanthika P V', handle: '@awanthi996', img: 'img/rev-awanthika.webp' }
+    ];
+    const plate = { width: '100%', height: '100%', objectFit: 'cover', display: 'block', border: '6px solid #ece6d8', outline: '1px solid rgba(29,42,38,.16)', filter: 'sepia(.15) saturate(.9) contrast(1.04)' };
+    const gallery = [
+      { src: 'img/gallery-image.webp', alt: 'Dome on its deck in tall grass', style: { ...plate, gridColumn: 'span 2', gridRow: 'span 2', borderRadius: '999px 999px 0 0' } },
+      { src: 'img/gallery-1.webp', alt: 'Bed and gold sconces inside a dome', style: plate },
+      { src: 'img/gallery-3.webp', alt: 'Twin Valley sign among red foliage', style: plate },
+      { src: 'img/banner5.webp', alt: 'Deck chairs facing the hills', style: { ...plate, gridColumn: 'span 2' } },
+      { src: 'img/infinity-pool.webp', alt: 'Guest in a hat by the infinity pool', style: { ...plate, gridRow: 'span 2', borderRadius: '0 0 999px 999px' } },
+      { src: 'img/gallery-2.webp', alt: 'Chess set on the deck', style: plate },
+      { src: 'img/barbeque.webp', alt: 'Barbecue with friends at night', style: plate },
+      { src: 'img/gallery-b5.webp', alt: 'Barbecue table on the lawn above the pool', style: { ...plate, gridColumn: 'span 2' } }
+    ];
+    const events = [
+      { title: 'Proposals', img: 'img/proposal.webp', alt: 'Marry me in lights on the lawn', wa: WA + encodeURIComponent("Hi Glamp Inn Valley, I'd like to plan a proposal.") },
+      { title: 'Birthdays', img: 'img/birthday.webp', alt: 'Birthday decor', wa: WA + encodeURIComponent("Hi Glamp Inn Valley, I'd like to plan a birthday.") },
+      { title: 'Private Events', img: 'img/private-events.webp', alt: 'Private event setup', wa: WA + encodeURIComponent("Hi Glamp Inn Valley, I'd like to plan a private event.") },
+      { title: 'Weddings', img: 'img/wedding.webp', alt: 'Wedding decor', wa: WA + encodeURIComponent("Hi Glamp Inn Valley, I'd like to plan a wedding.") }
+    ];
+
+    return {
+      waUrl, navStyle, navBtnStyle, showPrices, latticeD: this.lattice(), starChartD: this.starChart(), starChartStarsD: this.starChartStars(), meteorD: this.meteor(), peacockD: this.peacock(), peacockEyeD: this.peacockEye(), birdsD: this.birds(), ceilingD: this.ceiling(), sundialD: this.sundial(), dragonflyD: this.dragonfly(), milkyWayD: this.milkyWay(false), milkyWayBrightD: this.milkyWay(true), moonPhasesD: this.moonPhases(), moonPhasesFillD: this.moonPhasesFill(), monoTileD: this.monoTile(), trailD: this.trail(), trailMarksD: this.trailMarks(), compassD: this.compass(), horizonDomesD: this.horizonDomes(), latticeHalfD: this.lattice(), roadD: this.road(), roadDashD: this.roadDash(), ridgeTileD: this.ridgeTile(), contourD: this.contour(), fernD: this.fern(), grassD: this.grass(), branchD: this.branch(), landscapeD: this.landscape(),
+      firefliesHero: this.fireflies(10, 21), firefliesNight: this.fireflies(18, 42), firefliesClose: this.fireflies(12, 63),
+      logoFilter: onDark ? 'brightness(1.25)' : 'none',
+      stickyPos: ready && isMobile ? 'static' : 'sticky',
+      isMobile: ready && isMobile, isDesktop: !ready || !isMobile, menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      showBar: stickyBar && ready && isMobile && pastHero && !menuOpen,
+      domeFeatures, day, activities, domes, reviews, gallery, events,
+      activeImg: act.img, activeAlt: act.title, activeTitle: act.title,
+      activeIndexLabel: String(activeAct + 1).padStart(2, '0') + ' / ' + String(acts.length).padStart(2, '0')
+    };
+  }
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const nightRitualsData = [
+    {
+      pill: 'OBSERVATORY POOL · RIDGE ELEVATION 700M',
+      title: 'VALLEY PANORAMA · CLEAR SKY',
+      sub: 'Pristine waters meeting endless forest canopy · 17:00',
+      archImg: 'img/night-ridge-arch.webp',
+      archAlt: 'Hillside infinity pool overlooking the Vikarabad valley with astronomical dome grid',
+      satelliteImg: 'img/night-ridge-fire.webp',
+      satelliteAlt: 'Private Bonfire Hearth beside your dome',
+      satelliteTag: 'PRIVATE BONFIRE',
+      satelliteType: 'fire',
+      satelliteTarget: 1,
+      satelliteTooltip: 'Switch to Private Bonfire Hearth'
+    },
+    {
+      pill: 'PRIVATE BONFIRE HEARTH · STARLIT EVENINGS',
+      title: 'PRIVATE BONFIRE HEARTH',
+      sub: 'Crackling firewood & cozy stargazing seating beside your dome · 19:30',
+      archImg: 'img/night-ridge-bonfire.jpg',
+      archAlt: 'Private bonfire hearth with crackling fire and stargazing seating beside luxury geodesic dome',
+      satelliteImg: 'img/night-ridge-arch.webp',
+      satelliteAlt: 'Hillside Infinity Pool',
+      satelliteTag: 'INFINITY POOL',
+      satelliteType: 'pool',
+      satelliteTarget: 0,
+      satelliteTooltip: 'Switch to Hillside Infinity Pool'
+    },
+    {
+      pill: 'DARK-SKY OBSERVATORY · BORTLE CLASS 3',
+      title: 'DARK-SKY MILKY WAY',
+      sub: 'Bortle Class 3 observatory darkness with zero city glare · 21:00',
+      archImg: 'img/night-ridge-milkyway.jpg',
+      archAlt: 'Bortle Class 3 starlit night sky with luminous Milky Way core arching over the ridge',
+      satelliteImg: 'img/night-ridge-fire.webp',
+      satelliteAlt: 'Private Bonfire Hearth beside your dome',
+      satelliteTag: 'PRIVATE BONFIRE',
+      satelliteType: 'fire',
+      satelliteTarget: 1,
+      satelliteTooltip: 'Switch to Private Bonfire Hearth'
+    }
+  ];
+
+  const ritualItems = document.querySelectorAll('.giv-night-ritual-item');
+  const archVisual = document.getElementById('givArchVisual');
+  const archPillText = document.getElementById('givArchPillText');
+  const archTitle = document.getElementById('givArchTitle');
+  const archSub = document.getElementById('givArchSub');
+  const archCaptionText = document.querySelector('.giv-arch-caption-text');
+  const archDots = document.querySelectorAll('.giv-arch-dot');
+  const satelliteWrap = document.getElementById('givNightSatelliteWrap');
+  const satelliteImg = document.getElementById('givSatelliteImg');
+  const satelliteTag = document.getElementById('givSatelliteTag');
+  const satelliteTagText = document.getElementById('givSatelliteTagText');
+
+  if (ritualItems.length > 0 && archVisual) {
+    let currentRitual = 0;
+    let isTransitioning = false;
+
+    function switchRitual(index) {
+      if (index < 0 || index >= nightRitualsData.length) return;
+      if (index === currentRitual && !archVisual.classList.contains('fading')) return;
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentRitual = index;
+      const data = nightRitualsData[index];
+
+      ritualItems.forEach((btn, i) => {
+        const isActive = i === index;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      archDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+
+      if (archVisual) archVisual.classList.add('fading');
+      if (satelliteImg) satelliteImg.classList.add('fading');
+      if (archCaptionText) archCaptionText.classList.add('fading');
+
+      setTimeout(() => {
+        if (archVisual) {
+          archVisual.src = data.archImg;
+          archVisual.alt = data.archAlt;
+        }
+        if (archPillText) archPillText.textContent = data.pill;
+        if (archTitle) archTitle.textContent = data.title;
+        if (archSub) archSub.textContent = data.sub;
+
+        if (satelliteImg) {
+          satelliteImg.src = data.satelliteImg;
+          satelliteImg.alt = data.satelliteAlt;
+        }
+        if (satelliteTagText) satelliteTagText.textContent = data.satelliteTag;
+        if (satelliteTag) satelliteTag.dataset.type = data.satelliteType;
+        if (satelliteWrap) {
+          satelliteWrap.dataset.type = data.satelliteType;
+          satelliteWrap.dataset.target = data.satelliteTarget;
+          satelliteWrap.title = data.satelliteTooltip;
+          satelliteWrap.setAttribute('aria-label', data.satelliteTooltip);
+        }
+
+        if (archVisual) archVisual.classList.remove('fading');
+        if (satelliteImg) satelliteImg.classList.remove('fading');
+        if (archCaptionText) archCaptionText.classList.remove('fading');
+
+        isTransitioning = false;
+      }, 180);
+    }
+
+    ritualItems.forEach((btn, idx) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        switchRitual(idx);
+      });
+    });
+
+    archDots.forEach((dot, idx) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        switchRitual(idx);
+      });
+    });
+
+    if (satelliteWrap) {
+      satelliteWrap.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = parseInt(satelliteWrap.dataset.target, 10);
+        if (!isNaN(target)) switchRitual(target);
+      });
+    }
+  }
+});
+</script>
+</body>
+</html>
