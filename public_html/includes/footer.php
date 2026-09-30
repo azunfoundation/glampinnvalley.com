@@ -18,9 +18,9 @@ $svg_paths = require __DIR__ . '/svg-paths.php';
   <!-- Starry Background Points -->
   <div aria-hidden="true" style="position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(241,233,218,.7) 0 1px, transparent 1.6px), radial-gradient(circle, rgba(217,169,98,.55) 0 1px, transparent 1.7px); background-size: 230px 230px, 410px 410px; background-position: 40px 20px, 180px 100px;"></div>
 
-  <!-- Watermark Geodesic Lattice -->
+  <!-- Watermark Logo Geodesic Structure -->
   <svg viewBox="0 0 400 200" aria-hidden="true" style="position: absolute; right: -8%; bottom: 0; width: min(70vw, 820px); height: auto; opacity: .14; pointer-events: none;">
-    <path d="<?= $svg_paths['latticeD'] ?>" fill="none" stroke="#d9a962" stroke-width=".7"></path>
+    <path d="<?= $svg_paths['logoDomeD'] ?>" fill="none" stroke="#d9a962" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"></path>
   </svg>
 
   <!-- CTA Box -->
@@ -83,6 +83,9 @@ $svg_paths = require __DIR__ . '/svg-paths.php';
   <button class="giv-lightbox-close" type="button" aria-label="Close Preview">×</button>
   <img src="" alt="" class="giv-lightbox-img" id="givLightboxImg">
 </div>
+
+<!-- Nature Sounds Ambience Player -->
+<?php require __DIR__ . '/nature-player.php'; ?>
 
 <!-- Scripts -->
 <script src="assets/js/main.js?v=<?= filemtime(__DIR__ . '/../assets/js/main.js') ?>"></script>

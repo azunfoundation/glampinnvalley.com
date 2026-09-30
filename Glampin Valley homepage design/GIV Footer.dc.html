@@ -13,7 +13,7 @@
 <section style="position:relative;background:linear-gradient(180deg,#14262a 0%,#0f1f23 100%);color:#f1e9da;overflow:hidden;font-family:'Lora',Georgia,serif">
   <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);position:absolute;top:0;left:0;transform:translateY(-99%)"><path d="M0 90 L0 64 C130 54 220 26 340 30 C440 34 500 66 600 62 C720 57 780 22 900 26 C1000 29 1050 58 1150 54 C1250 50 1330 32 1440 36 L1440 90 Z" fill="#14262a"></path></svg>
   <div aria-hidden="true" style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(241,233,218,.7) 0 1px,transparent 1.6px),radial-gradient(circle,rgba(217,169,98,.55) 0 1px,transparent 1.7px);background-size:230px 230px,410px 410px;background-position:40px 20px,180px 100px"></div>
-  <svg viewBox="0 0 400 200" aria-hidden="true" style="position:absolute;right:-8%;bottom:0;width:min(70vw,820px);height:auto;opacity:.14"><path d="{{ latticeD }}" fill="none" stroke="#d9a962" stroke-width=".7"></path></svg>
+  <svg viewBox="0 0 400 200" aria-hidden="true" style="position:absolute;right:-8%;bottom:0;width:min(70vw,820px);height:auto;opacity:.14"><path d="{{ latticeD }}" fill="none" stroke="#d9a962" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
   <div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px) clamp(48px,6vw,80px)">
     <p style="margin:0 0 20px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#d9a962"><span style="display:block;width:36px;height:1px;background:#d9a962"></span>{{ kicker }}</p>
     <h2 style="margin:0 0 30px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(40px,5.6vw,84px);line-height:.98;letter-spacing:-.02em;max-width:16ch;text-wrap:balance">{{ title }}</h2>
@@ -47,12 +47,7 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:560},&quot;kicker&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Your weekend, elsewhere&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;title&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;The valley is closer than you think.&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;waText&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Hi Glamp Inn Valley, I'd like to check availability for a dome stay.&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   lattice() {
-    const cx = 200, cy = 200, R = [190, 132, 74, 22], N = [16, 12, 8, 4], f = v => v.toFixed(1);
-    const pt = (r, i, n) => { const a = Math.PI - (Math.PI * i) / n; return [cx + r * Math.cos(a), cy - r * Math.sin(a)]; };
-    let d = '';
-    for (let k = 0; k < R.length; k++) { d += 'M' + pt(R[k], 0, N[k]).map(f).join(' '); for (let i = 1; i <= N[k]; i++) d += ' L' + pt(R[k], i, N[k]).map(f).join(' '); }
-    for (let k = 0; k < R.length - 1; k++) { const n1 = N[k], n2 = N[k + 1]; for (let i = 0; i <= n1; i++) { const p = pt(R[k], i, n1), q = pt(R[k + 1], Math.round(i * n2 / n1), n2); d += ' M' + p.map(f).join(' ') + ' L' + q.map(f).join(' '); if (i < n1) d += ' L' + pt(R[k + 1], Math.min(n2, Math.round((i + 1) * n2 / n1)), n2).map(f).join(' '); } }
-    return d + ' M10 200 L390 200';
+    return 'M151.7 72.4 L248.3 72.4 M151.7 72.4 L65.8 124 M248.3 72.4 L334.2 124 M65.8 124 L10 200 M334.2 124 L390 200 M10 200 L49.7 169 M390 200 L350.3 169 M49.7 169 L37.3 200 M350.3 169 L362.7 200 M49.7 169 L57.1 200 M350.3 169 L342.9 200 M65.8 124 L49.7 169 M334.2 124 L350.3 169 M65.8 124 L115.7 104.6 M334.2 124 L284.3 104.6 M151.7 72.4 L115.7 104.6 M248.3 72.4 L284.3 104.6 M115.7 104.6 L49.7 169 M284.3 104.6 L350.3 169 M115.7 104.6 L85.6 197.9 M284.3 104.6 L314.4 197.9 M151.7 72.4 L200 86 M248.3 72.4 L200 86 M115.7 104.6 L200 86 M284.3 104.6 L200 86 M200 86 L85.6 197.9 M200 86 L314.4 197.9 M115.7 104.6 L200 133.9 M284.3 104.6 L200 133.9 M49.7 169 L200 133.9 M350.3 169 L200 133.9';
   }
   renderVals() {
     return {

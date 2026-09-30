@@ -115,8 +115,8 @@ require __DIR__ . '/includes/header.php';
         <?php endforeach; ?>
       </div>
 
-      <svg viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true" class="giv-hero-arch-lattice">
-        <path d="<?= $svg_paths['latticeD'] ?>" fill="none" stroke="#f1e9da" stroke-width=".6" vector-effect="non-scaling-stroke"></path>
+      <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYEnd meet" aria-hidden="true" class="giv-hero-arch-lattice">
+        <path d="<?= $svg_paths['logoDomeArchD'] ?>" fill="none" stroke="#f1e9da" stroke-width=".6" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
       </svg>
 
       <!-- Slide Caption -->

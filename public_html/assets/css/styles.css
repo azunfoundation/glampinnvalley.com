@@ -54,6 +54,7 @@
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -62,6 +63,8 @@ html {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -76,7 +79,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,6 +94,7 @@ a {
   color: var(--color-accent);
   text-decoration: none;
   transition: color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a:hover {
@@ -99,6 +105,30 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* Universal mobile interaction reset for clickable & interactive elements */
+a,
+button,
+input,
+textarea,
+select,
+summary,
+[role="button"],
+[tabindex] {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Focus outline handling:
+   Removes the default mobile browser blue highlight / focus ring on tap/click,
+   while preserving accessible outline for desktop keyboard navigation via :focus-visible */
+:focus {
+  outline: none;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 :focus-visible {
@@ -227,17 +257,22 @@ img {
   display: flex;
   align-items: center;
   color: inherit;
+  flex-shrink: 0;
 }
 
 .giv-logo {
   height: 52px;
   width: auto;
+  max-width: none;
+  flex-shrink: 0;
   display: block;
+  object-fit: contain;
   transition: height 0.4s ease, filter 0.4s ease;
 }
 
 .giv-header.scrolled .giv-logo {
   height: 44px;
+  width: auto;
   filter: brightness(1.25);
 }
 
@@ -601,8 +636,113 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   Buttons
+   Buttons & Interactive Clickable Controls Base
    -------------------------------------------------------------------------- */
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn,
+.giv-btn-gold,
+.giv-btn-outline,
+.giv-btn-link,
+.giv-btn-nav,
+.giv-quick-btn,
+.giv-menu-btn,
+.giv-mobile-toggle,
+.giv-drawer-close,
+.giv-drawer-nav a,
+.giv-drawer-btn-primary,
+.giv-drawer-btn-secondary,
+.giv-drawer-phone,
+.giv-filter-btn,
+.giv-music-btn,
+.giv-lightbox-close,
+.giv-timeline-nav-btn,
+.giv-timeline-action-btn,
+.giv-timeline-float-arrow,
+.giv-dome-slider-arrow,
+.giv-dome-slider-dot,
+.giv-night-ritual-item,
+.giv-arch-dot,
+.giv-hero-arch-arrow,
+.giv-hero-arch-dot,
+.giv-nav-link {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+/* Prevent native blue selection background inside buttons & interactive items */
+button::selection,
+[role="button"]::selection,
+input[type="button"]::selection,
+input[type="submit"]::selection,
+input[type="reset"]::selection,
+.btn::selection,
+.giv-btn-gold::selection,
+.giv-btn-outline::selection,
+.giv-btn-link::selection,
+.giv-btn-nav::selection,
+.giv-quick-btn::selection,
+.giv-drawer-btn-primary::selection,
+.giv-drawer-btn-secondary::selection,
+.giv-drawer-nav a::selection,
+.giv-filter-btn::selection,
+.giv-music-btn::selection,
+.giv-nav-link::selection {
+  background: transparent;
+  color: inherit;
+}
+
+/* Remove default focus outlines on click/tap for all buttons and clickable elements */
+button:focus,
+a:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+[role="button"]:focus,
+.giv-btn-gold:focus,
+.giv-btn-outline:focus,
+.giv-btn-link:focus,
+.giv-btn-nav:focus,
+.giv-quick-btn:focus,
+.giv-menu-btn:focus,
+.giv-mobile-toggle:focus,
+.giv-drawer-close:focus,
+.giv-drawer-btn-primary:focus,
+.giv-drawer-btn-secondary:focus,
+.giv-filter-btn:focus,
+.giv-music-btn:focus,
+.btn:focus {
+  outline: none;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+[role="button"]:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus-visible,
+[role="button"]:focus-visible,
+.giv-btn-gold:focus-visible,
+.giv-btn-outline:focus-visible,
+.giv-btn-nav:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 .giv-btn-gold {
   display: inline-flex;
   align-items: center;
@@ -701,8 +841,12 @@ img {
 
 @media (min-width: 861px) {
   .giv-experiences-preview {
+    position: -webkit-sticky;
     position: sticky;
-    top: 100px;
+    top: clamp(80px, 11vh, 100px);
+    align-self: start;
+    z-index: 5;
+    will-change: top;
   }
 }
 
@@ -718,11 +862,15 @@ img {
   overflow: hidden;
   border: 1px solid rgba(217, 169, 98, 0.45);
   background: #142622;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .giv-experiences-preview-img {
   width: 100%;
   aspect-ratio: 4 / 5;
+  max-height: calc(100vh - 200px);
   object-fit: cover;
   display: block;
   transition: opacity 0.3s ease;
@@ -987,9 +1135,14 @@ img {
   }
   .giv-logo {
     height: 42px;
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+    object-fit: contain;
   }
   .giv-header.scrolled .giv-logo {
     height: 36px;
+    width: auto;
   }
 
   /* Subfooter clearance (mobile sticky booking bar is hidden) */
@@ -1734,6 +1887,7 @@ img {
   z-index: 6;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
   padding: 5px 14px;
   border-radius: 999px;
@@ -1750,11 +1904,11 @@ img {
 }
 
 .giv-live-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #2ebd85;
-  box-shadow: 0 0 8px #2ebd85;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .giv-arch-viewport {
@@ -1950,8 +2104,9 @@ img {
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: 999px;
   background: rgba(10, 22, 20, 0.9);
   border: 1px solid rgba(217, 169, 98, 0.4);
@@ -1965,12 +2120,11 @@ img {
 }
 
 .giv-fire-spark {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #e28c3c;
-  box-shadow: 0 0 6px #e28c3c;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 /* Satellite Pool Theme Variant */
@@ -1996,8 +2150,7 @@ img {
 }
 
 .giv-satellite-tag[data-type="pool"] .giv-fire-spark {
-  background: #4ea8de;
-  box-shadow: 0 0 6px #4ea8de;
+  display: none !important;
 }
 
 .giv-night-hotspot {
@@ -2150,7 +2303,7 @@ img {
   aspect-ratio: 2.4 / 1;
   min-height: 240px;
   max-height: 56vh;
-  border-radius: 999px 999px 0 0;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   overflow: hidden;
   border: 1px solid rgba(217, 169, 98, 0.5);
   border-bottom: 0;
@@ -2546,3 +2699,294 @@ img {
 #domeGalleryGrid > div:last-child > div:hover img {
   transform: scale(1.04);
 }
+
+/* ==========================================================================
+   Mobile Button & Tap Interaction Styling (Consistency Enforcement)
+   - Removes blue overlay, blue highlight, or blue selection background on mobile tap/click
+   - Removes default mobile tap highlight / focus ring across all buttons, links, and clickable controls
+   - Preserves original colors, borders, hover effects, transforms, and animations unchanged
+   - Preserves full click/tap functionality across the entire site
+   ========================================================================== */
+@media (hover: none) and (pointer: coarse), (max-width: 860px) {
+  *, *::before, *::after {
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  html,
+  body {
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  summary,
+  [role="button"],
+  [tabindex] {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none;
+  }
+
+  /* Eliminate any tap/touch focus outline or blue highlight on mobile */
+  a:focus,
+  a:active,
+  button:focus,
+  button:active,
+  input:focus,
+  input:active,
+  [role="button"]:focus,
+  [role="button"]:active,
+  .giv-btn-gold:focus,
+  .giv-btn-gold:active,
+  .giv-btn-outline:focus,
+  .giv-btn-outline:active,
+  .giv-btn-link:focus,
+  .giv-btn-link:active,
+  .giv-btn-nav:focus,
+  .giv-btn-nav:active,
+  .giv-quick-btn:focus,
+  .giv-quick-btn:active,
+  .giv-menu-btn:focus,
+  .giv-menu-btn:active,
+  .giv-mobile-toggle:focus,
+  .giv-mobile-toggle:active,
+  .giv-drawer-close:focus,
+  .giv-drawer-close:active,
+  .giv-drawer-nav a:focus,
+  .giv-drawer-nav a:active,
+  .giv-drawer-btn-primary:focus,
+  .giv-drawer-btn-primary:active,
+  .giv-drawer-btn-secondary:focus,
+  .giv-drawer-btn-secondary:active,
+  .giv-drawer-phone:focus,
+  .giv-drawer-phone:active,
+  .giv-filter-btn:focus,
+  .giv-filter-btn:active,
+  .giv-music-btn:focus,
+  .giv-music-btn:active,
+  .giv-lightbox-close:focus,
+  .giv-lightbox-close:active,
+  .giv-timeline-nav-btn:focus,
+  .giv-timeline-nav-btn:active,
+  .giv-timeline-action-btn:focus,
+  .giv-timeline-action-btn:active,
+  .giv-timeline-float-arrow:focus,
+  .giv-timeline-float-arrow:active,
+  .giv-dome-slider-arrow:focus,
+  .giv-dome-slider-arrow:active,
+  .giv-dome-slider-dot:focus,
+  .giv-dome-slider-dot:active,
+  .giv-night-ritual-item:focus,
+  .giv-night-ritual-item:active,
+  .giv-arch-dot:focus,
+  .giv-arch-dot:active,
+  .giv-hero-arch-arrow:focus,
+  .giv-hero-arch-arrow:active,
+  .giv-hero-arch-dot:focus,
+  .giv-hero-arch-dot:active,
+  .giv-nav-link:focus,
+  .giv-nav-link:active,
+  .btn:focus,
+  .btn:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* Prevent text selection and blue selection background when tapping on mobile */
+  button,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  .giv-btn-gold,
+  .giv-btn-outline,
+  .giv-btn-link,
+  .giv-btn-nav,
+  .giv-quick-btn,
+  .giv-menu-btn,
+  .giv-mobile-toggle,
+  .giv-drawer-close,
+  .giv-drawer-nav a,
+  .giv-drawer-btn-primary,
+  .giv-drawer-btn-secondary,
+  .giv-drawer-phone,
+  .giv-filter-btn,
+  .giv-music-btn,
+  .giv-lightbox-close,
+  .giv-timeline-nav-btn,
+  .giv-timeline-action-btn,
+  .giv-timeline-float-arrow,
+  .giv-dome-slider-arrow,
+  .giv-dome-slider-dot,
+  .giv-night-ritual-item,
+  .giv-arch-dot,
+  .giv-hero-arch-arrow,
+  .giv-hero-arch-dot,
+  .giv-nav-link,
+  .btn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+/* ==========================================================================
+   Mobile Hero Section Redesign (Complete Viewport Fit & Rebalanced Composition)
+   ========================================================================== */
+@media (max-width: 860px) {
+  #top.giv-hero-section {
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
+    padding-top: calc(72px + clamp(20px, 4vh, 36px)) !important;
+    padding-bottom: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Hide desktop moon SVG on mobile to avoid background path overflow */
+  .giv-hero-moon {
+    display: none !important;
+  }
+
+  /* Keep content container neatly padded and compact */
+  .giv-hero-content-wrap {
+    flex-shrink: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 clamp(16px, 4.5vw, 24px) !important;
+    box-sizing: border-box !important;
+  }
+
+  .giv-hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: left !important;
+    gap: 0 !important;
+    width: 100% !important;
+  }
+
+  .giv-hero-col-title,
+  .giv-hero-col-copy {
+    width: 100% !important;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
+  /* Location: Vikarabad Hills */
+  .giv-hero-location {
+    margin: 0 0 clamp(6px, 1vh, 10px) !important;
+    font-size: clamp(10.5px, 2.8vw, 12px) !important;
+    letter-spacing: 0.22em !important;
+    gap: 10px !important;
+  }
+  .giv-hero-location-bar {
+    width: 28px !important;
+  }
+
+  /* Heading: Sleep under the whole sky */
+  .giv-hero-heading {
+    font-size: clamp(34px, 9vw, 46px) !important;
+    line-height: 0.96 !important;
+    letter-spacing: -0.02em !important;
+    margin: 0 0 clamp(8px, 1.4vh, 14px) !important;
+  }
+
+  /* Description lead */
+  .giv-hero-col-copy {
+    padding-bottom: 0 !important;
+  }
+  .giv-hero-desc {
+    font-size: clamp(13px, 3.5vw, 15px) !important;
+    line-height: 1.48 !important;
+    max-width: 42ch !important;
+    margin: 0 0 clamp(10px, 1.6vh, 16px) !important;
+    color: rgba(241, 233, 218, 0.84) !important;
+  }
+
+  /* Action Buttons */
+  .giv-hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: clamp(10px, 3vw, 16px) !important;
+    margin-bottom: clamp(6px, 1.2vh, 12px) !important;
+  }
+  .giv-hero-btn-book {
+    padding: clamp(10px, 1.4vh, 13px) clamp(18px, 4vw, 24px) !important;
+    font-size: clamp(12.5px, 3.2vw, 14px) !important;
+    height: auto !important;
+    min-height: 42px !important;
+  }
+  .giv-hero-btn-story {
+    font-size: clamp(14px, 3.6vw, 16.5px) !important;
+    height: clamp(40px, 5vh, 46px) !important;
+    gap: 8px !important;
+  }
+
+  /* Hero Plate Wrapper: balanced natural gap below buttons, refined bottom padding above wave */
+  .giv-hero-plate-wrap {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: clamp(24px, 4.2vh, 38px) auto 0 !important;
+    padding: 0 clamp(12px, 3.5vw, 20px) clamp(18px, 3.2vh, 28px) !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .giv-hero-plate {
+    width: 100% !important;
+    max-width: min(100%, 640px) !important;
+    aspect-ratio: 2 / 1 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0 !important;
+    border: 1px solid rgba(217, 169, 98, 0.5) !important;
+    border-bottom: 1px solid rgba(217, 169, 98, 0.35) !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  /* Image positioning: dome & sunset valley view visible */
+  .giv-hero-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: 65% 50% !important;
+  }
+
+  /* Caption clearance from floating music button */
+  .giv-hero-caption {
+    padding: clamp(10px, 1.8vh, 14px) clamp(12px, 3vw, 18px) !important;
+    padding-left: clamp(54px, 14vw, 66px) !important;
+    font-size: clamp(8.5px, 2.2vw, 10px) !important;
+    letter-spacing: 0.12em !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 3px !important;
+  }
+
+  /* Wave at bottom */
+  .giv-hero-wave {
+    flex-shrink: 0 !important;
+    height: clamp(24px, 3.6vh, 34px) !important;
+    margin-top: -1px !important;
+  }
+}
+
+
+

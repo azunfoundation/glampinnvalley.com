@@ -134,36 +134,68 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => el.classList.add('revealed'));
   }
 
-  // 5. Interactive Experiences Switcher
+  // 5. Interactive Experiences Switcher (Hover, Click, and Scroll-Synchronized)
   const actItems = document.querySelectorAll('.giv-activity-item');
   const actPreviewImg = document.querySelector('#actPreviewImg');
   const actPreviewTitle = document.querySelector('#actPreviewTitle');
   const actPreviewIndex = document.querySelector('#actPreviewIndex');
 
   if (actItems.length > 0) {
+    let currentIdx = 0;
+    let fadeTimeout = null;
+
+    const setActByIndex = (idx) => {
+      if (idx === currentIdx && actItems[idx].classList.contains('active')) return;
+      currentIdx = idx;
+
+      actItems.forEach((it, i) => {
+        if (i === idx) it.classList.add('active');
+        else it.classList.remove('active');
+      });
+
+      if (actPreviewImg) {
+        const item = actItems[idx];
+        const img = item.dataset.img;
+        const title = item.dataset.title;
+        const count = String(idx + 1).padStart(2, '0') + ' / ' + String(actItems.length).padStart(2, '0');
+
+        if (fadeTimeout) clearTimeout(fadeTimeout);
+        actPreviewImg.style.opacity = '0.35';
+        fadeTimeout = setTimeout(() => {
+          actPreviewImg.src = img;
+          actPreviewImg.alt = title;
+          if (actPreviewTitle) actPreviewTitle.textContent = title;
+          if (actPreviewIndex) actPreviewIndex.textContent = count;
+          actPreviewImg.style.opacity = '1';
+        }, 120);
+      }
+    };
+
     actItems.forEach((item, idx) => {
-      const updateAct = () => {
-        actItems.forEach(it => it.classList.remove('active'));
-        item.classList.add('active');
-        if (actPreviewImg) {
-          const img = item.dataset.img;
-          const title = item.dataset.title;
-          const count = String(idx + 1).padStart(2, '0') + ' / ' + String(actItems.length).padStart(2, '0');
-
-          actPreviewImg.style.opacity = '0.3';
-          setTimeout(() => {
-            actPreviewImg.src = img;
-            actPreviewImg.alt = title;
-            if (actPreviewTitle) actPreviewTitle.textContent = title;
-            if (actPreviewIndex) actPreviewIndex.textContent = count;
-            actPreviewImg.style.opacity = '1';
-          }, 150);
-        }
-      };
-
-      item.addEventListener('mouseenter', updateAct);
-      item.addEventListener('click', updateAct);
+      item.addEventListener('mouseenter', () => setActByIndex(idx));
+      item.addEventListener('click', () => setActByIndex(idx));
     });
+
+    // Scroll synchronization on desktop: as user scrolls down the activities, update the sticky image
+    if ('IntersectionObserver' in window) {
+      const scrollSyncObserver = new IntersectionObserver((entries) => {
+        // Only run scroll sync on desktop where the sticky preview is visible
+        if (window.innerWidth <= 860) return;
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const idx = Array.from(actItems).indexOf(entry.target);
+            if (idx !== -1) {
+              setActByIndex(idx);
+            }
+          }
+        });
+      }, {
+        rootMargin: '-25% 0px -45% 0px',
+        threshold: 0.1
+      });
+
+      actItems.forEach(item => scrollSyncObserver.observe(item));
+    }
   }
 
   // 5b. Night on the Ridge Rituals Interactive Switcher
@@ -1122,4 +1154,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 

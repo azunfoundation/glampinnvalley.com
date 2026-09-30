@@ -93,8 +93,8 @@ a:hover{color:#7d5411}
 .giv-night-canvas-stage{position:relative;width:100%;max-width:580px;margin:0 auto}
 .giv-night-arch-card{position:relative;width:100%;border-radius:999px 999px 12px 12px;padding:10px 10px 0 10px;border:1.5px solid rgba(217,169,98,.55);border-bottom:1.5px solid rgba(217,169,98,.25);background:linear-gradient(180deg,rgba(18,38,34,.6) 0%,rgba(10,22,20,.9) 100%);box-shadow:0 28px 70px rgba(0,0,0,.6)}
 .giv-arch-apex-marker{position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:36px;height:2.5px;background:#e28c3c;border-radius:2px;box-shadow:0 0 10px rgba(226,140,60,.8);z-index:5}
-.giv-arch-pill{position:absolute;top:26px;left:50%;transform:translateX(-50%);z-index:6;display:inline-flex;align-items:center;gap:7px;padding:5px 14px;border-radius:999px;background:rgba(10,22,20,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(217,169,98,.35);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#f1e9da;white-space:nowrap;pointer-events:none}
-.giv-live-dot{width:6px;height:6px;border-radius:50%;background:#2ebd85;box-shadow:0 0 8px #2ebd85}
+.giv-arch-pill{position:absolute;top:26px;left:50%;transform:translateX(-50%);z-index:6;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:5px 14px;border-radius:999px;background:rgba(10,22,20,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(217,169,98,.35);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#f1e9da;white-space:nowrap;pointer-events:none}
+.giv-live-dot{display:none!important;width:0!important;height:0!important;visibility:hidden!important}
 .giv-arch-viewport{position:relative;width:100%;aspect-ratio:16/11;border-radius:999px 999px 6px 6px;overflow:hidden;background:#081210}
 .giv-arch-visual{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
 .giv-arch-visual.fading{opacity:.18;transform:scale(.97)}
@@ -119,14 +119,14 @@ a:hover{color:#7d5411}
 .giv-satellite-img.fading{opacity:.15;transform:scale(.95)}
 .giv-night-satellite-wrap:hover .giv-satellite-img{transform:scale(1.1)}
 .giv-satellite-glow{position:absolute;inset:0;background:radial-gradient(circle,transparent 50%,rgba(0,0,0,.7) 100%);pointer-events:none}
-.giv-satellite-tag{position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);white-space:nowrap;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(10,22,20,.9);border:1px solid rgba(217,169,98,.4);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#f1e9da;box-shadow:0 4px 12px rgba(0,0,0,.4);pointer-events:none;transition:border-color .4s ease}
-.giv-fire-spark{width:5px;height:5px;border-radius:50%;background:#e28c3c;box-shadow:0 0 6px #e28c3c;transition:background .4s ease,box-shadow .4s ease}
+.giv-satellite-tag{position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:4px 12px;border-radius:999px;background:rgba(10,22,20,.9);border:1px solid rgba(217,169,98,.4);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#f1e9da;box-shadow:0 4px 12px rgba(0,0,0,.4);pointer-events:none;transition:border-color .4s ease}
+.giv-fire-spark{display:none!important;width:0!important;height:0!important;visibility:hidden!important}
 .giv-night-satellite-wrap[data-type="pool"] .giv-satellite-circle{border-color:rgba(78,168,222,.75);box-shadow:0 0 50px 10px rgba(78,168,222,.32),0 16px 36px rgba(0,0,0,.65)}
 .giv-night-satellite-wrap[data-type="pool"]:hover .giv-satellite-circle{box-shadow:0 0 70px 16px rgba(78,168,222,.5)}
 .giv-night-satellite-wrap[data-type="pool"] .giv-satellite-orbit-outer{border-color:rgba(78,168,222,.35)}
 .giv-night-satellite-wrap[data-type="pool"] .giv-satellite-orbit-middle{border-color:rgba(78,168,222,.28)}
 .giv-satellite-tag[data-type="pool"]{border-color:rgba(78,168,222,.5)}
-.giv-satellite-tag[data-type="pool"] .giv-fire-spark{background:#4ea8de;box-shadow:0 0 6px #4ea8de}
+.giv-satellite-tag[data-type="pool"] .giv-fire-spark{display:none!important}
 .giv-night-hotspot{position:absolute;inset:0;z-index:3;cursor:pointer}
 .giv-night-metrics-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.5vw,28px);padding:clamp(24px,3.5vw,36px) 0;border-top:1px solid rgba(241,233,218,.12);border-bottom:1px solid rgba(241,233,218,.12);margin-top:clamp(20px,3vw,40px);margin-bottom:clamp(60px,8vw,100px)}
 .giv-metric-card{display:flex;flex-direction:column;gap:6px}
@@ -215,10 +215,10 @@ a:hover{color:#7d5411}
   </div>
   <!-- dome-shaped hero plate with lattice -->
   <div style="position:relative;max-width:1440px;margin:clamp(36px,6vh,72px) auto 0;padding:0 clamp(20px,5vw,64px)">
-    <div style="position:relative;width:100%;aspect-ratio:2/1;min-height:clamp(260px,52vh,440px);max-height:70vh;border-radius:999px 999px 0 0;overflow:hidden;border:1px solid rgba(217,169,98,.5);border-bottom:0">
+    <div style="position:relative;width:100%;aspect-ratio:2/1;min-height:clamp(260px,52vh,440px);max-height:70vh;border-radius:50% 50% 0 0 / 100% 100% 0 0;overflow:hidden;border:1px solid rgba(217,169,98,.5);border-bottom:0">
       <img src="img/home-slider.webp" alt="Sunset over the valley from a private dome deck" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 55%">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,31,35,.35) 0%,rgba(15,31,35,0) 40%)"></div>
-      <svg viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;opacity:.55;mix-blend-mode:screen"><path d="{{ latticeD }}" fill="none" stroke="#f1e9da" stroke-width=".6" vector-effect="non-scaling-stroke"></path></svg>
+      <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYEnd meet" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;opacity:.55;mix-blend-mode:screen"><path d="{{ latticeD }}" fill="none" stroke="#f1e9da" stroke-width=".6" vector-effect="non-scaling-stroke"></path></svg>
       <div style="position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;align-items:flex-end;padding:clamp(14px,2.5vw,32px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#f1e9da;text-shadow:0 1px 8px rgba(0,0,0,.5)">
         <span>18° 12′ N · 77° 50′ E</span>
         <span style="display:inline-flex;align-items:center;gap:8px"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 3 20 12 6 21"></polygon></svg> property film · placeholder</span>
@@ -285,17 +285,17 @@ a:hover{color:#7d5411}
       </div>
       <div style="position:relative">
         <svg viewBox="0 0 400 260" aria-hidden="true" style="width:100%;height:auto;display:block;overflow:visible">
-          <path d="{{ latticeD }}" fill="none" stroke="#d9a962" stroke-width=".9" opacity=".9"></path>
+          <path d="M151.7 10 L248.3 10 M151.7 10 L65.8 86.9 M248.3 10 L334.2 86.9 M65.8 86.9 L10 200 M334.2 86.9 L390 200 M10 200 L49.7 153.9 M390 200 L350.3 153.9 M49.7 153.9 L37.3 200 M350.3 153.9 L362.7 200 M49.7 153.9 L57.1 200 M350.3 153.9 L342.9 200 M65.8 86.9 L49.7 153.9 M334.2 86.9 L350.3 153.9 M65.8 86.9 L115.7 58 M334.2 86.9 L284.3 58 M151.7 10 L115.7 58 M248.3 10 L284.3 58 M115.7 58 L49.7 153.9 M284.3 58 L350.3 153.9 M115.7 58 L85.6 196.9 M284.3 58 L314.4 196.9 M151.7 10 L200 30.3 M248.3 10 L200 30.3 M115.7 58 L200 30.3 M284.3 58 L200 30.3 M200 30.3 L85.6 196.9 M200 30.3 L314.4 196.9 M115.7 58 L200 101.6 M284.3 58 L200 101.6 M49.7 153.9 L200 101.6 M350.3 153.9 L200 101.6" fill="none" stroke="#d9a962" stroke-width=".75" stroke-linecap="round" stroke-linejoin="round" opacity=".9"></path>
           <line x1="0" y1="200" x2="400" y2="200" stroke="#f1e9da" stroke-width=".8" opacity=".5"></line>
           <line x1="40" y1="200" x2="40" y2="228" stroke="#f1e9da" stroke-width=".8" opacity=".5"></line><line x1="360" y1="200" x2="360" y2="228" stroke="#f1e9da" stroke-width=".8" opacity=".5"></line>
           <line x1="20" y1="228" x2="380" y2="228" stroke="#f1e9da" stroke-width=".8" opacity=".5" stroke-dasharray="2 4"></line>
-          <circle cx="200" cy="12" r="2.4" fill="#d9a962"></circle><circle cx="68" cy="86" r="2.4" fill="#d9a962"></circle><circle cx="332" cy="86" r="2.4" fill="#d9a962"></circle><circle cx="200" cy="200" r="2.4" fill="#d9a962"></circle>
-          <text x="200" y="-4" text-anchor="middle" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="2">01 · SHELL</text>
-          <text x="44" y="82" text-anchor="end" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="2">02 · VALLEY WINDOW</text>
-          <text x="356" y="82" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="2">03 · KING BED</text>
-          <text x="200" y="246" text-anchor="middle" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="2">04 · PRIVATE DECK · 450–550 SQ FT</text>
+          <circle cx="200" cy="10" r="2.4" fill="#d9a962"></circle><circle cx="65.8" cy="86.9" r="2.4" fill="#d9a962"></circle><circle cx="334.2" cy="86.9" r="2.4" fill="#d9a962"></circle><circle cx="200" cy="200" r="2.4" fill="#d9a962"></circle>
+          <text x="200" y="6" text-anchor="middle" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="1.5">01 · SHELL</text>
+          <text x="14" y="82" fill="#f1e9da" font-family="Lora, serif" font-size="7.5" letter-spacing="1">02 · VALLEY WINDOW</text>
+          <text x="386" y="82" text-anchor="end" fill="#f1e9da" font-family="Lora, serif" font-size="7.5" letter-spacing="1">03 · KING BED</text>
+          <text x="200" y="246" text-anchor="middle" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="1.5">04 · PRIVATE DECK · 450–550 SQ FT</text>
         </svg>
-        <img src="img/banner3.webp" alt="Inside a dome: quilted golden walls and a wide window onto the valley" loading="lazy" style="position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:52%;aspect-ratio:1;object-fit:cover;object-position:60% 50%;border-radius:50%;border:4px solid #1f3b34;outline:1px solid rgba(217,169,98,.6);filter:sepia(.1) saturate(.95)">
+        <img src="img/banner3.webp" alt="Inside a dome: quilted golden walls and a wide window onto the valley" loading="lazy" style="position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);width:52%;aspect-ratio:1;object-fit:cover;object-position:60% 50%;border-radius:50%;border:4px solid #1f3b34;outline:1px solid rgba(217,169,98,.6);filter:sepia(.1) saturate(.95)">
       </div>
     </div>
   </div>
@@ -455,7 +455,6 @@ a:hover{color:#7d5411}
 
             <!-- Top Floating Status Pill -->
             <div class="giv-arch-pill" id="givArchPill">
-              <span class="giv-live-dot"></span>
               <span id="givArchPillText">OBSERVATORY POOL · RIDGE ELEVATION 700M</span>
             </div>
 
@@ -506,7 +505,6 @@ a:hover{color:#7d5411}
 
             <!-- Satellite Floating Badge -->
             <div class="giv-satellite-tag" id="givSatelliteTag" data-type="fire">
-              <span class="giv-fire-spark"></span>
               <span id="givSatelliteTagText">PRIVATE BONFIRE</span>
             </div>
           </div>
@@ -1092,25 +1090,9 @@ class Component extends DCLogic {
     return d.trim();
   }
 
-  // Geodesic dome lattice: three rings + radials + zigzag struts, in a 400x200 box (base at y=200)
+  // Logo dome arch structure in a 400x200 box (base at y=200)
   lattice() {
-    const cx = 200, cy = 200, R = [190, 132, 74, 22], N = [16, 12, 8, 4];
-    const pt = (r, i, n) => { const a = Math.PI - (Math.PI * i) / n; return [cx + r * Math.cos(a), cy - r * Math.sin(a)]; };
-    let d = '';
-    for (let k = 0; k < R.length; k++) {
-      d += `M${pt(R[k], 0, N[k]).join(' ')}`;
-      for (let i = 1; i <= N[k]; i++) d += ` L${pt(R[k], i, N[k]).map(v => v.toFixed(1)).join(' ')}`;
-    }
-    for (let k = 0; k < R.length - 1; k++) {
-      const n1 = N[k], n2 = N[k + 1];
-      for (let i = 0; i <= n1; i++) {
-        const p = pt(R[k], i, n1), j = Math.round((i * n2) / n1), q = pt(R[k + 1], j, n2);
-        d += ` M${p.map(v => v.toFixed(1)).join(' ')} L${q.map(v => v.toFixed(1)).join(' ')}`;
-        if (i < n1) { const q2 = pt(R[k + 1], Math.min(n2, Math.round(((i + 1) * n2) / n1)), n2); d += ` L${q2.map(v => v.toFixed(1)).join(' ')}`; }
-      }
-    }
-    d += ` M${cx - R[0]} ${cy} L${cx + R[0]} ${cy}`;
-    return d;
+    return 'M151.7 10 L248.3 10 M151.7 10 L65.8 86.9 M248.3 10 L334.2 86.9 M65.8 86.9 L10 200 M334.2 86.9 L390 200 M10 200 L49.7 153.9 M390 200 L350.3 153.9 M49.7 153.9 L37.3 200 M350.3 153.9 L362.7 200 M49.7 153.9 L57.1 200 M350.3 153.9 L342.9 200 M65.8 86.9 L49.7 153.9 M334.2 86.9 L350.3 153.9 M65.8 86.9 L115.7 58 M334.2 86.9 L284.3 58 M151.7 10 L115.7 58 M248.3 10 L284.3 58 M115.7 58 L49.7 153.9 M284.3 58 L350.3 153.9 M115.7 58 L85.6 196.9 M284.3 58 L314.4 196.9 M151.7 10 L200 30.3 M248.3 10 L200 30.3 M115.7 58 L200 30.3 M284.3 58 L200 30.3 M200 30.3 L85.6 196.9 M200 30.3 L314.4 196.9 M115.7 58 L200 101.6 M284.3 58 L200 101.6 M49.7 153.9 L200 101.6 M350.3 153.9 L200 101.6';
   }
 
   renderVals() {

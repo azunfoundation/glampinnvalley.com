@@ -43,12 +43,12 @@ require __DIR__ . '/includes/header.php';
 <!-- =========================================================================
      HERO SECTION · Night into Dawn
      ========================================================================= -->
-<section id="top" style="position:relative;background:linear-gradient(180deg,#0f1f23 0%,#14262a 45%,#1f3b34 100%);color:var(--color-text-light);overflow:hidden;padding-top:clamp(120px,16vh,180px);">
+<section id="top" class="giv-hero-section" style="position:relative;background:linear-gradient(180deg,#0f1f23 0%,#14262a 45%,#1f3b34 100%);color:var(--color-text-light);overflow:hidden;padding-top:clamp(120px,16vh,180px);">
   <!-- Twinkling starlight background -->
-  <div aria-hidden="true" style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(241,233,218,.7) 0 1px,transparent 1.6px),radial-gradient(circle,rgba(241,233,218,.45) 0 .8px,transparent 1.4px),radial-gradient(circle,rgba(217,169,98,.6) 0 1px,transparent 1.6px);background-size:220px 220px,140px 140px,380px 380px;background-position:0 0,60px 90px,140px 40px;opacity:.9;mask-image:linear-gradient(180deg,#000 0%,#000 40%,transparent 80%);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 40%,transparent 80%);"></div>
+  <div aria-hidden="true" class="giv-hero-stars" style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(241,233,218,.7) 0 1px,transparent 1.6px),radial-gradient(circle,rgba(241,233,218,.45) 0 .8px,transparent 1.4px),radial-gradient(circle,rgba(217,169,98,.6) 0 1px,transparent 1.6px);background-size:220px 220px,140px 140px,380px 380px;background-position:0 0,60px 90px,140px 40px;opacity:.9;mask-image:linear-gradient(180deg,#000 0%,#000 40%,transparent 80%);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 40%,transparent 80%);"></div>
 
   <!-- Moon and constellation lines -->
-  <svg viewBox="0 0 400 220" aria-hidden="true" style="position:absolute;right:clamp(20px,8vw,140px);top:clamp(56px,7vh,88px);width:clamp(0px,(100vw - 760px) * 1.2,340px);height:auto;opacity:.75;pointer-events:none;">
+  <svg viewBox="0 0 400 220" aria-hidden="true" class="giv-hero-moon" style="position:absolute;right:clamp(20px,8vw,140px);top:clamp(56px,7vh,88px);width:clamp(0px,(100vw - 760px) * 1.2,340px);height:auto;opacity:.75;pointer-events:none;">
     <path d="M318 26 A34 34 0 1 0 318 94 A27 27 0 1 1 318 26 Z" fill="none" stroke="#d9a962" stroke-width=".9"></path>
     <g fill="#f1e9da">
       <circle cx="40" cy="160" r="1.6"></circle>
@@ -62,7 +62,7 @@ require __DIR__ . '/includes/header.php';
   </svg>
 
   <!-- Glowing Fireflies -->
-  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+  <div aria-hidden="true" class="giv-hero-fireflies" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
     <?php
     $firefly_seeds = [
       ['left' => '15%', 'top' => '35%', 'dur' => '9.2s', 'del' => '-3.1s'],
@@ -81,25 +81,25 @@ require __DIR__ . '/includes/header.php';
     <?php endforeach; ?>
   </div>
 
-  <div style="position:relative;max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px);">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(20px,4vw,56px);align-items:end;">
-      <div>
-        <p style="margin:0 0 20px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--color-accent-gold);">
-          <span style="display:block;width:36px;height:1px;background:var(--color-accent-gold);"></span><?= SITE_LOCATION_SHORT ?>
+  <div class="giv-hero-content-wrap" style="position:relative;max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,64px);">
+    <div class="giv-hero-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(20px,4vw,56px);align-items:end;">
+      <div class="giv-hero-col-title">
+        <p class="giv-hero-location" style="margin:0 0 20px;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--color-accent-gold);">
+          <span class="giv-hero-location-bar" style="display:block;width:36px;height:1px;background:var(--color-accent-gold);"></span><?= SITE_LOCATION_SHORT ?>
         </p>
-        <h1 style="margin:0;font-family:var(--font-heading);font-weight:300;font-size:clamp(52px,8.4vw,132px);line-height:.92;letter-spacing:-.025em;text-wrap:balance;">
+        <h1 class="giv-hero-heading" style="margin:0;font-family:var(--font-heading);font-weight:300;font-size:clamp(52px,8.4vw,132px);line-height:.92;letter-spacing:-.025em;text-wrap:balance;">
           Sleep under<br>the whole <em style="font-style:italic;font-weight:300;color:var(--color-accent-gold);">sky.</em>
         </h1>
       </div>
-      <div style="padding-bottom:clamp(6px,1.2vw,18px);">
-        <p style="margin:0 0 24px;max-width:40ch;font-size:clamp(15px,1.15vw,18px);line-height:1.6;color:var(--color-text-soft);text-wrap:pretty;">
+      <div class="giv-hero-col-copy" style="padding-bottom:clamp(6px,1.2vw,18px);">
+        <p class="giv-hero-desc" style="margin:0 0 24px;max-width:40ch;font-size:clamp(15px,1.15vw,18px);line-height:1.6;color:var(--color-text-soft);text-wrap:pretty;">
           Eight geodesic domes on a forested ridge two hours from Hyderabad. An infinity pool at the edge of the hills, a fire of your own, and nights with more stars than you remember.
         </p>
-        <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
-          <a href="<?= htmlspecialchars(get_booking_url()) ?>" target="_blank" rel="noopener" class="giv-btn-gold">
+        <div class="giv-hero-actions" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
+          <a href="<?= htmlspecialchars(get_booking_url()) ?>" target="_blank" rel="noopener" class="giv-btn-gold giv-hero-btn-book">
             Check Availability
           </a>
-          <a href="#story" style="display:inline-flex;align-items:center;gap:10px;height:52px;color:var(--color-text-light);font-family:var(--font-heading);font-weight:500;font-size:19px;border-bottom:1px solid rgba(241,233,218,.4);">
+          <a href="#story" class="giv-hero-btn-story" style="display:inline-flex;align-items:center;gap:10px;height:52px;color:var(--color-text-light);font-family:var(--font-heading);font-weight:500;font-size:19px;border-bottom:1px solid rgba(241,233,218,.4);">
             Begin the story <span aria-hidden="true">↓</span>
           </a>
         </div>
@@ -108,14 +108,14 @@ require __DIR__ . '/includes/header.php';
   </div>
 
   <!-- Dome-shaped hero plate with lattice overlay -->
-  <div style="position:relative;max-width:1440px;margin:clamp(36px,6vh,72px) auto 0;padding:0 clamp(20px,5vw,64px);">
-    <div style="position:relative;width:100%;aspect-ratio:2/1;min-height:clamp(260px,52vh,440px);max-height:70vh;border-radius:999px 999px 0 0;overflow:hidden;border:1px solid rgba(217,169,98,.5);border-bottom:0;">
-      <img src="assets/images/home-slider.webp" alt="Sunset over the valley from a private dome deck" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 55%;">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,31,35,.35) 0%,rgba(15,31,35,0) 40%);"></div>
-      <svg viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;opacity:.55;mix-blend-mode:screen;">
-        <path d="<?= $svg_paths['latticeD'] ?>" fill="none" stroke="#f1e9da" stroke-width=".6" vector-effect="non-scaling-stroke"></path>
+  <div class="giv-hero-plate-wrap" style="position:relative;max-width:1440px;margin:clamp(36px,6vh,72px) auto 0;padding:0 clamp(20px,5vw,64px);">
+    <div class="giv-hero-plate" style="position:relative;width:100%;aspect-ratio:2/1;min-height:clamp(260px,52vh,440px);max-height:70vh;border-radius:50% 50% 0 0 / 100% 100% 0 0;overflow:hidden;border:1px solid rgba(217,169,98,.5);border-bottom:0;">
+      <img class="giv-hero-image" src="assets/images/home-slider.webp" alt="Sunset over the valley from a private dome deck" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 55%;">
+      <div class="giv-hero-overlay" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,31,35,.35) 0%,rgba(15,31,35,0) 40%);"></div>
+      <svg class="giv-hero-lattice" viewBox="0 0 400 200" preserveAspectRatio="xMidYEnd meet" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;opacity:.55;mix-blend-mode:screen;pointer-events:none;">
+        <path d="<?= $svg_paths['logoDomeArchD'] ?>" fill="none" stroke="#f1e9da" stroke-width=".6" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
       </svg>
-      <div style="position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;align-items:flex-end;padding:clamp(14px,2.5vw,32px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-light);text-shadow:0 1px 8px rgba(0,0,0,.5);">
+      <div class="giv-hero-caption" style="position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;align-items:flex-end;padding:clamp(14px,2.5vw,32px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-light);text-shadow:0 1px 8px rgba(0,0,0,.5);">
         <span><?= SITE_COORDINATES ?></span>
         <span style="display:inline-flex;align-items:center;gap:8px">
           <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 3 20 12 6 21"></polygon></svg>
@@ -126,7 +126,7 @@ require __DIR__ . '/includes/header.php';
   </div>
 
   <!-- Organic wave transition into cream -->
-  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);margin-top:-1px;background:#1f3b34;">
+  <svg class="giv-hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(40px,6vw,90px);margin-top:-1px;background:#1f3b34;">
     <path d="M0 90 L0 62 C120 48 200 30 320 36 C420 41 470 60 560 52 C660 43 720 14 840 20 C940 25 990 52 1090 48 C1190 44 1250 24 1330 28 C1380 31 1410 44 1440 50 L1440 90 Z" fill="#f3efe6"></path>
   </svg>
 </section>
@@ -241,21 +241,21 @@ require __DIR__ . '/includes/header.php';
       <!-- Illustrated Dome Anatomy & Circular Plate -->
       <div style="position:relative;overflow:hidden;max-width:100%;">
         <svg viewBox="0 0 400 260" aria-hidden="true" style="width:100%;height:auto;display:block;">
-          <path d="<?= $svg_paths['latticeD'] ?>" fill="none" stroke="#d9a962" stroke-width=".9" opacity=".9"></path>
+          <path d="<?= $svg_paths['anatomyDomeD'] ?>" fill="none" stroke="#d9a962" stroke-width=".75" stroke-linecap="round" stroke-linejoin="round" opacity=".9"></path>
           <line x1="0" y1="200" x2="400" y2="200" stroke="#f1e9da" stroke-width=".8" opacity=".5"></line>
           <line x1="40" y1="200" x2="40" y2="228" stroke="#f1e9da" stroke-width=".8" opacity=".5"></line>
           <line x1="360" y1="200" x2="360" y2="228" stroke="#f1e9da" stroke-width=".8" opacity=".5"></line>
           <line x1="20" y1="228" x2="380" y2="228" stroke="#f1e9da" stroke-width=".8" opacity=".5" stroke-dasharray="2 4"></line>
-          <circle cx="200" cy="12" r="2.4" fill="#d9a962"></circle>
-          <circle cx="68" cy="86" r="2.4" fill="#d9a962"></circle>
-          <circle cx="332" cy="86" r="2.4" fill="#d9a962"></circle>
+          <circle cx="200" cy="10" r="2.4" fill="#d9a962"></circle>
+          <circle cx="65.8" cy="86.9" r="2.4" fill="#d9a962"></circle>
+          <circle cx="334.2" cy="86.9" r="2.4" fill="#d9a962"></circle>
           <circle cx="200" cy="200" r="2.4" fill="#d9a962"></circle>
-          <text x="200" y="8" text-anchor="middle" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="1.5">01 · SHELL</text>
+          <text x="200" y="6" text-anchor="middle" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="1.5">01 · SHELL</text>
           <text x="14" y="82" fill="#f1e9da" font-family="Lora, serif" font-size="7.5" letter-spacing="1">02 · VALLEY WINDOW</text>
           <text x="386" y="82" text-anchor="end" fill="#f1e9da" font-family="Lora, serif" font-size="7.5" letter-spacing="1">03 · KING BED</text>
           <text x="200" y="246" text-anchor="middle" fill="#f1e9da" font-family="Lora, serif" font-size="8" letter-spacing="1.5">04 · PRIVATE DECK · 450–550 SQ FT</text>
         </svg>
-        <img src="assets/images/banner3.webp" alt="Inside a dome: quilted golden walls and a wide window onto the valley" loading="lazy" style="position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:52%;aspect-ratio:1;object-fit:cover;object-position:60% 50%;border-radius:50%;border:4px solid #1f3b34;outline:1px solid rgba(217,169,98,.6);filter:sepia(.1) saturate(.95);">
+        <img src="assets/images/banner3.webp" alt="Inside a dome: quilted golden walls and a wide window onto the valley" loading="lazy" style="position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);width:52%;aspect-ratio:1;object-fit:cover;object-position:60% 50%;border-radius:50%;border:4px solid #1f3b34;outline:1px solid rgba(217,169,98,.6);filter:sepia(.1) saturate(.95);">
       </div>
     </div>
   </div>
@@ -440,7 +440,6 @@ require __DIR__ . '/includes/header.php';
 
             <!-- Top Floating Status Pill -->
             <div class="giv-arch-pill" id="givArchPill">
-              <span class="giv-live-dot"></span>
               <span id="givArchPillText">OBSERVATORY POOL · RIDGE ELEVATION 700M</span>
             </div>
 
@@ -491,7 +490,6 @@ require __DIR__ . '/includes/header.php';
 
             <!-- Satellite Floating Badge -->
             <div class="giv-satellite-tag" id="givSatelliteTag" data-type="fire">
-              <span class="giv-fire-spark"></span>
               <span id="givSatelliteTagText">PRIVATE BONFIRE</span>
             </div>
           </div>
@@ -641,7 +639,7 @@ require __DIR__ . '/includes/header.php';
       </h2>
     </div>
 
-    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(28px,5vw,80px);align-items:start;">
+    <div class="giv-experiences-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(28px,5vw,80px);align-items:start;">
       <!-- Synchronized Image Preview (Sticky on desktop, clean relative card on mobile) -->
       <div class="giv-experiences-preview">
         <div class="giv-experiences-preview-card">
